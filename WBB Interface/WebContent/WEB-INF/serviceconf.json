@@ -1,0 +1,55 @@
+{ "NTH:1" : {
+    "unknown_error" : "NO",
+    "mbb_connection" : "OK",
+    "voted" : "NO",
+    "cancelled" : "NO",
+    "audited" : "NO",
+    "discarded" : "NO",
+    "expired" : "NO"
+  },
+  "NTH:2" : {
+    "unknown_error" : "NO",
+    "mbb_connection" : "OK",
+    "voted" : "YES",
+    "cancelled" : "NO",
+    "audited" : "NO",
+    "discarded" : "NO",
+    "expired" : "NO"
+  },
+  "NTH:3" : {
+    "unknown_error" : "NO",
+    "mbb_connection" : "OK",
+    "voted" : "NO",
+    "cancelled" : "YES",
+    "audited" : "NO",
+    "discarded" : "NO",
+    "expired" : "NO"
+  },
+  "NTH:4" : {
+    "unknown_error" : "NO",
+    "mbb_connection" : "OK",
+    "voted" : "NO",
+    "cancelled" : "YES",
+    "audited" : "NO",
+    "discarded" : "NO",
+    "expired" : "NO"
+  },
+  "NTH:5" : {
+    "unknown_error" : "NO",
+    "mbb_connection" : "OK",
+    "voted" : "NO",
+    "cancelled" : "NO",
+    "audited" : "YES",
+    "discarded" : "NO",
+    "expired" : "NO"
+  },
+  "NTH:6" : {
+    "unknown_error" : "NO",
+    "mbb_connection" : "OK",
+    "voted" : "NO",
+    "cancelled" : "NO",
+    "audited" : "NO",
+    "discarded" : "YES",
+    "expired" : "NO"
+  }
+}

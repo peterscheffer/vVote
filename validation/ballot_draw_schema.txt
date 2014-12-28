@@ -1,0 +1,134 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "districts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": 
+          [ "candidates",
+            "district",
+            "locationAudio"
+          ],
+          "properties": {
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required":
+                [ "audio",
+                  "ballotPosition",
+                  "id",
+                  "name",                  
+                  "partyName"
+                ],
+                "properties": {
+                  "audio": {
+                    "type": "string"
+                  },
+                  "ballotPosition": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "partyName": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "district": {
+              "type": "string"
+            },
+            "locationAudio": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "parties": {
+        "type": "array",
+        "required": true,
+        "items": {
+          "type": "object",
+          "required": 
+          [ "id",
+            "groupBallotPosition",
+            "preferredName",
+            "ungrouped",
+            "hasBallotBox",
+            "ballotBoxLetter",
+            "audio",
+            "candidates"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "groupBallotPosition": {
+              "type": "string"
+            },
+            "preferredName": {
+              "type": "string"
+            },
+            "ungrouped": {
+              "type": "boolean"
+            },
+            "hasBallotBox": {
+              "type": "boolean"
+            },
+            "ballotBoxLetter": {
+              "type": "string"
+            },
+            "audio": {
+              "type": "string"
+            },
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": 
+                [ "id",
+                  "audio",
+                  "ballotPosition",
+                  "name",
+                  "partyName",
+                  "region"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "audio": {
+                    "type": "string"
+                  },
+                  "ballotPosition": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "partyName": {
+                    "type": "string"
+                  },
+                  "region": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "region": {
+        "type": "string"
+      }
+    }
+  }
+}

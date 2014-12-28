@@ -1,0 +1,61 @@
+<div id="submit_confirmation_header" class="header" style="display: none; z-index: 281;">
+  <div id="confirmation_title" style="float: left; padding: 8px;">
+    Confirm before sending your vote!
+  </div>
+
+  <div id="confirmation_screen_help_button" class="button" style="float: right; margin-right: 100px;">
+    Help
+  </div>
+</div>
+
+<div id="submit_confirmation_modal_background">
+</div>
+<div id="submit_confirmation_modal_container" style="display: none; position: absolute; z-index: 280; width: 100%">
+  <center>
+    <div id="confirmation_message_box" class="notice_panel invert_color" style="width: 1300px;">
+      <div style="text-align: center; padding: 75px;">
+        <p id="confirmation_message_1" class="invert_color internationalisation">
+          Your votes will now be sent to the VEC. Once you do this you cannot change your vote. Touch Send My Vote if you are ready to do this or touch Back to go back and make any changes.
+        </p>
+        <p id="confirmation_message_2" class="invert_color internationalisation">
+
+        </p>
+      </div>
+    </div>
+  </center>
+</div>
+
+<div id="submit_confirmation_footer" class="footer" style="display: none; z-index: 281;">
+  <div id="dont_submit_button" class="button" style="float: left;">
+    Back
+  </div>
+
+  <div id="submit_button" class="button" style="float: left; width: 400px; margin-left: 25%;">
+    Send My Vote
+  </div>
+</div>
+
+
+<div id="submit_error_modal_header" class="header" style="display: none; z-index: 301;">
+  <div id="error_modal_title" style="float: left; padding: 8px;">Error</div>
+</div>
+
+<div id="submit_error_modal_background" style="z-index: 301; display: none;">
+</div>
+<div id="submit_error_modal_container" style="z-index: 302; display: none; position: absolute; top: 0px; width: 100%">
+    <center>
+      <div id="submit_error_modal_panel" class="notice_panel invert_color" style="overflow-y: scroll; overflow-x: hidden;">
+        <div id="submit_error_content">
+          <p id="submit_error_modal_message" class="invert_color internationalisation" style="text-align: center; padding: 20px;">
+            The computer was unable to submit your vote.
+          </p>
+        </div>
+      </div>
+    </center>
+</div>
+
+<div id="submit_error_modal_footer" class="footer" style="display: none; z-index: 301;">
+  <div id="submit_error_modal_back_button" class="button" style="float: left;" onclick="hideSubmitErrorAlert();">
+    Back
+  </div>
+</div>

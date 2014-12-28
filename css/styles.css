@@ -1,0 +1,1315 @@
+
+
+button {
+  padding: 0;
+}
+
+.language_map {
+  border: 0px;
+}
+
+
+
+
+
+
+#menu_options p {
+  font-size: 20px;
+}
+
+#menu_options img {
+  cursor: pointer;
+}
+
+#language_options {
+  background-color: #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+#language_options img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  color: #fff;
+  font-family: Arial, Verdana;
+  font-size: 22px;
+  text-align: center;
+  white-space:pre;
+  padding-top: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+p {
+  color: #ffffff;
+  font-family: Verdana;
+  font-size: 24px;
+}
+
+.start_header img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.screen_id {
+  display: none;
+}
+
+#intro_message {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+  width: 900px;
+}
+
+#intro_touch_buttons {
+  font-size: 25px;
+}
+
+.menu_option {
+  float: left;
+  text-align: center;
+}
+
+#menu_choice_img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 150px;
+}
+
+#about_vvote {
+  padding-left: 0px;
+  padding-top: 5px;
+  width: 155px;
+}
+
+#show_me_how {
+  padding-left: 90px;
+  padding-top: 5px;
+  width: 155px;
+}
+
+#practice_vote {
+  padding-left: 90px;
+  padding-top: 5px;
+  width: 155px;
+}
+
+#staff_training {
+  padding-left: 90px;
+  padding-top: 5px;
+  width: 155px;
+}
+
+.start_voting {
+  background: url('../images/start_voting_header.png') no-repeat;
+  width: 60%;
+  margin-left: 25%;
+  height: 98px;
+  border: 0px;
+  color: #F23636;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-left: 0px;
+  font-weight: bold;      
+}
+
+#welcome_header {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Verdana;
+  font-size: 28px;
+  padding-top: 10px;
+}
+
+#welcome_text {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Verdana;
+  width: 850px;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+}
+
+.header_separator {
+  color: #CCC1DA;
+  background-color: #CCC1DA;
+  width: 99%;
+  height: 10px;
+}
+
+.centered {
+  margin: 0 auto;
+  display: block;
+}
+
+.back_button {
+  left: 25px;
+}
+
+.quit_button {
+  left: 215px;
+}
+
+.help_button {
+  left: 405px;
+}
+
+.undo_button {
+  right: 220px;
+}
+
+.next_button {
+  right: 30px;
+}
+
+.print_button {
+  right: 60px;
+}
+
+.audio_button {
+  right: 60px;
+}
+
+#visual_switch_button {
+  visibility: hidden;
+  position: absolute;
+  bottom: 20px;
+  left: 200px;
+  height: 100px;
+  background-color: #CCC1DA;
+  width: 70%;
+  font-family: Verdana;
+  color: #604A7B;
+  font-size: 24px;
+}
+
+#audio_switch_button {
+  position: absolute;
+  top: 70px;
+  background-color: #CCC1DA;
+  width: 94%;
+  height: 100px;
+  font-family: Verdana;
+  color: #604A7B;
+  font-size: 24px;
+}
+
+.navigation_button {
+  position: absolute;
+  bottom: 10px;
+  background-color: #CCC1DA;
+  height: 100px;
+  width: 160px;
+  font-family: Verdana;
+  color: #604A7B;
+  font-size: 24px;
+  margin-left: 5px;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+.finalise_button {
+  width: 80%; 
+  margin: 0 auto; 
+  display: block;
+  background-color: #CCC1DA;
+  height: 100px;
+  font-family: Verdana;
+  color: #604A7B;
+  font-size: 24px;
+}
+
+#print_buttons {
+  height: 250px;
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+}
+
+.ballot_options_description {
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 24px;
+  padding: 25px;
+  width: 70%;
+}
+
+#title_area {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.information_heading {
+  color: #FFFFFF;
+  text-align: left;
+  font-family: Verdana;
+  font-size: 30px;
+  padding: 25px;
+}
+
+.information_heading p {
+   margin: 0px auto;
+   text-align:center;
+   font-size: 32px;
+}
+
+.information_body {
+  color: #FFFFFF;
+  text-align: left;
+  font-family: Verdana;
+  font-size: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  width: 70%;
+}
+
+.information_body p {
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFFFF;
+  text-align: left;
+  font-family: Verdana;
+  font-size: 24px;
+  margin-top: 0px;
+}
+
+#legislative_assembly_preferences_voted {
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+#legislative_council_preferences_voted {
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+#legislative_assembly_has_voted {
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+#legislative_council_has_voted {
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+#legislative_assembly_confirm_has_voted {
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+#legislative_council_confirm_has_voted {
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+.preference_selections {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: Verdana;
+  font-size: 26px;
+  width: 90%;
+  background-color: #E6E0EC;
+  color: #000000;
+  padding: 0px;
+}
+
+.preference_selections li {
+  padding: 5px;
+}
+
+#legislative_assembly_option {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC1DA;
+  height: 150px;
+  width: 68%;
+  border: 1px solid #FFFFFF;
+  font-size: 24px;
+  font-family: Verdana;
+  color: #604A7B;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+#legislative_assembly_option_choice {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC1DA;
+  height: 150px;
+  width: 68%;
+  border: 1px solid #FFFFFF;
+  font-size: 24px;
+  font-family: Verdana;
+  color: #604A7B;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+#ballot_options_confirmation {
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 20px;
+  font-size: 24px;
+  padding: 15px;
+  width: 95%;
+}
+
+#ballot_options_confirmation span {
+  padding: 0;
+  margin: 0;
+}
+
+#ballot_options_finish_notification {
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 20px;
+  font-size: 24px;
+  padding: 15px;
+  width: 90%;
+}
+
+#legislative_council_option {
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC1DA;
+  height: 150px;
+  width: 68%;
+  font-size: 24px;
+  font-family: Verdana;
+  color: #604A7B;
+  border: 1px solid #FFFFFF;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+#legislative_council_option_choice {
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC1DA;
+  height: 150px;
+  width: 68%;
+  font-size: 24px;
+  font-family: Verdana;
+  color: #604A7B;
+  border: 1px solid #FFFFFF;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+#vote_for_groups_option {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC1DA;
+  height: 135px;
+  width: 60%;
+  border: 1px solid #FFFFFF;
+  font-size: 24px;
+  font-family: Verdana;
+  color: #604A7B;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+box-shadow: 4px 4px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+#vote_for_candidates_option {
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC1DA;
+  height: 135px;
+  width: 60%;
+  border: 1px solid #FFFFFF;
+  font-size: 24px;
+  font-family: Verdana;
+  color: #604A7B;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+box-shadow: 4px 4px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+#legislative_council_explanation {
+  padding: 30px;
+  width: 50%;
+  font-size: 24px;
+  font-family: Verdana;
+  color: #FFFFFF;
+  float: left;
+  display: inline;
+}
+
+#legislative_council_explanation_picture {
+  height: 50%;
+}
+
+#legislative_council_explanation_picture img {
+  padding-top: 50px;
+  display: block;
+  float: right;
+}
+
+.white_text {
+  color: #FFFFFF;
+}
+
+.red_text {
+  color: #FF4D9D;
+}
+
+#ballot_content {
+  height: 90%;
+  padding-top: 20px;
+}
+
+#assembly_ballot_instructions {
+  background-color: #604A7B;
+  width: 35%;
+  height: 100%;
+  display: block;
+  float: left;
+  margin-left: 30px;
+}
+
+#ballot_introduction_blurb p {
+  font-family: Verdana;
+  color: #FFFFFF;
+}
+
+#ballot_paper {
+  padding: 5px;
+  width: 58%;
+  height: 550px;
+  display: block;
+  background: url('../images/ballot_white_single.png') repeat;
+  color: #000000;
+  overflow-y: scroll;
+}
+
+#ballot_paper::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+#ballot_paper p {
+  color: #000000;
+  font-family: Verdana;
+  font-size: 26px;
+}
+
+#ballot_introduction_blurb p {
+  padding: 20px;
+  color: #FFFFFF;
+  font-family: Verdana;
+}
+
+#ballot_paper h1 {
+  color: #000000;
+  font-family: Verdana;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+#ballot_paper h2 {
+  color: #000000;
+  font-family: Verdana;
+  font-size: 22px;
+}
+
+#debug_console {
+	display:none; 
+	position: fixed; 
+	z-index: 150; 
+	top: 0px; 
+	left: 0px; 
+	background-color: #000; 
+	width: 50%; 
+	padding: 2px;
+}
+
+.ballot {
+  display: block;
+  height: 90px;
+  -- width: 410px;
+}
+
+.ballot img {
+  float: left;
+  margin: 0px 5px 5px 0px;
+}
+
+.ballot_box {
+  background-color: #FFFFFF;
+  float: left;
+  display: inline;
+  margin-right: 10px;
+  border: 2px solid #444;
+  font-family: Verdana;
+  font-size: 40px;
+  text-align: center;
+  width: 55px;
+  height: 55px;
+}
+
+.candidate_details {
+  float: left;
+  display: inline;
+  padding-bottom: 10px;
+  margin-top: -5px;
+  text-align: left;
+}
+
+.candidate_name {
+  font-size: 26px;
+  font-family: Verdana;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.candidate_party {
+  font-size: 16px;
+  font-family: Verdana;
+  font-weight: normal;
+}
+
+.candidate_region {
+  font-size: 16px;
+  font-family: Verdana;
+  font-weight: normal;
+}
+
+
+
+
+
+
+.candidate_group_ballot h1 {
+  color: #000000;
+  font-size: 40px;
+  padding-left: 10px;
+  margin: 0px;
+  width: 150px;
+  font-family: Verdana;
+}
+
+.candidate_group_ballot h3 {
+  color: #000000;
+  font-size: 28px;
+  padding-left: 5px;
+  margin: 0px;
+  width: 150px;
+  font-family: Verdana;
+  text-align: left;
+}
+
+.group_ballot h1 {
+  color: #000000;
+  font-size: 40px;
+  padding-left: 10px;
+  margin: 0px;
+  text-align: left;
+}
+
+.group_candidate_name {
+  font-size: 28px;
+  font-family: Verdana;
+  font-weight: bold;
+  clear: both;
+  text-align:left;
+}
+ 
+.party_ticket_panel {
+  width: 900px; 
+  height: 600px; 
+  background-color: #E6E0EC; 
+  color: #000000; 
+  display: none; 
+  visibility: hidden; 
+  border: 3px solid #385D8A;
+  overflow-y: hidden;
+  overflow-x: hidden; 
+  z-index: 501;
+  left: 15%;
+}
+
+.confirm_ticket_panel {
+  width: 560px; 
+  height: 600px; 
+  background-color: #E6E0EC; 
+  display: none; 
+  visibility: hidden; 
+  border: 3px solid #385D8A;
+  padding-left: 25px;
+}
+
+#confirm_message p {
+  padding: 25px;
+  font-family: Verdana;
+  font-size: 18px;
+  color: #000000; 
+}
+
+#confirm_ticket_panel button {
+  background-color: #CCC1DA;
+  border: 3px solid #385D8A;
+  margin-top: 200px;
+  margin-left: 35px;
+  float: left;
+  font-family: Verdana;
+  font-size: 22px;
+  width: 200px; 
+  height: 75px; 
+  padding: 5px;
+}
+
+.confirm_candidate_ticket_panel {
+  width: 560px; 
+  height: 600px; 
+  background-color: #E6E0EC; 
+  display: none; 
+  visibility: hidden; 
+  border: 3px solid #385D8A;
+  padding-left: 25px;
+}
+
+#confirm_candidate_ticket_panel p {
+  padding: 25px;
+  font-family: Verdana;
+  font-size: 18px;
+  color: #000000; 
+}
+
+#confirm_candidate_ticket_panel button {
+  background-color: #CCC1DA;
+  border: 3px solid #385D8A;
+  margin-top: 200px;
+  margin-left: 35px;
+  float: left;
+  font-family: Verdana;
+  font-size: 22px;
+  width: 200px; 
+  height: 75px; 
+  padding: 5px;
+}
+ 
+.party_ticket_holder {
+  width: 100%; 
+  height: 470px;
+  background-color: #FFFFFF; 
+  overflow-y: hidden;
+  overflow-x: auto; 
+}
+
+#party_ticket_panel button {
+  background-color: #CCC1DA;
+  border: 3px solid #385D8A;
+  margin-top: 15px;
+  margin-left: 15px;
+  float: left;
+  font-family: Verdana;
+  font-size: 22px;
+}
+    
+.party_members_panel {
+  width: 560px; 
+  height: 600px; 
+  background-color: #E6E0EC; 
+  color: #000000; 
+  display: none; 
+  visibility: hidden; 
+  border: 3px solid #385D8A;
+  z-index: 503;
+  left: 30%;
+}
+   
+.party_members_panel button {
+  background-color: #CCC1DA;
+  border: 3px solid #385D8A;
+  margin: 15px;
+  float: left;
+  font-family: Verdana;
+  font-size: 22px;
+  padding: 10px;
+}
+
+.party_members_panel #party_name {
+  font-family: Verdana;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 25px;
+}
+
+#party_members {
+  padding: 25px;
+  height: 300px;
+}  
+
+#party_members p {
+  color: #000000;
+  font-family: Verdana;
+  font-size: 18px;      
+}
+
+.party_policy_panel {
+  width: 560px; 
+  height: 720px; 
+  background-color: #E6E0EC; 
+  color: #000000; 
+  display: none; 
+  visibility: hidden; 
+  border: 3px solid #385D8A;
+  z-index: 500;
+  left: 30%;
+}
+
+.party_policy_panel img {
+  padding: 15px;
+  float: left;
+}
+
+.party_policy_panel button {
+  background-color: #CCC1DA;
+  border: 3px solid #385D8A;
+  margin: 15px;
+  float: left;
+  font-family: Verdana;
+  font-size: 22px;
+  padding: 10px;
+}
+
+#party_policy {
+  font-family: Verdana;
+  font-size: 18px;
+  height: 200px;
+  color: #000000;
+  padding-left: 25px;
+}
+
+.candidate_policy_panel {
+  width: 560px; 
+  height: 560px; 
+  background-color: #E6E0EC; 
+  color: #000000; 
+  display: none; 
+  visibility: hidden; 
+  border: 3px solid #385D8A;
+  z-index: 15;
+}
+
+.candidate_policy_panel img {
+  padding: 15px;
+  float: left;
+}
+
+.candidate_policy_panel button {
+  background-color: #CCC1DA;
+  border: 3px solid #385D8A;
+  margin: 15px;
+  float: left;
+  font-family: Verdana;
+  font-size: 22px;
+}
+
+#candidate_policy {
+  font-family: Verdana;
+  font-size: 18px;
+  height: 200px;
+  color: #000000;
+  padding-left: 25px;
+}
+ 
+.candidate_ticket_panel {
+  width: 600px; 
+  height: 700px; 
+  background-color: #FFFFFF; 
+  color: #000000; 
+  display: none; 
+  visibility: hidden; 
+  border: 3px solid #385D8A;
+  overflow-y: hidden;
+  overflow-x: hidden; 
+  z-index: 15;
+}
+
+#candidate_ticket_image {
+  height: 90%;      
+}
+
+.candidate_ticket_holder {
+  width: 100%; 
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden; 
+}
+
+.candidate_ticket_holder h1 {
+  color: black;
+  text-align: center;
+  background-color: #CCC1DA;
+  margin: 0px;
+  padding: 10px;
+}
+
+#candidate_ticket_panel button {
+  background-color: #CCC1DA;
+  border: 3px solid #385D8A;
+  margin-top: 15px;
+  margin-left: 15px;
+  float: left;
+  font-family: Verdana;
+  font-size: 22px;
+}
+
+#audio_only_screen {
+  width: 1000px;
+  min-width: 1000px;
+  height: 1000px;
+  min-height: 1000px;
+  z-index: 1;
+}
+
+#switch_interface {
+  position: absolute;
+  width: 200px;
+  left: 400px;
+  top: 10px;
+}
+
+#switch_interface p {
+  font-size: 15px;
+}
+
+.switch_button {
+  width: 180px;
+  height: 50px;
+  font-size: 20px;
+  font-family: Verdana;
+  color: #604A7B;
+  background-color: #CCC1DA;
+  border: 1px solid #FFFFFF;
+  padding: 25px;
+}
+
+#left_trigger {
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  font-family: Verdana;
+  color: #604A7B;
+  background-color: #CCC1DA;
+  border: 1px solid #FFFFFF;
+  padding: 25px;
+  z-index: 50;
+}
+
+#right_trigger {
+  position: absolute;
+  top: 500px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  font-family: Verdana;
+  color: #604A7B;
+  background-color: #CCC1DA;
+  border: 1px solid #FFFFFF;
+  padding: 25px;
+  z-index: 50;
+}
+
+.audio {
+  display: none;
+  visibility: hidden;
+}
+
+.video_frame {
+  margin-left: 250px;
+  margin-top: 50px;
+}
+
+.video_screen_button {
+  margin: 0 auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  background-color: #CCC1DA;
+  height: 100px;
+  font-family: Verdana;
+  color: #604A7B;
+  font-size: 24px;
+  width: 300px; 
+  height: 65px;
+}
+
+#veil {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  z-index: 10;
+  display: none;
+}
+
+#confirmationMessageBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1.0;
+  -khtml-opacity: 1.0;
+  opacity: 1.0;
+  z-index: 10;
+  display: none;
+}
+
+#confirmationMessageBox button {
+  margin-top: 100px;
+  width: 260px;
+  height: 70px;
+  background-color: #CCC1DA;
+  font-family: Verdana;
+  color: #F23636;
+  font-size: 24px;
+  padding: 15px;
+  opacity: 1;
+  -khtml-opacity: 1;
+}
+
+#confirmationMessageBox p {
+  text-align: center;
+  font-size: 45px;
+  font-family: Verdana;
+  color: #FFF;
+  width: 80%;
+  margin-left: 100px;
+  margin-top: 150px;
+}
+
+#start_message_box {	
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #604A7B;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  z-index: 100; 
+  display:none;
+  text-align:center;
+  vertical-align: middle;
+  padding-top: 10%;
+}
+
+#start_message_box p, #start_message_box span  {
+  text-align: center;
+  font-size: 35px;
+  font-family: Verdana;
+  color: #FFF;
+}
+
+#gesture_video_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  z-index: 100;
+  display: none;
+}
+
+.button_highlighted {
+  background-color: #F8BABA !important;
+  border-color: #F23636 !important;
+}
+
+#ballot_comparison {
+  height: 350px;
+  width: 450px;
+  display: block;
+  color: #000000;
+  float: left;
+}
+
+#ballot_comparison p {
+  color: #000000;
+  font-family: Verdana;
+  font-size: 16px;
+  margin: 10px;
+  margin-left: 15px;
+}
+
+.ballot_sm {
+  display: block;
+  height: 45px;
+  width: 205px;
+}
+
+.ballot_sm img {
+  float: left;
+  margin: 0px 2.5px 2.5px 0px;
+}
+
+.ballot_box_sm {
+  background-color: #FFFFFF;
+  float: left;
+  display: inline;
+  margin-right: 5px;
+  border: 1px solid #444;
+  font-family: Verdana;
+  font-size: 20px;
+  text-align: center;
+  width: 27px;
+  height: 27px;
+}
+
+.candidate_details_sm {
+  float: left;
+  display: inline;
+  padding-bottom: 5px;
+  margin-top: -2.5px;
+}
+
+.candidate_name_sm {
+  font-size: 13px;
+  font-family: Verdana;
+  font-weight: bold;
+  margin-top: 1px;
+}
+
+.candidate_party_sm {
+  font-size: 8px;
+  font-family: Verdana;
+  font-weight: normal;
+}
+
+
+.candidate_name_sm_printed {
+  font-size: 13px;
+  font-family: Arial;
+  font-weight: bold;
+  margin-top: 1px;
+}
+
+.candidate_party_sm_printed {
+  font-size: 8px;
+  font-family: Arial;
+  font-weight: normal;
+}
+
+.preference_selections_comparison {
+  width: 45%;
+  float: left;
+  background-color: #FFFFFF;  
+  border: 1px solid #CCCCCC;
+}
+
+#assembly_preference_selections_legal_order {
+  background: url('../images/ballot_white_single.png') repeat;
+  padding-left: 10px;
+}
+
+#assembly_preference_selections_shuffle_order {
+  font-family: Arial;
+  padding-left: 18px;
+}
+
+.rendered_ballot {
+  float: right;
+  width: 50%;
+}
+
+
+
+#htvc_ui_header {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Verdana;
+  font-size: 28px;
+  padding-top: 10px;
+}
+
+#htvc_ui_text {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Verdana;
+  width: 850px;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+}
+
+
+#how_to_vote_preferencing_choice {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC1DA;
+  height: 150px;
+  width: 68%;
+  border: 1px solid #FFFFFF;
+  font-size: 24px;
+  font-family: Verdana;
+  color: #604A7B;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+#selecting_preferences_choice {
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC1DA;
+  height: 150px;
+  width: 68%;
+  border: 1px solid #FFFFFF;
+  font-size: 24px;
+  font-family: Verdana;
+  color: #604A7B;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+#htvc_button_options {
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 400px;
+}
+
+#htvc_both_houses {
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 400px;
+}
+
+.htvc_button {
+  padding: 10px;
+  margin: 25px;
+  background-color: #CCC1DA;
+  height: 100px;
+  width: 180px;
+  float: left;
+  text-align: center;
+  border: 1px solid #FFFFFF;
+  font-size: 24px;
+  font-family: Verdana;
+  color: #604A7B;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+.htvc_upper_lower_house_holder {
+  width: 570px; 
+  height: 550px;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden; 
+}
+
+#lower_house_htvc_image {
+  height: 60%;
+}
+
+#upper_house_htvc_image {
+  height: 150px;
+  vertical-align: top;
+}
+
+
+#legislative_assembly_preference_list {
+  height: 260px;
+  padding-left: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#legislative_council_preference_list {
+  height: 260px;
+  padding-left: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#menu_options {
+  margin: 0 auto;
+  display: block;
+  width: 950px;
+  height: 210px;
+}

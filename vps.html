@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- VPS version 3.2.1 -->
+  <!--
+    This file is part of vVote from the Victorian Electoral Commission.
+
+    vVote is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License.
+
+    vVote is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with vVote.  If not, see <http://www.gnu.org/licenses/>.
+
+    Contact Craig Burton   craig.burton@vec.vic.gov.au
+ 
+  -->  
+  <meta http-equiv="CACHE-CONTROL" content="NO-CACHE,NO-STORE,MUST-REVALIDATE">
+  <meta http-equiv="PRAGMA" content="NO-CACHE">
+  <meta content='True' name='HandheldFriendly' />
+  <meta name='viewport' meta content='width=1200, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>VPS</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="imagetoolbar" content="false" />
+
+  <style>
+
+    html {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: #ffffff;
+      padding: 0;
+      margin: 0;
+      font-family: verdana;
+      text-align: center;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -khtml-user-select: none;
+      user-select: none;
+      font-size: 24pt;
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
+    }
+
+    div {
+      text-align: left;
+    }
+
+    h1 {
+      font-weight: bold;
+    }
+
+    h2 {
+      margin: 0px;
+      float: left;
+    }
+
+    select {
+      font-size: 20pt;
+      padding: 5px;
+      color: #444;
+      width: 500px;
+    }
+
+    option {
+      line-height: 120%;
+      margin-top: 20px;
+    }
+
+    input[type="text"] {
+      font-size: 34pt;
+      color: #000000;
+      padding: 5px;
+      font-weight: bold;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .section {
+      float: left;
+      display: inline;
+    }
+
+    .button {
+      background-color: #999999;
+      color: #FFFFFF;
+      height: 70px;
+      line-height: 70px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .header {
+      background-color: #CCCCCC;
+      width: 100%;
+      height: 70px;
+    }
+
+    .footer {
+      background-color: #CCCCCC;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 70px;
+    }
+
+    .selected_vps_option {
+      background-color: #999999;
+      color: #000000;
+      float: left;
+      font-size: 24pt;
+      height: 52px;
+      padding-left: 80px;
+      padding-right: 80px;
+      text-align: center;
+      line-height: 70px;
+      height: 70px;
+    }
+
+    .unselected_vps_option {
+      background-color: #CCCCCC;
+      color: #000000;
+      float: left;
+      font-size: 24pt;
+      height: 52px;
+      padding-left: 80px;
+      padding-right: 80px;
+      text-align: center;
+      line-height: 70px;
+      height: 70px;
+    }
+  </style>
+
+  <title>vVote Print Station</title>
+
+  <script src="js/lib/pdf.js" type="text/javascript"></script>
+  <script src="js/lib/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="js/lib/drag_drop.js" type="text/javascript"></script>
+  <script src="js/lib/dependency_injection.js" type="text/javascript"></script>
+  <script src="js/lib/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="js/lib/jquery.ui.touch-punch.js" type="text/javascript"></script>
+  <script src="js/lib/jquery.i18n.js" type="text/javascript"></script>
+  <script src="js/lib/jquery.flip.js" type="text/javascript"></script>
+  <script src="js/lib/knockout-latest.js" type="text/javascript"></script>
+  <script src="js/lib/jquery.ba-throttle-debounce.min.js" type="text/javascript"></script>
+  <script src="js/lib/jquery.hammer.js" type="text/javascript"></script>
+  <script src="js/lib/jquery.qrcode.js" type="text/javascript"></script>
+  <script src="js/lib/qrcode.js" type="text/javascript"></script>
+  <script src="js/lib/double_tap.js" type="text/javascript"></script>
+  <script src="js/lib/hammer.js" type="text/javascript"></script>
+  <script src="js/lib/inheritance.js" type="text/javascript"></script>
+  <script src="js/lib/print_stack_trace.js" type="text/javascript"></script>
+  <script src="js/lib/sprintf.js" type="text/javascript"></script>
+  <script src="js/lib/jspdf.js" type="text/javascript"></script>
+  <script src="js/lib/jspdf.plugin.javascript.js" type="text/javascript"></script>
+  <script src="js/lib/Deflate/adler32cs.js" type="text/javascript"></script>
+  <script src="js/lib/FileSaver.js/FileSaver.js" type="text/javascript"></script>
+  <script src="js/lib/Blob.js/BlobBuilder.js" type="text/javascript"></script>
+  <script src="js/lib/jspdf.plugin.addimage.js" type="text/javascript"></script>
+  <script src="js/lib/jspdf.plugin.standard_fonts_metrics.js" type="text/javascript"></script>
+  <script src="js/lib/jspdf.plugin.split_text_to_size.js" type="text/javascript"></script>
+  <script src="js/lib/jsqr-0.2-min.js" type="text/javascript"></script>
+  <script src="js/lib/dependency_injection.js" type="text/javascript"></script>
+
+  <script src="webcam/js/swfobject_vps.js" type="text/javascript"></script>
+
+  <script src="js/core_vps.js" type="text/javascript"></script>
+  <script src="js/internationalisation.js" type="text/javascript"></script>
+  <script src="js/ballot_generation.js" type="text/javascript"></script>
+  <script src="js/audio_view.js" type="text/javascript"></script>
+  <script src="js/audio_clip.js" type="text/javascript"></script>
+  <script src="js/audio_instructions.js" type="text/javascript"></script>
+  <script src="js/translated_audio_instructions.js" type="text/javascript"></script>
+  <script src="js/constants.js" type="text/javascript"></script>
+  <script src="js/assembly_candidate.js" type="text/javascript"></script>
+  <script src="js/council_candidate.js" type="text/javascript"></script>
+  <script src="js/ballot_manager.js" type="text/javascript"></script>
+  <script src="js/options_manager.js" type="text/javascript"></script>
+  <script src="js/audio_controller.js" type="text/javascript"></script>
+  <script src="js/visual_controller.js" type="text/javascript"></script>
+  <script src="js/ballot.js" type="text/javascript"></script>
+  <script src="js/party_group.js" type="text/javascript"></script>
+  <script src="js/below_line_council_ballot.js" type="text/javascript"></script>
+  <script src="js/above_line_council_ballot.js" type="text/javascript"></script>
+  <script src="js/legislative_assembly_ballot.js" type="text/javascript"></script>
+  <script src="js/voting_session.js" type="text/javascript"></script>
+  <script src="js/qr_scanning.js" type="text/javascript"></script>
+  <script src="js/alerts.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+
+    var SERIAL_PREFIX = "PRA:";
+
+    // Dependency Injection container.
+    var container;
+    var containerBuilder = new JsInject.ContainerBuilder();
+
+    var dataContainer;
+    var dataContainerBuilder = new JsInject.ContainerBuilder();
+
+    var regionData = null;
+    var districtRegionArray = null;
+
+    var lastDistrictChosen = "";
+
+    function getContainer () {
+      return container;
+    }
+
+    function getDataContainer () {
+      return dataContainer;
+    }
+
+    function addRegionChangeHandler () {
+      $("#region").bind("change", function (event) {
+        setDistricts(event);
+      });
+    }
+
+    function enableFields () {
+      var interfaceChoice = $('#interface').val();
+      if (interfaceChoice == "1") {
+        $('#contrast').removeAttr('disabled');
+        $('#fontsize').removeAttr('disabled');
+        $('#language').removeAttr('disabled');
+      } else {
+        $('#contrast').val($("#contrast option:first").val());
+        $('#fontsize').val($("#fontsize option:first").val());
+        $('#language').val($("#fontsize option:first").val());
+        $('#contrast').attr('disabled', 'disabled');
+        $('#fontsize').attr('disabled', 'disabled');
+        $('#language').attr('disabled', 'disabled');
+      }
+    }
+
+    // Once we have the data and the document is ready, start building the UI.
+    function receivedNominationsData(event, data) {
+
+      containerBuilder.Register("votingSession",
+        function(c) {
+          return new VotingSession;
+        }).Reused();
+
+      // Legislative Assembly (Lower House) Ballot Singleton.
+      containerBuilder.Register("assembly",
+        function(c) {
+          return new LegislativeAssemblyBallot();
+        }).Reused();
+
+      // Legislative Council (Upper House) "Above The Line" Ballot Singleton.
+      containerBuilder.Register("atl",
+        function(c) {
+          return new AboveTheLineCouncilBallot();
+        }).Reused();
+
+      // Legislative Council (Upper House) "Below The Line" Ballot Singleton.
+      containerBuilder.Register("btl",
+        function(c) {
+          return new BelowTheLineCouncilBallot();
+        }).Reused();
+
+      // Store the complete set of nominations data once.
+      dataContainerBuilder.Register("nominationsData",
+        function(c) {
+          return data;
+        }).Reused();
+
+      // Store the audio controller for playback.
+      containerBuilder.Register("audioController",
+        function(c) {
+          return new AudioController();
+        }).Reused();
+
+      // Store the options manager.
+      containerBuilder.Register("optionsManager",
+        function(c) {
+          return new OptionsManager();
+        }).Reused();
+
+      // The current audio clip.
+      containerBuilder.Register("currentAudio", 
+        function(c) {
+          return new CurrentAudio();
+        }).Reused();
+
+      container = containerBuilder.Create();
+      dataContainer = dataContainerBuilder.Create();
+    }
+
+    function showEvcLocation (event, data) {
+      var evcLocation = data['LocationEntity']['Name'];
+      if (evcLocation == null) {
+        evcLocation = "";
+      }
+      $('#voting_centre').html(evcLocation);
+
+      // Strip the word "District" off the string to allow pattern match against drop down list of district names.
+      // NOTE: This may change in the future if someone decides the config file should say " EVC" or something similar.
+      lastDistrictChosen = evcLocation.substring(0, evcLocation.indexOf(" District"));
+    }
+
+    function receivedDistrictData(event, data) {
+
+      // clear the current drop down list.
+      $("#district").find('option').remove();
+
+      var districtArray = new Array();
+      districtRegionArray = new Array();
+
+      regionData = data;
+      for (key in data) {
+        var region = data[key]["region"];
+        $("#region").append("<option value='" + region + "'>" + region + "</option>");
+        districtArray = districtArray.concat(setDistricts(data[key]));
+      }
+
+      districtArray.sort();
+
+      for (var index = 0; index < districtArray.length; index++) {
+        var district = districtArray[index];
+
+        if (district == lastDistrictChosen) {
+          $("#district").append("<option value='" + district + "' selected>" + district + "</option>");
+        } else {
+          $("#district").append("<option value='" + district + "'>" + district + "</option>");
+        }
+      }
+
+      addRegionChangeHandler();
+    }
+
+    function setDistricts (region) {
+
+      var districtArray = new Array();
+
+      var counter = 0;
+      var districts = region["districts"];
+      for (key in districts) {
+        var district = districts[key]["district"];
+        districtArray[counter++] = district;
+        districtRegionArray[district] = region["region"];
+      }
+
+      return districtArray;
+    }
+
+    $(document).bind("receivedDistrictData", receivedDistrictData);
+    $(document).bind("receivedNominationsData", receivedNominationsData);
+
+    /**
+     * Load candidate data into the application.
+     */
+    // Get all nominations data.
+    function getNominationsData() {
+      try {
+        $.getJSON('bundle/region_district_candidate_data.txt', function(jsonData) {
+          receivedDistrictData(null, jsonData);
+          receivedNominationsData(null, jsonData);
+        })
+        .error(function () { alert('ERROR: JSON Election Data is not valid.'); });
+      } catch (error) {
+        alert("Error reading nominations data: " + error);
+      }
+    }
+
+    function getEvcLocation () {
+      try {
+        $.getJSON('data/stagingconfig.json', function(jsonData) {
+          showEvcLocation(null, jsonData);
+        })
+        .error(function () { alert('ERROR: Staging Config data is not valid.'); });
+      } catch (error) {
+        alert("Error staging configuration data: " + error);
+      }
+    }
+
+    var POD_SERVER_URL = 'http://localhost:8090/servlet/PODProxy';
+
+    function callPrintOnDemandService () {
+
+      var msg = {};
+      msg.district = $('#district').val();
+      msg.type = "pod";
+      var jsonRequest = "msg=" + JSON.stringify(msg);
+
+      alertDelayedTimeout = window.setTimeout(function () { showVpsMbbTimeoutAlert(); }, DELAYED_TIMEOUT_PERIOD);
+
+      $.ajax({
+        type: 'POST',
+        url: POD_SERVER_URL,
+        data: jsonRequest,
+        timeout: MBB_TIMEOUT,
+        dataType: 'json',
+        success: generateCandidateList,
+        failure: alertUserPodFailure
+      });
+    }
+
+    function alertUserPodFailure () {
+      alert("ERROR: Print On Demand server did not respond.");
+    }
+
+    function generateCandidateList (podResponse) {
+
+      var error = podResponse["ERROR"];
+      if (error != null && error != "") {
+        alert(error);
+        return;
+      }
+
+      if (podResponse["races"] == null) {
+        return;
+      }
+
+      window.clearTimeout(alertDelayedTimeout);
+
+      var district = $('#district').val();
+      var region = districtRegionArray[district];
+      var languageVal = $('#language').val();
+      var fontSize = $('#fontsize').val();
+      var contrast = $('#contrast').val();
+      var interface = $('#interface').val();
+
+      var serialNumber = podResponse["serialNo"];
+      var signature = podResponse["sigs"];
+
+      buildBallot(district, region, serialNumber, signature, languageVal, fontSize, contrast, interface, podResponse);
+    }
+
+    function showCreateList () {
+
+      quarantineReset();
+      auditReset();
+
+      $('#district').val(lastDistrictChosen);
+      $('#interface').val(1);
+      $('#language').val(1);
+      $('#fontsize').val(1);
+      $('#contrast').val(1);
+      enableFields();
+
+      $('#create_candidate_list').show();
+      $('#quarantine_candidate_list').hide();
+      $('#audit_candidate_list').hide();
+      $('#reconcile').hide();
+
+      $('#create_candidate_list_button').addClass('selected_vps_option');
+      $('#quarantine_candidate_list_button').removeClass('selected_vps_option');
+      $('#audit_candidate_list_button').removeClass('selected_vps_option');
+      $('#reconcile_button').removeClass('selected_vps_option');
+
+      $('#create_candidate_list_button').removeClass('unselected_vps_option');
+      $('#quarantine_candidate_list_button').addClass('unselected_vps_option');
+      $('#audit_candidate_list_button').addClass('unselected_vps_option');
+      $('#reconcile_button').addClass('unselected_vps_option');
+
+      // reset the language to English.
+      setCurrentLanguageSelection("english");
+    }
+
+    function quarantineChecklist () {
+
+      auditReset();
+
+      lastDistrictChosen = $('#district').val();
+      $('#create_candidate_list').hide();
+      $('#quarantine_candidate_list').show();
+      $('#audit_candidate_list').hide();
+      $('#reconcile').hide();
+
+      $('#create_candidate_list_button').removeClass('selected_vps_option');
+      $('#quarantine_candidate_list_button').addClass('selected_vps_option');
+      $('#audit_candidate_list_button').removeClass('selected_vps_option');
+      $('#reconcile_button').removeClass('selected_vps_option');
+
+      $('#create_candidate_list_button').addClass('unselected_vps_option');
+      $('#quarantine_candidate_list_button').removeClass('unselected_vps_option');
+      $('#audit_candidate_list_button').addClass('unselected_vps_option');
+      $('#reconcile_button').addClass('unselected_vps_option');
+
+      quarantineQrCode();
+    }
+
+    function showAuditList () {
+
+      quarantineReset();
+      
+      getBarcodeForAudit();
+
+      $('#create_candidate_list').hide();
+      $('#quarantine_candidate_list').hide();
+      $('#audit_candidate_list').show();
+      $('#reconcile').hide();
+
+      $('#create_candidate_list_button').removeClass('selected_vps_option');
+      $('#quarantine_candidate_list_button').removeClass('selected_vps_option');
+      $('#audit_candidate_list_button').addClass('selected_vps_option');
+      $('#reconcile_button').removeClass('selected_vps_option');
+
+      $('#create_candidate_list_button').addClass('unselected_vps_option');
+      $('#quarantine_candidate_list_button').addClass('unselected_vps_option');
+      $('#audit_candidate_list_button').removeClass('unselected_vps_option');
+      $('#reconcile_button').addClass('unselected_vps_option');
+    }
+
+    function alertFailure (x, t, m) {
+      if (t === "timeout") {
+        alertFailureToConnect();
+      } else {
+        alert(t);
+      }
+    }
+
+    function showQuarantineSuccess () {
+      $('#quarantine_wait').hide();
+      $('#quarantine_success').show();
+    }
+
+    function showQuarantineFailure () {
+      $('#quarantine_wait').hide();
+      $('#quarantine_failure').show();
+    }
+
+    function showQuarantineWarning () {
+      $('#quarantine_wait').hide();
+      $('#quarantine_warning').show();
+    }
+
+    function quarantineReset () {
+      $('#quarantine_wait').hide();
+      $('#quarantine_failure').hide();
+      $('#quarantine_success').hide();
+      $('#confirm_quarantine').hide();
+      $('#quarantine_warning').hide();
+      $('#quarantine_main').show();
+    }
+    
+    function showAuditWait () {
+      $('#audit_main').hide();
+      $('#audit_wait').show();
+    }
+
+    function showAuditSuccess () {
+      $('#audit_wait').hide();
+      $('#audit_success').show();
+    }
+
+    function showAuditFailure (response) {
+      $('#audit_wait').hide();
+      $('#audit_failure').show();
+    }
+
+    function showAuditWarning () {
+      $('#audit_wait').hide();
+      $('#audit_warning').show();
+    }
+
+    function auditReset () {
+      $('#audit_wait').hide();
+      $('#audit_failure').hide();
+      $('#audit_success').hide();
+      $('#audit_warning').hide();
+      $('#audit_main').show();
+    }
+
+    $(document).ready(function() {
+      $('#create_candidate_list_button').bind('touchstart', function () {
+        showCreateList();
+      });
+
+      $('#quarantine_candidate_list_button').bind('touchstart', function () {
+        quarantineChecklist();
+      });
+
+      $('#print_candidate_list_button').bind('touchstart', function () {
+        callPrintOnDemandService();
+      });
+
+      $('#show_create_list_view_button').bind('touchstart', function () {
+        showCreateList();
+      });
+
+      $('#confirm_cancel_list_button').bind('touchstart', function () {
+        cancelSlip();
+      });
+
+      $('#back_button').bind('touchstart', function () {
+        showCreateList();
+      });
+
+      $('#cancel_list_button').bind('touchstart', function () {
+        confirmCancelSlip();
+      });
+
+      $('#cancel_back_button').bind('touchstart', function () {
+        hideCancelPane();
+      });
+
+      $('#invalid_qr_modal_back_button').bind('touchstart', function () {
+        hideInvalidQrAlert();
+      });
+
+      $('#mbb_timeout_back_button').bind('touchstart', function () {
+        hideVpsMbbTimeoutAlert();
+      });
+
+      $('#mbb_timeout_modal_back_button').bind('touchstart', function () {
+        hideVpsMbbTimeoutAlert();
+      });
+
+      $('#audit_candidate_list_button').bind('touchstart', function () {
+        showAuditList();
+      });
+
+      $('#quarantine_button').bind('touchstart', function () {
+        getBarcodeForQuarantine();
+        $('#quarantine_main').hide();
+        $('#confirm_quarantine').show();
+      });
+
+      $('#cancel_quarantine_button').bind('touchstart', function () {
+        $('#quarantine_main').show();
+        $('#confirm_quarantine').hide();
+      });
+
+      $('#continue_quarantine_button').bind('touchstart', function () {
+        $('#quarantine_wait').show();
+        $('#confirm_quarantine').hide();
+      });
+
+      $('#audit_button').bind('touchstart', function () {
+        getBarcodeForAudit();
+        $('#audit_main').hide();
+        $('#audit_wait').show();
+      });
+
+      $('#audit_button_2').bind('touchstart', function () {
+        getBarcodeForAudit();
+        $('#audit_main').hide();
+        $('#audit_wait').show();
+      });
+
+      getEvcLocation();
+      getNominationsData();
+      showCreateList();
+    });
+  </script>
+</head>
+<body>
+<div id="vps_content" style="width: 100%; height: 100%;">
+
+  <div class="header">
+    <div id="create_candidate_list_button" class="selected_vps_option">PRINT</div>
+    <div id="quarantine_candidate_list_button" class="unselected_vps_option">QUARANTINE</div>
+    <div id="audit_candidate_list_button" class="unselected_vps_option">AUDIT</div>
+    <div id="reconcile_button" class="unselected_vps_option">RECONCILE</div>
+  </div>
+
+  <!-- PRINT -->
+  <div id="create_candidate_list" style="display: block;">
+    <center>
+
+    <div style="width: 100%; height: 100px; display: inline; float: left;">
+      <p id="voting_centre" style="text-decoration: underline; text-align: center; padding: 35px;"></p>
+    </div>
+
+    <div style="width: 1200px;">
+
+      <div style="width: 100%; height: 50px; display: inline; float: left; margin-left: -15px;">
+        <p>Please Select:</p>
+      </div>
+
+      <div style="width: 300px; height: 35px; display: inline; float: left; margin-top: 40px; margin-left: 50px;">
+        1. District
+      </div>
+      <div style="width: 750px; height: 35px; display: inline; float: left; margin-top: 40px;">
+        <select id="district">
+
+        </select>
+      </div>
+
+      <div style="width: 300px; height: 35px; display: inline; float: left; margin-top: 40px; margin-left: 50px;">
+        2. Guide
+      </div>
+      <div style="width: 750px; height: 35px; display: inline; float: left; margin-top: 40px;">
+        <select id="interface">
+          <option value="1">Visual guidance</option>
+          <option value="2">Audio guidance with touchscreen</option>
+          <option value="3">Audio guidance with keypad</option>
+        </select>
+      </div>
+
+      <div style="width: 300px; height: 35px; display: inline; float: left; margin-top: 40px; margin-left: 50px;">
+        3. Text Size
+      </div>
+      <div style="width: 750px; height: 35px; display: inline; float: left; margin-top: 40px;">
+        <select id="fontsize">
+          <option value="1">Medium</option>
+          <option value="2">Large</option>
+        </select>
+      </div>
+
+      <div style="width: 300px; height: 35px; display: inline; float: left; margin-top: 40px; margin-left: 50px;">
+        4. Contrast
+      </div>
+      <div style="width: 750px; height: 35px; display: inline; float: left; margin-top: 40px;">
+        <select id="contrast">
+          <option value="1">Black on White</option>
+          <option value="2">White on Black</option>
+        </select>
+      </div>
+
+      <div style="width: 300px; height: 35px; display: inline; float: left; margin-top: 40px; margin-left: 50px;">
+        5. Language
+      </div>
+      <div style="width: 750px; height: 35px; display: inline; float: left; margin-top: 40px;">
+        <select id="language">
+
+        </select>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div id="print_candidate_list_button" class="button" style="float: right;">
+        Print
+      </div>
+    </div>
+
+    <iframe id="pdfFrameBallot" style="height: 600px; display: none; float: right; margin-right: 50px; margin-top: -500px;">
+    </iframe>
+    </center>
+  </div>
+
+  <!-- QUARANTINE -->
+  <div id="quarantine_candidate_list" class="section" style="display: none;">
+    <div>
+      <div id="quarantine_main" style="width: 1200px; float: left;">
+        <center>
+        <div style=" width: 1200px; margin-top: 200px;">
+          <p style="text-align: center;">Please scan the Candidate List you wish to Quarantine.</p>
+        </div>
+        <div style=" width: 1200px; margin-left: 50px; margin-top: 100px;">
+          <p>You may quarantine a Candidate List if:</p>
+          <ul>
+            <li>The elector has reported a problem with the voting session or the preference receipt</li>
+            <li>There is a problem and the list cannot be scanned</li>
+            <li>The elector believes that the Preferences Receipt does not reflect their vote</li>
+          </ul>
+        </div>
+        </center>
+      </div>
+
+      <div class="footer">
+        <div id="quarantine_button" class="button" style="float: right;">
+          Quarantine
+        </div>
+      </div>
+    </div>
+
+    <div id="confirm_quarantine" style="width: 1200px; float: left; display: none;">
+      <center>
+        <div style="width: 1200px; margin-top: 200px; text-align: center;">
+          <p>This action cannot be undone.</p>
+          <p>Do you want to Quarantine the vote associated with this Candidate List?</p>
+        </div>
+        <div class="footer">
+          <div id="cancel_quarantine_button" class="button" style="float: left;">
+            NO
+          </div>
+          <div id="continue_quarantine_button" class="button" style="float: right;">
+            YES
+          </div>
+        </div>
+      </center>
+    </div>
+
+    <div id="quarantine_wait" style="width: 1200px; float: left; display: none;">
+      <center>
+        <div style="width: 1200px; margin-top: 200px; text-align: center;">
+          <p>Please wait while the vote is quarantined.</p>
+        </div>
+      </center>
+      <div class="footer">
+
+      </div>
+    </div>
+
+    <div id="quarantine_success" style="width: 1200px; float: left; display: none;">
+      <center>
+        <div style="width: 1200px; margin-top: 200px; text-align: center;">
+          <p>The vote has been quarantined.</p>
+          <p>Please tell the elector that their e-vote has been quarantined and that they should retain the receipt being printed.</p>
+          <p>Please issue the elector a paper vote.</p>
+        </div>
+      </center>
+      <div class="footer">
+
+      </div>
+    </div>
+
+    <div id="quarantine_failure" style="width: 1200px; float: left; display: none;">
+      <center>
+        <div style="width: 1200px; margin-top: 200px; text-align: center;">
+          <p>Error: Server cannot be reached.</p>
+          <p>Please contact the Helpdesk on 131 832 stating the above error.</p>
+        </div>
+      </center>
+      <div class="footer">
+
+      </div>
+    </div>
+
+    <div id="quarantine_warning" style="width: 1200px; float: left; display: none;">
+      <center>
+        <div style="width: 1200px; margin-top: 200px; text-align: center;">
+          <p>Error: You have requested too many Quarantines.</p>
+          <p>Please contact the Helpdesk on 131 832 stating the above error.</p>
+        </div>
+      </center>
+      <div class="footer">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- AUDIT -->
+  <div id="audit_candidate_list" class="section" style="display: none;">
+    <div>
+      <div id="audit_main" style="width: 100%; margin-top: 100px;">
+        <div style=" width: 1200px;">
+          <p style="text-align: center;">Please scan the Candidate List</p>
+        </div>
+        <!-- div style="width: 1200px; margin-left: 40%; margin: 50px;">
+          <div id="audit_serial_number" style="display: block; text-align: justify; margin-left: 35%; height: 60px; width: 300px;  border: 1px solid black;">
+          </div>
+        </div -->
+        <div style=" width: 1200px; margin-left: 50px;">
+          <p>You can only audit fresh Candidate Lists. You cannot audit a Candidate List that:</p>
+          <ul>
+            <li>Is already voted</li>
+            <li>Has been scanned to start a voting session</li>
+            <li>Is expired</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <!-- div id="audit_button" class="button" style="float: right;">
+        Audit
+      </div -->
+    </div>
+
+    <div id="audit_wait" style="width: 1200px; float: left; display: none;">
+      <center>
+        <div style="width: 1200px; margin-top: 200px; text-align: center;">
+          <p>Please wait while the vote is audited.</p>
+        </div>
+      </center>
+      <div class="footer">
+
+      </div>
+    </div>
+
+    <div id="audit_success" style="width: 1200px; float: left; display: none;">
+      <center>
+        <div style="width: 1200px; margin-top: 200px; text-align: center;">
+          <p>The vote has been audited.</p>
+          <p>Please give the elector the Audit Receipt that is printing now along with the original Candidate List.
+             The elector can take both out of the voting centre.</p>
+          <p>Please give the elector a new Candidate List if they wish to vote electronically, or direct them to the paper voting area.</p>
+        </div>
+      </center>
+      <div class="footer">
+
+      </div>
+    </div>
+
+    <div id="audit_failure" style="width: 1200px; float: left; display: none;">
+      <center>
+        <div style="width: 1200px; margin-top: 200px; text-align: center;">
+          <p>Error: This tablet is experiencing a technical problem.</p>
+          <p>Please try again or call the Helpdesk on 131 832.</p>
+        </div>
+      </center>
+      <div class="footer">
+        <div id="audit_button_2" class="button" style="float: right;">
+          Try Again
+        </div>
+      </div>
+    </div>
+
+    <div id="audit_warning" style="width: 1200px; float: left; display: none;">
+        <div style="width: 1200px; margin-top: 200px; text-align: center;">
+          <p>Error: This Candidate List cannot be audited.</p>
+        </div>
+        <div style=" width: 1200px; margin-left: 50px;">
+          <p>You can only audit fresh Candidate Lists. You cannot audit a Candidate List that:</p>
+          <ul>
+            <li>Is already voted</li>
+            <li>Has been scanned to start a voting session</li>
+            <li>Is expired</li>
+          </ul>
+          <p>If the elector wishes to conduct an audit, please print them a new Candidate List.</p>
+        </div>
+      <div class="footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="mbb_timeout_modal_container" style="z-index: 292;  height: 100%; width: 100%; display: none;">
+  <center>
+    <div id="mbb_timeout_content" style="width: 900px; margin-top: 250px;">
+      <p id="mbb_timeout_modal_message" class="invert_color internationalisation">
+        This is taking longer than expected. Please wait.
+      </p>
+    </div>
+    <button id="mbb_timeout_modal_back_button" style="width: 200px; height: 100px; margin-top: 50px; ">Cancel</button>
+  </center>
+</div>
+
+  <div id="audio" class="audio">
+    <audio class="audio" id="complete_audio" preload="auto"></audio>
+  </div>
+
+  <canvas id="foreign" width="500" height="320" style="display: none;">
+  </canvas>
+
+  <canvas id="foreign2" width="700" height="320" style="display: none;">
+  </canvas>
+
+  <canvas id="the-canvas" width="576px" style="border:1px solid black; display: none;">
+  </canvas>
+
+  <script type="text/javascript">
+    $("#interface").bind("change", function (event) {
+      enableFields();
+    });
+
+    $("#serial_number").keyup(function () {
+      $(this).val( $(this).val().toUpperCase() );
+    });
+  </script>
+</body>
+</html>

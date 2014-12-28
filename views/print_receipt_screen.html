@@ -1,0 +1,30 @@
+<div id="print_receipt_header" class="header" style="z-index: 281;">
+  <div id="print_receipt_title" style="float: left; padding: 8px;">
+    Thankyou for voting
+  </div>
+
+  <div id="print_receipt_help_button" class="button" style="float: right; margin-right: 100px;">
+    Help
+  </div>
+</div>
+
+<div id="receipt_explanation_content" style="width: 100%; margin-top: 70px;">
+  <center>
+      <div id="receipt_explanation_background" class="invert_color" style="padding: 0px 5px 0px 5px;">
+        <div style="margin-left: 100px; width: 80%; float: left; text-align: left;">
+          <div id="print_receipt_message" class="internationalisation">The receipt is printing. Please check it against the candidate list. You can take home this receipt but you must discard the candidate list in the security bin.</div>
+        </div>
+        <div style="padding-top:10px;"></div>
+        <video id="shred_instructions_video" height="420px" width="640px" loop="loop" muted="" style="float: left; margin-left: 350px;">
+          <source type="video/mp4"></source>
+        </video>
+      </div>
+  </center>
+</div>
+
+<div id="print_receipt_modal_footer" class="footer" style="z-index: 301;">
+  <div id="print_receipt_next_button" class="button" style="float: left; margin-left: 40%; width: 200px;"
+      onclick="(container.Resolve('visualController')).quitApplication();">
+    Done
+  </div>
+</div>

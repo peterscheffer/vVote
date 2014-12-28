@@ -1,0 +1,53 @@
+<div id="timeout_modal_header" class="header" style="display: block; z-index: 310;">
+  <div id="timeout_unlock_modal_title" style="float: left; padding: 8px;">
+    ENTER PIN TO UNLOCK
+  </div>
+</div>
+
+<div id="timeout_unlock_modal_background" style="z-index: 309;">
+</div>
+<div id="timeout_unlock_modal_container" style="z-index: 310; display: block; position: absolute; width: 100%">
+  <div id="timeout_alert">
+    <center>
+      <div id="timeout_unlock_modal_panel" class="notice_panel invert_color"
+           style="overflow-y: scroll; overflow-x: hidden; background-color: #000000;">
+        <div id="timeout_unlock_content">
+            <div style="width: 60%; height: 500px; display: inline; float: left;">
+              <center>
+                <input id="unlock_pin" type="text" style="font-size: 90pt; padding-left: 25px; margin-left: 10px; width: 400px; height: 150px; background-color: #000000; color: #FFFFFF; margin: 25px; border: 5px solid #FFFFFF;" />
+                <input id="hidden_pin" type="text" style="visibility: hidden;" />
+              </center>
+            </div>
+
+            <div style="width: 40%; height: 500px; display: inline; float: left;">
+              <center>
+				  <div id="unlock_keypad">
+					<div id="unlock_button_1" title="Button 1" class="unlock_button" onclick="enterDigit(this);">1</div>
+					<div id="unlock_button_2" title="Button 2" class="unlock_button" onclick="enterDigit(this);">2</div>
+					<div id="unlock_button_3" title="Button 3" class="unlock_button" onclick="enterDigit(this);">3</div>
+					<div id="unlock_button_4" title="Button 4" class="unlock_button" onclick="enterDigit(this);">4</div>
+					<div id="unlock_button_5" title="Button 5" class="unlock_button" onclick="enterDigit(this);">5</div>
+					<div id="unlock_button_6" title="Button 6" class="unlock_button" onclick="enterDigit(this);">6</div>
+					<div id="unlock_button_7" title="Button 7" class="unlock_button" onclick="enterDigit(this);">7</div>
+					<div id="unlock_button_8" title="Button 8" class="unlock_button" onclick="enterDigit(this);">8</div>
+					<div id="unlock_button_9" title="Button 9" class="unlock_button" onclick="enterDigit(this);">9</div>
+					<div id="unlock_button_10" title="Button 10" class="unlock_button"></div>
+					<div id="unlock_button_11" title="Button 11" class="unlock_button" onclick="enterDigit(this);">0</div>
+					<div id="unlock_button_12" title="Button 12" class="unlock_button" onclick="deleteDigit();"><</div>
+				  </div>
+              </center>
+            </div>
+        </div>
+      </div>
+    </center>
+  </div>
+</div>
+
+<div id="timeout_unlock_modal_footer" class="footer" style="display: block; z-index: 310;">
+  <div id="unlock_screen_back_button" onclick="hideUnlockScreen();" class="button internationalisation" style="float: left; width: auto;" onclick="hideTimeoutAlert();">
+    BACK
+  </div>
+  <div id="unlock_screen_unlock_button" onclick="unlockScreen();" class="button internationalisation" style="float: right; width: auto;" onclick="hideTimeoutAlert();">
+    UNLOCK
+  </div>
+</div>

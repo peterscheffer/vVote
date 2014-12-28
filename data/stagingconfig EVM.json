@@ -1,0 +1,46 @@
+{
+    "EventEntity": {
+        "AssociatedElections": [
+            {
+                "ElectionDate": "Saturday, 27 November 2010",
+                "ElectionType": 1,
+                "Id": "57474254-4f91-4125-8b89-ad4113387f78",
+                "Name": "State Election 2010"
+            }
+        ],
+        "DraftBundlePath": "http://175.184.205.25/WbbServices/bundle/bundle.zip",
+        "EBPubKeyPath": "/vvote/pub.bpg",
+        "FinalBundlePath": "/vvote/bundle.zip",
+        "Id": "8894cb06-ee2b-4e7f-a129-136476f421ce",
+        "MBBInternetProtocols": [
+            {
+                "Id": 14,
+                "Name": "10.15.151.155"
+            },
+            {
+                "Id": 15,
+                "Name": "10.15.151.16"
+            }
+        ],
+        "MBBPubKeyPath": "/vvote/pub.bpg",
+        "Name": "My State Election 2010",
+        "PollTime": "2014-11-06T10:10",
+        "ProofTime": "2013-11-06T11:11",
+        "VVPubKeyPath": "/vvote/pub.bpg",
+        "WBBMServiceHostName": "http://localhost",
+        "WBBServiceHostName": "http://localhost"
+    },
+    "Id": "d4b23610-79cb-4097-a21e-00baac7082ed",
+    "LocationEntity": {
+        "AddressLine1": null,
+        "AddressLine2": null,
+        "AddressLine3": null,
+        "Id": "d76a9339-804a-4647-8cfe-29cc312b0140",
+        "LocationCode": 281,
+        "LocationType": 1,
+        "Name": "South-West Coast District",
+        "ParentId": "00000000-0000-0000-0000-000000000000"
+    },
+    "TypeId": 1,
+    "TypeName": "EVM"
+}

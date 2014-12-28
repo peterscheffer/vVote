@@ -1,0 +1,49 @@
+<div id="atl_btl_choice_header" class="header" style="z-index: 281;">
+  <div id="atl_btl_choice_title" style="float: left; padding: 8px;">How to vote region ballot</div>
+  <div id="atl_btl_choice_help_button" class="button" style="float: right; margin-right: 100px;">
+    Help
+  </div>
+</div>
+
+<div id="atl_btl_choice_background" style="z-index: 279;">
+</div>
+<div id="atl_btl_choice_container" style="z-index: 280; display: block; position: absolute; top: 0; width: 100%">
+  <div id="atl_btl_choice_alert">
+    <center>
+      <div id="atl_btl_choice_modal_panel" class="notice_panel invert_color" style="overflow-y: scroll; overflow-x: hidden;">
+        <div id="atl_btl_choice_content">
+
+          <div id="atl_btl_choice_modal_title" class="invert_color" style="text-align: left; width: 1100px; height: 180px; overflow: hidden;">
+            For the Region vote, which is next, touch ONE of the two large buttons below. You can vote one method or the other, but not both.
+          </div>
+
+          <div style="background-color: white; position: absolute; top: 250px; left: 350px; width: 580px; height: 430px;">
+            <video id="lc_fork_video" style="float: left;" width="580px" height="450px" loop="loop" muted="">
+
+            </video>
+          </div>
+
+          <div style="position: absolute; top: 300px; left: 20px; width: 280px; height: 280px;">
+            <div id="atl_btl_choice_atl_button" style="width: 280px;"
+              onclick="(container.Resolve('visualScreenManager')).setUserVotedAboveOrBelowTheLine('above'); (container.Resolve('visualView')).displaySection('atl_btl_choice_screen', 'legislative_council_combined_screen');">
+              Touch here to vote for a single party or group
+            </div>
+          </div>
+
+          <div style="position: absolute; top: 300px; right: 45px; width: 280px; height: 280px;">
+            <div id="atl_btl_choice_btl_button" style="width: 280px;"
+              onclick="(container.Resolve('visualScreenManager')).setUserVotedAboveOrBelowTheLine('below'); (container.Resolve('visualView')).displaySection('atl_btl_choice_screen', 'legislative_council_combined_screen');">
+              Touch here to vote for 5 or more candidates
+            </div>
+          </div>
+        </div>
+      </div>
+    </center>
+  </div>
+</div>
+
+<div id="atl_btl_choice_footer" class="footer" style="z-index: 281;">
+  <div id="atl_btl_choice_back_button" class="button" style="float: left;">
+    Back
+  </div>
+</div>

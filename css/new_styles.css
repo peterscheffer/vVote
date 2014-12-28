@@ -1,0 +1,1154 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Arial;
+  text-align: center;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;       
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: #fff;
+    line-height: 100%;
+}
+
+ol, ul {
+  margin-bottom: 0px;
+  font-size: 1em;  
+  padding-left:0px; 
+  padding-right: 5px; 
+}
+
+li {
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);  
+   padding-left: 0px;
+   margin-left: 0px;
+}
+
+
+ol li { 
+  list-style:decimal; 
+  background-image:none; 
+  padding-left:0px; 
+}
+
+/************************ New UI Changes as of 20/1/2014 *************************/
+
+.dark_grey {
+  background-color: #595959;
+}
+
+.medium_grey { 
+  background-color: #999999;
+}
+
+.light_grey {
+  background-color: #CCCCCC;
+}
+
+.paper_white {
+  color: #FDF5E8;
+}
+
+.header {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 70px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+}
+
+.left_bar {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 70px;
+}
+
+.right_bar {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  width: 70px;
+}
+
+#language_listing li {
+  width: 44%;
+  float: left;
+  display: inline;
+}
+
+#language_listing::-webkit-scrollbar
+{
+  -webkit-appearance: none;  
+  height: 0px; 
+  width: 0px; 
+  background-color: #FFF; 
+}
+
+.option_tick_box {
+  -webkit-border-radius: 30px; 
+  border-radius: 30px; 
+  width: 60px; 
+  height: 60px; 
+  font-size: 38pt; 
+  float: left;
+}
+
+.option_text {
+  float: left;
+  line-height: 1.3em;
+  padding-left: 35px;
+}
+
+#switch_to_audio_button {
+  -webkit-border-radius: 20px; 
+  border-radius: 20px; 
+  padding: 30px;
+}
+
+.option_wrapper {
+  position: absolute;
+  -webkit-border-radius: 20px; 
+  border-radius: 20px; 
+  padding: 30px;
+}
+
+#atl_btl_choice_btl_button {
+  -webkit-border-radius: 30px; 
+  border-radius: 30px; 
+}
+
+#atl_btl_choice_atl_button {
+  -webkit-border-radius: 30px; 
+  border-radius: 30px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************ Old Styles ***************/
+.start_screen_button {
+  border: 3px solid; 
+  display: block; 
+  cursor: pointer;
+}
+
+.color_change_button {
+  position: absolute; 
+  right: 5px; 
+  padding: 20px; 
+  margin: 15px; 
+  cursor: pointer;
+}
+
+.notice_panel button {
+  cursor: pointer;
+}
+
+#btnSmall,
+#btnMedium,
+#btnLarge {
+  visibility: hidden;
+}
+
+.navButtonRecolor {
+  text-align: center;    
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 14px;
+}
+
+.actionButtonDiv {
+  padding: 25px;
+  cursor: pointer;
+  font-weight:bold;
+  text-align: center;  
+  margin: 0px;
+}
+
+.navButtonInactive {
+  font-weight:bold;
+  float: left;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.navButton {
+  padding: 0px 5px 0px 5px;
+  cursor: pointer;
+  text-align: center;  
+  float: left;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 8px;
+}
+
+button.navPositionBtn {
+  padding: 5px;
+  position: fixed;  
+  text-align: center; 
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+}
+
+.candidate_name {
+  font-weight: bold;
+  text-align: left;
+  display: inline;
+}
+
+.candidate_name_lc {
+  font-weight: bold;
+}
+
+.candidate_party {
+  display: inline;
+  text-align: left;
+}
+
+.candidate_group_ballot h1 {
+  color: #000000;  
+  padding-left: 10px;
+  margin: 0px;
+  width: 150px;
+}
+
+.candidate_group_ballot h3 {
+  color: #000000;  
+  padding-left: 5px;
+  margin: 0px;
+  width: 150px;
+  text-align: left;
+}
+
+.group_ballot h1 {
+  color: #000000;  
+  padding-left: 10px;
+  margin: 0px;
+  text-align: left;
+}
+
+.group_candidate_name {
+  text-align: left;
+}
+
+#council_ballot_summary_container {
+  overflow: hidden;
+}
+
+.language_button {
+  color: #FFFFFF; 
+  padding: 20px; 
+  text-decoration: none; 
+  cursor: pointer;
+  line-height: 210%;
+}
+
+#ballot_combined_gesture_video {
+  visibility: hidden;
+  display: none;  
+}
+
+#help_modal_background {
+  display: none; 
+  position: absolute; 
+  z-index: 279; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;  
+}
+
+#assembly_instruction_background {
+  display: none; 
+  position: absolute; 
+  z-index: 289; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;
+}
+
+#more_help_modal_background {
+  display: none; 
+  position: absolute; 
+  z-index: 279; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;  
+}
+
+#other_help_modal_background {
+  display: none; 
+  position: absolute; 
+  z-index: 279; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;  
+}
+
+#paper_voting_modal_background {
+ top: 0px; 
+ left: 0px; 
+ position: absolute; 
+ width: 100%; 
+ height: 100%; 
+ display: none;
+ z-index: 287;
+}
+
+#warning_modal_background {
+  display: none; 
+  position: absolute; 
+  z-index: 279; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;
+}
+
+#confirmation_modal_background {
+  display: none; 
+  position: absolute; 
+  z-index: 279; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px; 
+}
+
+#submit_confirmation_modal_background {
+  display: none; 
+  position: absolute; 
+  z-index: 279; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;
+}
+
+#error_modal_background {
+  display: none; 
+  position: absolute; 
+  z-index: 291; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;
+}
+
+#timeout_modal_background {
+  display: none; 
+  position: absolute; 
+  z-index: 291; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;
+}
+
+#timeout_lock_modal_background {
+  display: none; 
+  position: absolute; 
+  z-index: 291; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#timeout_unlock_modal_background {
+  display: none; 
+  position: absolute; 
+  z-index: 291; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+
+.help_box {
+  padding: 20px; 
+}
+
+#QR {
+  width: 0px;
+  height: 0px;
+}
+
+.ballot_sm {
+  display: block;
+  height: 45px;
+  width: 205px;
+}
+
+.ballot_sm img {
+  float: left;
+  margin: 0px 2.5px 2.5px 0px;
+}
+
+.ballot_box_sm {
+  background-color: #FFFFFF;
+  float: left;
+  display: inline;
+  margin-right: 5px;
+  border: 1px solid #444;
+  font-size: 20px;
+  text-align: center;
+  width: 27px;
+  height: 27px;
+}
+
+.candidate_details_sm {
+  float: left;
+  display: inline;
+  padding-bottom: 5px;
+  margin-top: -2.5px;
+}
+
+.candidate_name_sm {
+  font-size: 13px;
+  margin-top: 1px;
+}
+
+.candidate_party_sm {
+  font-size: 8px;
+  font-weight: normal;
+}
+
+.preference_selections_comparison {
+  width: 45%;
+  float: left;
+}
+
+#assembly_preference_selections_legal_order {
+
+}
+
+#assembly_preference_selections_shuffle_order {
+  font-family: Arial;
+}
+
+.rendered_ballot {
+  float: right;
+  width: 50%;
+}
+
+
+#audio_only_screen {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#keypad {}
+
+#audio_only_screen div#keypad  {
+  display: block;
+  padding-left: 1px;
+  width: 450px;
+  height: 526px;
+  background-size: 278px 274px;
+  background-position-x: 50px;
+  background-position-y: 50px;
+  text-align: center;
+  position: absolute;
+  top: 150px;
+  left: 455px; 
+  font-size: 20px;
+  font-family: Verdana;
+  color: #000000;
+}
+
+.blind_button {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #CACACA;
+  float: left;
+  display: inline;
+  color: #FFFFFF;
+  font-size: 25pt;
+  margin: 35px;
+  background-color: #000;
+}
+
+#unlock_keypad  {
+  display: block;
+  padding-left: 1px;
+  width: 451px;
+  height: 569px;
+  background-size: 278px 274px;
+  background-color: #000;
+  background-position-x: 50px;
+  background-position-y: 50px;
+  text-align: center;
+  position: absolute;
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: Verdana;
+  color: #000000;
+}
+
+.unlock_button {
+  width: 148px;
+  height: 140px;
+  border: 1px solid #CACACA;
+  float: left;
+  display: inline;
+  color: #FFFFFF;
+  font-size: 80pt;
+}
+
+#switch_interface {
+  position: absolute;
+  width: 200px;
+  left: 400px;
+  top: 10px;
+}
+
+#switch_interface p {
+  font-size: 15px;
+}
+
+.switch_button {
+  width: 180px;
+  height: 50px;
+  font-size: 20px;
+  font-family: Verdana;
+  color: #604A7B;
+  background-color: #CCC1DA;
+  border: 1px solid #FFFFFF;
+  padding: 25px;
+}
+
+#left_trigger {
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  font-family: Verdana;
+  color: #604A7B;
+  background-color: #CCC1DA;
+  border: 1px solid #FFFFFF;
+  padding: 25px;
+  z-index: 50;
+}
+
+#right_trigger {
+  position: absolute;
+  top: 500px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  font-family: Verdana;
+  color: #604A7B;
+  background-color: #CCC1DA;
+  border: 1px solid #FFFFFF;
+  padding: 25px;
+  z-index: 50;
+}
+
+#left_language_trigger {
+  position: absolute;
+  top: 550px;
+  left: 50px;
+  width: 180px;
+  height: 100px;
+  font-size: 30px;
+  font-family: Verdana;
+  color: #604A7B;
+  background-color: #CCC1DA;
+  border: 1px solid #FFFFFF;
+  padding: 25px;
+  z-index: 50;
+}
+
+#right_language_trigger {
+  position: absolute;
+  top: 550px;
+  right: 50px;
+  width: 180px;
+  height: 100px;
+  font-size: 30px;
+  font-family: Verdana;
+  color: #604A7B;
+  background-color: #CCC1DA;
+  border: 1px solid #FFFFFF;
+  padding: 25px;
+  z-index: 50;
+}
+
+#ballot_container {
+  position: relative; 
+  float: right; 
+  width: 100%; 
+  height: 98%; 
+  padding: 0px; 
+  margin: 0px; 
+  overflow-x: scroll; 
+  overflow-y: scroll;
+}
+
+.review_middle_dashed {
+  float:left; 
+  width: 20px; 
+  border-right-style: solid; 
+  border-right-width: 20px; 
+}
+
+#review_front_inner_ballot {
+  position: relative;  
+  height: 100%;
+  overflow-x: scroll; 
+  overflow-y: scroll;
+  width: 1000px; 
+  float: right; 
+}
+
+.review_assembly_preferences {
+  width: 69px;
+  float: right;
+  margin-right: 10px;
+}
+
+.review_atl_preferences {
+  width: 69px;
+  float: right;
+  margin-right: 10px;
+}
+
+.review_btl_preferences {
+  width: 69px;
+  float: right;
+  margin-right: 10px;
+}
+
+.arrowButtonRecolor {
+  cursor: pointer;
+}
+
+.back_button {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  display: block;
+  float: left;
+}
+
+.next_button {
+  display: inline;
+  float: right;
+}
+
+#confirmation_screen_back_button_text {
+  display: inline;
+}
+
+#confirmation_screen_next_button_text {
+  display: inline;
+}
+
+.down_button {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  float: left;
+  display: inline;
+  width: 100%;
+  font-size: 2.5em;
+  line-height: 80%;
+  text-align: center;
+  margin-left: 15px;
+  margin-top: -5px;
+}
+
+.up_button {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  float: left;
+  display: inline;
+  width: 100%;
+  font-size: 2.5em;
+  line-height: 80%;
+  text-align: center;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.left_button {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  float: left;
+  display: inline;
+  width: 100%;
+  padding-bottom: 35px;
+  margin-left: 15px;
+  font-size: 2.5em;
+  line-height: 80%;
+  text-align: center;
+}
+
+.right_button {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  float: left;
+  display: inline;
+  width: 100%;
+  padding-top: 15px;
+  margin-left: -15px;
+  font-size: 2.5em;
+  line-height: 80%;
+  text-align: center;
+}
+
+.modal_button_scroll_up {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  bottom: 750px;
+  left: 620px;
+}
+
+.modal_button_scroll_down {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  bottom: 100px;
+  left: 530px;
+}
+
+.council_button_scroll_up {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+}
+
+.council_button_scroll_down {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  bottom: 105px; 
+}
+
+.council_button_scroll_left {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+
+.council_button_scroll_right {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+}
+
+#assembly_ballot_summary_up_section {
+  float: left;
+  background-color: black;
+  opacity: 0.6;
+}
+
+#assembly_ballot_summary_down_section {
+  float: left;
+  background-color: black;
+  opacity: 0.6;  
+}
+
+#assembly_summary_button_scroll_up {
+  position: relative;
+  display: block;
+  visibility: visible;  
+}
+
+#assembly_summary_button_scroll_down {
+  position: relative;
+  display: block;
+  visibility: visible;  
+}
+
+#council_ballot_summary_up_section {
+  float: left;
+  background-color: black;
+  opacity: 0.6;
+}
+
+#council_ballot_summary_down_section {
+  float: left;
+  background-color: black;
+  opacity: 0.6;  
+}
+
+#council_summary_button_scroll_up {
+  position: relative;
+  display: block;
+  visibility: visible;  
+}
+
+#council_summary_button_scroll_down {
+  position: relative;
+  display: block;
+  visibility: visible;  
+}
+
+#ballot_groups_content_inner {
+  height: 100%;
+}
+
+.group_ballot {
+  height: 100%;
+}
+
+#ballot_groups_content_inner h1 {
+  padding: 10px;
+}
+
+.warning_text {
+  width: 90%;
+  padding-left: 50px;  
+  padding-top: 10px;
+}
+
+#confirmation_veil {
+  z-index: 149;
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 1000px;
+  opacity: 0.6;
+}
+
+#assembly_confirmation_veil {
+  z-index: 149;
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  padding-top: 30%;
+}
+
+#assembly_ballot_veil {
+  z-index: 149;
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 98%;
+  opacity: 0.6;
+  padding-top: 30%;
+}
+
+#council_confirmation_veil {
+  z-index: 149;
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  padding-top: 30%;
+}
+
+#triage_veil {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+#triage_screen {
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+}
+
+#confirm_triage_veil {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+#confirm_scan_screen {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+#audio_mode_scan_qr_code_screen {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  position: absolute;
+}
+
+#start_visual_ui {
+  margin-top: 25%;
+  width: 400px;
+  height: 150px;
+  font-size: 40pt;
+  padding: 15px;
+}
+
+#start_visual_ui {
+  margin-top: 25%;
+  width: 400px;
+  height: 150px;
+  font-size: 40pt;
+  padding: 15px;
+}
+
+#timeout_alert {
+  width: 100%;
+  height: 1000px;
+  z-index: 290;
+}
+
+.or_group {
+  float: left;
+  margin-left: -50px;
+  margin-top: 40px;
+  font-size: 20pt;
+}
+
+.btl_group_letter {
+  width: 50px !important;
+  font-size: 30pt !important;
+}
+
+.ballot_aggregate {
+
+}
+
+canvas {
+  position: absolute;
+  left: 150px;
+  top: 150px;
+  background-color: white;
+  width: 500px;
+  height: 320px;
+  display: none;
+}
+
+#language_listing a {
+  float: left;
+  display: inline;
+}
+
+#help_modal_title {
+  text-align: center;
+}
+
+#more_help_modal_title {
+  text-align: center;
+}
+
+#other_help_modal_title {
+  text-align: center;
+}
+
+#incomplete_vote_help_title {
+  text-align: center;
+}
+
+#confirm_clear_ballot_title {
+  text-align: center;
+}
+
+#confirm_clear_ballot_title {
+  text-align: center;
+}
+
+#ballot_cleared_confirmation {
+  text-align: center;
+}
+
+#quit_confirmation_title {
+  text-align: center;
+}
+
+#paper_voting_help_title {
+  text-align: center;
+}
+
+#warning_modal_title {
+  text-align: center;
+}
+
+#quit_confirmation_message {
+  width: 80%;
+  text-align: left;
+  padding-top: 5%;
+}
+
+#more_help_info {
+  float: left;
+}
+
+#confirmation_title {
+  text-align: center;
+}
+
+#print_receipt_title {
+  text-align: center;
+}
+
+.bubble {
+  color: #000;
+  position: absolute;
+  width: 950px;
+  text-align: center;
+  padding: 20px;
+  background: #FFFFFF;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border: #333 solid 8px;
+  display: none;
+  z-index: 300;
+}
+
+.bubble:after {
+  position: absolute;
+  border-style: solid;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 299;
+}
+
+.bubble:before {
+  position: absolute;
+  border-style: solid;
+  border-color: #333 transparent;
+  display: block;
+  width: 0;
+  z-index: 298;
+}
+
+.bubble.bottomLeftPointer:after  {
+  content: '';
+  border-width: 31px 31px 0;
+  bottom: -25px;
+  left: 159px;
+}
+
+.bubble.bottomLeftPointer:before  {
+  content: '';
+  border-width: 35px 35px 0;
+  bottom: -38px;
+  left: 155px;
+}
+
+.bubble.topLeftPointer:after  {
+  content: '';
+  border-width: 0 31px 31px;
+  top: -25px;
+  left: 159px;
+}
+
+.bubble.topLeftPointer:before  {
+  content: '';
+  border-width: 0 35px 35px;
+  top: -38px;
+  left: 155px;
+}
+
+.bubble.bottomRightPointer:after  {
+  content: '';
+  border-width: 31px 31px 0;
+  bottom: -25px;
+  right: 159px;
+}
+
+.bubble.bottomRightPointer:before  {
+  content: '';
+  border-width: 35px 35px 0;
+  bottom: -38px;
+  right: 155px;
+}
+
+.bubble.topRightPointer:after  {
+  content: '';
+  border-width: 0 31px 31px;
+  top: -25px;
+  right: 159px;
+}
+
+.bubble.topRightPointer:before  {
+  content: '';
+  border-width: 0 35px 35px;
+  top: -38px;
+  right: 155px;
+}
+
+.bubble p {
+  font-size: 40pt;
+}
+
+.summary_ballot {
+  float: left;
+}
+
+.switch_bar {
+  z-index: 101; 
+  white-space: nowrap; 
+  position: absolute; 
+  left: -90px; 
+  height: 55px; 
+  border: 1px black solid; 
+  color: #FFFFFF; 
+  background-color: #999999;
+  overflow: hidden;
+}

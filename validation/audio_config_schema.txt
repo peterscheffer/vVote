@@ -1,0 +1,1507 @@
+{
+  "type":"object",
+  "required" : [ "clips" ],
+  "properties":{
+    "clips": {
+      "type":"object",
+      "required" : 
+      [ "english", 
+        "arabic", 
+        "mandarin",
+        "alert_scanned_okay",
+        "alert_bottom_of_list",
+        "alert_top_of_list",
+        "alert_left_of_list",
+        "alert_right_of_list",
+        "confirm_end_voting",
+        "end_voting_session",
+        "ballot_cleared",
+        "already_selected",
+        "audio_interface",
+        "playing_back_ballot",
+        "maximum_number_of_groups",
+        "last_candidate_in_ballot",
+        "first_candidate_in_ballot",
+        "this_vote_will_not_be_counted",
+        "this_vote_will_be_counted",
+        "groups",
+        "candidates",
+        "have_not_voted_in_assembly",
+        "have_voted_in_assembly",
+        "have_not_voted_in_council",
+        "have_voted_in_council",
+        "press_hash",
+        "preference_number",
+        "unavailable_option",
+        "speaking_rate_fast",
+        "speaking_rate_medium",
+        "speaking_rate_normal",
+        "invalid_qr_code",
+        "atl_A",
+        "atl_B",
+        "atl_C",
+        "atl_D",
+        "atl_E",
+        "atl_F",
+        "atl_G",
+        "atl_H",
+        "atl_I",
+        "atl_J",
+        "atl_K",
+        "atl_L",
+        "atl_M",
+        "atl_N",
+        "atl_O",
+        "atl_P",
+        "atl_Q",
+        "atl_R",
+        "atl_S",
+        "atl_T",
+        "atl_U",
+        "atl_V",
+        "atl_W",
+        "atl_X",
+        "atl_Y",
+        "atl_Z",
+        "column",
+        "group",
+        "ungroupedcandidates",
+        "blank",
+        "number_0",
+        "number_1",
+        "number_2",
+        "number_3",
+        "number_4",
+        "number_5",
+        "number_6",
+        "number_7",
+        "number_8",
+        "number_9",
+        "number_10",
+        "number_11",
+        "number_12",
+        "number_13",
+        "number_14",
+        "number_15",
+        "number_16",
+        "number_17",
+        "number_18",
+        "number_19",
+        "number_20",
+        "number_21",
+        "zero",
+        "hash",
+        "button_1",
+        "button_2",
+        "button_3",
+        "button_4",
+        "button_5",
+        "button_6",
+        "button_7",
+        "button_8",
+        "button_9",
+        "button_10",
+        "button_11",
+        "button_12",
+        "gesture_1",
+        "gesture_2",
+        "gesture_3",
+        "gesture_4",
+        "gesture_5",
+        "gesture_6",
+        "gesture_7",
+        "gesture_8",
+        "gesture_9",
+        "gesture_10",
+        "gesture_11",
+        "gesture_12",
+        "preference_selections",
+        "you_have_made",
+        "removed_selection_for",
+        "no_preferences_selected",
+        "last_group_for_ballot",
+        "first_group_for_ballot",
+        "last_candidate_in_group",
+        "first_candidate_in_group",
+        "legislative_assembly_ballot_summary",
+        "review_ballots_screen",
+        "print_receipt_screen",
+        "four_fingers_on_screen",
+        "switch_to_atl_warning_screen",
+        "switch_to_btl_warning_screen",
+        "print_ballot_again",
+        "candidate_already_selected",
+        "this_candidate_list_voted",
+        "action_not_supported",
+        "error_matching_candidate_preferences",
+        "swipe_right_entire_vote_left_candidate",
+        "swipe_right_entire_vote_left_preferences",
+        "swipe_right_readback_again",
+        "this_preferences_receipt_voted",
+        "your_district_preferences",
+        "your_region_candidate_preferences",
+        "your_region_group_preferences",
+        "your_district_preferences_on_receipt",
+        "your_region_candidate_preferences_on_receipt",
+        "your_region_group_preferences_on_receipt",
+        "screen_automatically_locked",
+        "press_two_fingers_to_continue",
+        "press_hash_to_continue",
+        "district_ballot_for",
+        "or_press_hold_to_quit",
+        "right_whole_vote_left_cl_press_quit",
+        "right_whole_vote_left_pr_press_quit",
+        "button_1_error",
+        "button_2_error",
+        "button_3_error",
+        "button_4_error",
+        "button_5_error",
+        "button_6_error",
+        "button_7_error",
+        "button_8_error",
+        "button_9_error",
+        "button_10_error",
+        "button_11_error",
+        "button_12_error",
+        "ordinal_1",
+        "ordinal_2",
+        "ordinal_3",
+        "ordinal_4",
+        "ordinal_5",
+        "ordinal_6",
+        "ordinal_7",
+        "ordinal_8",
+        "ordinal_9",
+        "ordinal_10",
+        "ordinal_11",
+        "ordinal_12",
+        "ordinal_13",
+        "ordinal_14",
+        "ordinal_15",
+        "ordinal_16",
+        "ordinal_17",
+        "ordinal_18",
+        "ordinal_19",
+        "ordinal_20",
+        "ordinal_21",
+        "start_screen",
+        "practice_screen",
+        "practice_swipe_up",
+        "practice_swipe_down",
+        "practice_swipe_left",
+        "practice_swipe_right",
+        "practice_single_finger_press_hold",
+        "practice_single_finger_double_tap",
+        "practice_double_finger_press_hold",
+        "practice_three_finger_press_hold",
+        "gesture_correct",
+        "gesture_incorrect",
+        "thats_correct",
+        "free_practice_screen",
+        "move_to_legislative_council",
+        "black_screen",
+        "legislative_assembly_screen_initial",
+        "you_are_back_legislative_assembly_ballot",
+        "legislative_assembly_return_from_summary",
+        "legislative_council_return_from_summary",
+        "legislative_assembly_context",
+        "legislative_assembly_gestures",
+        "legislative_assembly_informal_warning",
+        "legislative_council_atl_screen_initial",
+        "legislative_council_atl_context",
+        "legislative_council_btl_screen",
+        "legislative_council_btl_context",
+        "you_are_back_legislative_council_ballot",
+        "informal_council_atl_warning",
+        "informal_council_btl_warning",
+        "left_back_right_continue",
+        "atl_to_btl_switch_no_warning",
+        "btl_to_atl_switch_no_warning",
+        "legislative_assembly_where_am_i",
+        "you_have_voted_for",
+        "for_this_vote_to_be_counted",
+        "you_need_to_vote_for",
+        "preference",
+        "selected_all_candidates",
+        "atl_selected_all_candidates",
+        "btl_selected_all_candidates",
+        "move_to_summary_confirmation",
+        "this_candidate_has_been_given_your",
+        "for_your_vote_to_count",
+        "you_are_in_a_list_of",
+        "you_are_currently_at_the",
+        "candidate",
+        "legislative_council_atl_gestures",
+        "legislative_council_btl_gestures",
+        "legislative_council_ballot_for",
+        "and_on_the",
+        "scan_qr_code_screen",
+        "switch_to_audio",
+        "warning_user_cant_make_changes",
+        "cannot_unselect_candidate",
+        "swipe_down_skip_ahead",
+        "swipe_up_repeat_summary",
+        "continue_to_printing",
+        "continue_to_council_summary",
+        "print_receipt_intro",
+        "print_receipt_intro_sent_formal",
+        "print_receipt_intro_sent_informal",
+        "print_shuffle_explanation_a",
+        "print_shuffle_explanation_b_atl",
+        "print_shuffle_explanation_b_btl",
+        "print_shuffle_explanation_c",
+        "print_again_swipe_right",
+        "print_again_press_three",
+        "finalise_voting",
+        "position",
+        "is_in_the",
+        "confirm_assembly_votes_screen",
+        "confirm_council_atl_votes_screen",
+        "confirm_council_btl_votes_screen",
+        "make_changes_to_ballot",
+        "options_menu",
+        "change_vote_later",
+        "user_failed_gestures",
+        "gvs_double_tap",
+        "gvs_options_menu_navigation",
+        "options_menu_item_1",
+        "options_menu_item_2",
+        "options_menu_item_3",
+        "options_menu_item_4",
+        "options_menu_item_5",
+        "options_menu_item_6",
+        "options_menu_item_7",
+        "options_menu_item_8",
+        "about_vic_parliament",
+        "about_la_ballot",
+        "about_lc_ballot",
+        "confirm_clear_ballot",
+        "press_three_fingers_for_options_menu",
+        "swipe_left_no_right_yes",
+        "press_two_fingers_council_ballot",
+        "atl_to_btl_switch",
+        "btl_to_atl_switch",
+        "flip_over_cover",
+        "legislative_council_candidate_summary",
+        "legislative_council_group_summary",
+        "confirm_all_votes_screen",
+        "practice_hash_key",
+        "practice_star_key",
+        "practice_one_key",
+        "practice_two_key",
+        "practice_four_key",
+        "practice_five_key",
+        "practice_six_key",
+        "practice_eight_key",
+        "practice_zero_key",
+        "practice_star_star",
+        "practice_key_not_used",
+        "tvs_practice_navigation_instructions",
+        "practice_buttons_instructions",
+        "tvs_introduction_audio",
+        "tvs_intro_district_of",
+        "tvs_legislative_assembly_navigation",
+        "legislative_assembly_selected_all",
+        "tvs_legislative_council_atl_navigation",
+        "tvs_legislative_council_btl_navigation",
+        "tvs_legislative_council_atl_context_help",
+        "tvs_legislative_council_btl_context_help",
+        "tvs_legislative_council_ballot_for",
+        "tvs_legislative_assembly_informal_warning",
+        "tvs_legislative_council_return_from_summary",
+        "tvs_informal_council_atl_warning",
+        "tvs_informal_council_btl_warning",
+        "tvs_confirm_clear_ballot",
+        "changes_will_be_lost",
+        "tvs_switch_to_atl_warning_screen",
+        "tvs_switch_to_btl_warning_screen",
+        "tvs_legislative_council_candidate_summary",
+        "tvs_legislative_council_group_summary",
+        "press_eight_skip_ahead",
+        "press_star_to_repeat_summary",
+        "tvs_continue_to_printing",
+        "tvs_continue_to_council_summary",
+        "tvs_print_receipt_intro",
+        "tvs_print_shuffle_explanation_a",
+        "tvs_print_shuffle_explanation_b_atl",
+        "tvs_print_shuffle_explanation_b_btl",
+        "tvs_print_shuffle_explanation_c",
+        "tvs_to_exit_this_options_menu",
+        "tvs_confirm_end_voting",
+        "tvs_move_to_summary_confirmation",
+        "tvs_btl_to_atl_switch",
+        "tvs_atl_to_btl_switch",
+        "tvs_flip_keypad",
+        "one_back_two_continue",
+        "tvs_press_1",
+        "tvs_press_2",
+        "tvs_press_3",
+        "tvs_press_4",
+        "tvs_press_5",
+        "tvs_press_6",
+        "tvs_press_7",
+        "tvs_press_8",
+        "tvs_press_star",
+        "tvs_press_0",
+        "tvs_press_hash"        
+      ],
+      "properties":{
+        "english": {
+          "type": "object",
+          "required" : 
+          [ "start_screen",
+            "scan_qr_code_screen",
+            "legislative_assembly_candidate_vote_popup",
+            "legislative_assembly_candidate_vote_screen",
+            "legislative_council_combined_screen",
+            "legislative_council_combined_popup",
+            "legislative_council_combined_atl_screen",
+            "legislative_council_combined_btl_screen",
+            "confirm_selections_screen",
+            "review_ballots_screen",
+            "print_receipt_screen",
+            "turn_audio_on",
+            "turn_audio_off",
+            "informal_vote_warning",
+            "vote_been_cancelled",
+            "district_not_being_contested",
+            "no_district_please_continue_region"
+          ],
+          "properties":{
+            "start_screen": "string",
+            "scan_qr_code_screen": "string",
+            "legislative_assembly_candidate_vote_popup": "string",
+            "legislative_assembly_candidate_vote_screen": "string",
+            "legislative_council_combined_screen": "string",
+            "legislative_council_combined_popup": "string",
+            "legislative_council_combined_atl_screen": "string",
+            "legislative_council_combined_btl_screen": "string",
+            "confirm_selections_screen": "string",
+            "review_ballots_screen": "string",
+            "print_receipt_screen": "string",
+            "turn_audio_on": "string",
+            "turn_audio_off": "string",
+            "informal_vote_warning": "string",
+            "vote_been_cancelled": "string",
+            "district_not_being_contested": "string",
+            "no_district_please_continue_region": "string"
+          }
+        },
+        "arabic": {
+          "type": "object",
+          "required" : 
+          [ "start_screen",
+            "scan_qr_code_screen",
+            "legislative_assembly_candidate_vote_popup",
+            "legislative_assembly_candidate_vote_screen",
+            "legislative_council_combined_screen",
+            "legislative_council_combined_popup",
+            "legislative_council_combined_atl_screen",
+            "legislative_council_combined_btl_screen",
+            "confirm_selections_screen",
+            "review_ballots_screen",
+            "print_receipt_screen",
+            "turn_audio_on",
+            "turn_audio_off",
+            "informal_vote_warning",
+            "vote_been_cancelled",
+            "district_not_being_contested",
+            "no_district_please_continue_region"
+          ],
+          "properties":{
+            "start_screen": "string",
+            "scan_qr_code_screen": "string",
+            "legislative_assembly_candidate_vote_popup": "string",
+            "legislative_assembly_candidate_vote_screen": "string",
+            "legislative_council_combined_screen": "string",
+            "legislative_council_combined_popup": "string",
+            "legislative_council_combined_atl_screen": "string",
+            "legislative_council_combined_btl_screen": "string",
+            "confirm_selections_screen": "string",
+            "review_ballots_screen": "string",
+            "print_receipt_screen": "string",
+            "turn_audio_on": "string",
+            "turn_audio_off": "string",
+            "informal_vote_warning": "string",
+            "vote_been_cancelled": "string",
+            "district_not_being_contested": "string",
+            "no_district_please_continue_region": "string"      
+          }
+        },
+        "mandarin": {
+          "type": "object",
+          "required" : 
+          [ "start_screen",
+            "scan_qr_code_screen",
+            "legislative_assembly_candidate_vote_popup",
+            "legislative_assembly_candidate_vote_screen",
+            "legislative_council_combined_screen",
+            "legislative_council_combined_popup",
+            "legislative_council_combined_atl_screen",
+            "legislative_council_combined_btl_screen",
+            "confirm_selections_screen",
+            "review_ballots_screen",
+            "print_receipt_screen",
+            "turn_audio_on",
+            "turn_audio_off",
+            "informal_vote_warning",
+            "vote_been_cancelled",
+            "district_not_being_contested",
+            "no_district_please_continue_region"
+          ],
+          "properties":{
+            "start_screen": "string",
+            "scan_qr_code_screen": "string",
+            "legislative_assembly_candidate_vote_popup": "string",
+            "legislative_assembly_candidate_vote_screen": "string",
+            "legislative_council_combined_screen": "string",
+            "legislative_council_combined_popup": "string",
+            "legislative_council_combined_atl_screen": "string",
+            "legislative_council_combined_btl_screen": "string",
+            "confirm_selections_screen": "string",
+            "review_ballots_screen": "string",
+            "print_receipt_screen": "string",
+            "turn_audio_on": "string",
+            "turn_audio_off": "string",
+            "informal_vote_warning": "string",
+            "vote_been_cancelled": "string",
+            "district_not_being_contested": "string",
+            "no_district_please_continue_region": "string"      
+          }
+        },
+        "alert_scanned_okay": {
+          "type": "string"
+        },
+        "alert_bottom_of_list": {
+          "type": "string"
+        },
+        "alert_top_of_list": {
+          "type": "string"
+        },
+        "alert_left_of_list": {
+          "type": "string"
+        },
+        "alert_right_of_list": {
+          "type": "string"
+        },
+        "confirm_end_voting": {
+          "type": "string"
+        },
+        "end_voting_session": {
+          "type": "string"
+        },
+        "ballot_cleared": {
+          "type": "string"
+        },
+        "already_selected": {
+          "type": "string"
+        },
+        "audio_interface": {
+          "type": "string"
+        },
+        "playing_back_ballot": {
+          "type": "string"
+        },
+        "groups_instead_of_candidates": {
+          "type": "string"
+        },
+        "candidates_instead_of_groups": {
+          "type": "string"
+        },
+        "maximum_number_of_groups": {
+          "type": "string"
+        },
+        "last_candidate_in_ballot": {
+          "type": "string"
+        },
+        "first_candidate_in_ballot": {
+          "type": "string"
+        },
+        "this_vote_will_not_be_counted": {
+          "type": "string"
+        },
+        "this_vote_will_be_counted": {
+          "type": "string"
+        },
+        "groups": {
+          "type": "string"
+        },
+        "candidates": {
+          "type": "string"
+        },
+        "have_not_voted_in_assembly": {
+          "type": "string"
+        },
+        "have_voted_in_assembly": {
+          "type": "string"
+        },
+        "have_not_voted_in_council": {
+          "type": "string"
+        },
+        "have_voted_in_council": {
+          "type": "string"
+        },
+        "press_hash": {
+          "type": "string"
+        },
+        "preference_number": {
+          "type": "string"
+        },
+        "unavailable_option": {
+          "type": "string"
+        },
+        "speaking_rate_fast": {
+          "type": "string"
+        },
+        "speaking_rate_medium": {
+          "type": "string"
+        },
+        "speaking_rate_normal": {
+          "type": "string"
+        },
+        "invalid_qr_code": {
+          "type": "string"
+        },
+        "atl_1": {
+          "type": "string"
+        },
+        "atl_2": {
+          "type": "string"
+        },
+        "atl_3": {
+          "type": "string"
+        },
+        "atl_4": {
+          "type": "string"
+        },
+        "atl_5": {
+          "type": "string"
+        },
+        "atl_6": {
+          "type": "string"
+        },
+        "atl_7": {
+          "type": "string"
+        },
+        "atl_8": {
+          "type": "string"
+        },
+        "atl_9": {
+          "type": "string"
+        },
+        "atl_10": {
+          "type": "string"
+        },
+        "atl_11": {
+          "type": "string"
+        },
+        "atl_12": {
+          "type": "string"
+        },
+        "atl_13": {
+          "type": "string"
+        },
+        "atl_14": {
+          "type": "string"
+        },
+        "atl_15": {
+          "type": "string"
+        },
+        "atl_16": {
+          "type": "string"
+        },
+        "atl_17": {
+          "type": "string"
+        },
+        "atl_18": {
+          "type": "string"
+        },
+        "atl_19": {
+          "type": "string"
+        },
+        "atl_20": {
+          "type": "string"
+        },
+        "atl_21": {
+          "type": "string"
+        },
+        "atl_22": {
+          "type": "string"
+        },
+        "atl_23": {
+          "type": "string"
+        },
+        "atl_24": {
+          "type": "string"
+        },
+        "atl_25": {
+          "type": "string"
+        },
+        "atl_26": {
+          "type": "string"
+        },
+        "column": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "ungroupedcandidates": {
+          "type": "string"
+        },
+        "blank": {
+          "type": "string"
+        },
+        "number_0": {
+          "type": "string"
+        },
+        "number_1": {
+          "type": "string"
+        },
+        "number_2": {
+          "type": "string"
+        },
+        "number_3": {
+          "type": "string"
+        },
+        "number_4": {
+          "type": "string"
+        },
+        "number_5": {
+          "type": "string"
+        },
+        "number_6": {
+          "type": "string"
+        },
+        "number_7": {
+          "type": "string"
+        },
+        "number_8": {
+          "type": "string"
+        },
+        "number_9": {
+          "type": "string"
+        },
+        "number_10": {
+          "type": "string"
+        },
+        "number_11": {
+          "type": "string"
+        },
+        "number_12": {
+          "type": "string"
+        },
+        "number_13": {
+          "type": "string"
+        },
+        "number_14": {
+          "type": "string"
+        },
+        "number_15": {
+          "type": "string"
+        },
+        "number_16": {
+          "type": "string"
+        },
+        "number_17": {
+          "type": "string"
+        },
+        "number_18": {
+          "type": "string"
+        },
+        "number_19": {
+          "type": "string"
+        },
+        "number_20": {
+          "type": "string"
+        },
+        "number_21": {
+          "type": "string"
+        },
+        "zero": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string"
+        },
+        "button_1": {
+          "type": "string"
+        },
+        "button_2": {
+          "type": "string"
+        },
+        "button_3": {
+          "type": "string"
+        },
+        "button_4": {
+          "type": "string"
+        },
+        "button_5": {
+          "type": "string"
+        },
+        "button_6": {
+          "type": "string"
+        },
+        "button_7": {
+          "type": "string"
+        },
+        "button_8": {
+          "type": "string"
+        },
+        "button_9": {
+          "type": "string"
+        },
+        "button_10": {
+          "type": "string"
+        },
+        "button_11": {
+          "type": "string"
+        },
+        "button_12": {
+          "type": "string"
+        },
+        "gesture_1": {
+          "type": "string"
+        },
+        "gesture_2": {
+          "type": "string"
+        },
+        "gesture_3": {
+          "type": "string"
+        },
+        "gesture_4": {
+          "type": "string"
+        },
+        "gesture_5": {
+          "type": "string"
+        },
+        "gesture_6": {
+          "type": "string"
+        },
+        "gesture_7": {
+          "type": "string"
+        },
+        "gesture_8": {
+          "type": "string"
+        },
+        "gesture_9": {
+          "type": "string"
+        },
+        "gesture_10": {
+          "type": "string"
+        },
+        "gesture_11": {
+          "type": "string"
+        },
+        "gesture_12": {
+          "type": "string"
+        },
+        "preference_selections": {
+          "type": "string"
+        },
+        "you_have_made": {
+          "type": "string"
+        },
+        "removed_selection_for": {
+          "type": "string"
+        },
+        "no_preferences_selected": {
+          "type": "string"
+        },
+        "last_group_for_ballot": {
+          "type": "string"
+        },
+        "first_group_for_ballot": {
+          "type": "string"
+        },
+        "last_candidate_in_group": {
+          "type": "string"
+        },
+        "first_candidate_in_group": {
+          "type": "string"
+        },
+        "legislative_assembly_ballot_summary": {
+          "type": "string"
+        },
+        "review_ballots_screen": {
+          "type": "string"
+        },
+        "print_receipt_screen": {
+          "type": "string"
+        },
+        "four_fingers_on_screen": {
+          "type": "string"
+        },
+        "switch_to_atl_warning_screen": {
+          "type": "string"
+        },
+        "switch_to_btl_warning_screen": {
+          "type": "string"
+        },
+        "print_ballot_again": {
+          "type": "string"
+        },
+        "candidate_already_selected": {
+          "type": "string"
+        },
+        "this_candidate_list_voted": {
+          "type": "string"
+        },
+        "action_not_supported": {
+          "type": "string"
+        },
+        "error_matching_candidate_preferences": {
+          "type": "string"
+        },
+        "swipe_right_entire_vote_left_candidate": {
+          "type": "string"
+        },
+        "swipe_right_entire_vote_left_preferences": {
+          "type": "string"
+        },
+        "swipe_right_readback_again": {
+          "type": "string"
+        },
+        "this_preferences_receipt_voted": {
+          "type": "string"
+        },
+        "your_district_preferences": {
+          "type": "string"
+        },
+        "your_region_candidate_preferences": {
+          "type": "string"
+        },
+        "your_region_group_preferences": {
+          "type": "string"
+        },
+        "your_district_preferences_on_receipt": {
+          "type": "string"
+        },
+        "your_region_candidate_preferences_on_receipt": {
+          "type": "string"
+        },
+        "your_region_group_preferences_on_receipt": {
+          "type": "string"
+        },
+        "screen_automatically_locked": {
+          "type": "string"
+        },
+        "press_two_fingers_to_continue": {
+          "type": "string"
+        },
+        "press_hash_to_continue": {
+          "type": "string"
+        },
+        "district_ballot_for": {
+          "type": "string"
+        },
+        "district_not_being_contested": {
+          "type": "string"
+        },
+        "or_press_hold_to_quit": {
+          "type": "string"
+        },
+        "right_whole_vote_left_cl_press_quit": {
+          "type": "string"
+        },
+        "right_whole_vote_left_pr_press_quit": {
+          "type": "string"
+        },
+        "button_1_error": {
+          "type": "string"
+        },
+        "button_2_error": {
+          "type": "string"
+        },
+        "button_3_error": {
+          "type": "string"
+        },
+        "button_4_error": {
+          "type": "string"
+        },
+        "button_5_error": {
+          "type": "string"
+        },
+        "button_6_error": {
+          "type": "string"
+        },
+        "button_7_error": {
+          "type": "string"
+        },
+        "button_8_error": {
+          "type": "string"
+        },
+        "button_9_error": {
+          "type": "string"
+        },
+        "button_10_error": {
+          "type": "string"
+        },
+        "button_11_error": {
+          "type": "string"
+        },
+        "button_12_error": {
+          "type": "string"
+        },
+        "ordinal_1": {
+          "type": "string"
+        },
+        "ordinal_2": {
+          "type": "string"
+        },
+        "ordinal_3": {
+          "type": "string"
+        },
+        "ordinal_4": {
+          "type": "string"
+        },
+        "ordinal_5": {
+          "type": "string"
+        },
+        "ordinal_6": {
+          "type": "string"
+        },
+        "ordinal_7": {
+          "type": "string"
+        },
+        "ordinal_8": {
+          "type": "string"
+        },
+        "ordinal_9": {
+          "type": "string"
+        },
+        "ordinal_10": {
+          "type": "string"
+        },
+        "ordinal_11": {
+          "type": "string"
+        },
+        "ordinal_12": {
+          "type": "string"
+        },
+        "ordinal_13": {
+          "type": "string"
+        },
+        "ordinal_14": {
+          "type": "string"
+        },
+        "ordinal_15": {
+          "type": "string"
+        },
+        "ordinal_16": {
+          "type": "string"
+        },
+        "ordinal_17": {
+          "type": "string"
+        },
+        "ordinal_18": {
+          "type": "string"
+        },
+        "ordinal_19": {
+          "type": "string"
+        },
+        "ordinal_20": {
+          "type": "string"
+        },
+        "ordinal_21": {
+          "type": "string"
+        },
+        "start_screen": {
+          "type": "string"
+        },
+        "practice_screen": {
+          "type": "string"
+        },
+        "practice_swipe_up": {
+          "type": "string"
+        },
+        "practice_swipe_down": {
+          "type": "string"
+        },
+        "practice_swipe_left": {
+          "type": "string"
+        },
+        "practice_swipe_right": {
+          "type": "string"
+        },
+        "practice_single_finger_press_hold": {
+          "type": "string"
+        },
+        "practice_single_finger_double_tap": {
+          "type": "string"
+        },
+        "practice_double_finger_press_hold": {
+          "type": "string"
+        },
+        "practice_three_finger_press_hold": {
+          "type": "string"
+        },
+        "gesture_correct": {
+          "type": "string"
+        },
+        "gesture_incorrect": {
+          "type": "string"
+        },
+        "thats_correct": {
+          "type": "string"
+        },
+        "free_practice_screen": {
+          "type": "string"
+        },
+        "move_to_legislative_council": {
+          "type": "string"
+        },
+        "black_screen": {
+          "type": "string"
+        },
+        "legislative_assembly_screen_initial": {
+          "type": "string"
+        },
+        "you_are_back_legislative_assembly_ballot": {
+          "type": "string"
+        },
+        "legislative_assembly_return_from_summary": {
+          "type": "string"
+        },
+        "legislative_council_return_from_summary": {
+          "type": "string"
+        },
+        "legislative_assembly_context": {
+          "type": "string"
+        },
+        "legislative_assembly_gestures": {
+          "type": "string"
+        },
+        "legislative_assembly_informal_warning": {
+          "type": "string"
+        },
+        "legislative_council_atl_screen_initial": {
+          "type": "string"
+        },
+        "legislative_council_atl_context": {
+          "type": "string"
+        },
+        "legislative_council_btl_screen": {
+          "type": "string"
+        },
+        "legislative_council_btl_context": {
+          "type": "string"
+        },
+        "you_are_back_legislative_council_ballot": {
+          "type": "string"
+        },
+        "informal_council_atl_warning": {
+          "type": "string"
+        },
+        "informal_council_btl_warning": {
+          "type": "string"
+        },
+        "left_back_right_continue": {
+          "type": "string"
+        },
+        "atl_to_btl_switch_no_warning": {
+          "type": "string"
+        },
+        "btl_to_atl_switch_no_warning": {
+          "type": "string"
+        },
+        "legislative_assembly_where_am_i": {
+          "type": "string"
+        },
+        "you_have_voted_for": {
+          "type": "string"
+        },
+        "for_this_vote_to_be_counted": {
+          "type": "string"
+        },
+        "you_need_to_vote_for": {
+          "type": "string"
+        },
+        "preference": {
+          "type": "string"
+        },
+        "selected_all_candidates": {
+          "type": "string"
+        },
+        "atl_selected_all_candidates": {
+          "type": "string"
+        },
+        "btl_selected_all_candidates": {
+          "type": "string"
+        },
+        "move_to_summary_confirmation": {
+          "type": "string"
+        },
+        "this_candidate_has_been_given_your": {
+          "type": "string"
+        },
+        "for_your_vote_to_count": {
+          "type": "string"
+        },
+        "you_are_in_a_list_of": {
+          "type": "string"
+        },
+        "you_are_currently_at_the": {
+          "type": "string"
+        },
+        "candidate": {
+          "type": "string"
+        },
+        "legislative_council_atl_gestures": {
+          "type": "string"
+        },
+        "legislative_council_btl_gestures": {
+          "type": "string"
+        },
+        "legislative_council_ballot_for": {
+          "type": "string"
+        },
+        "and_on_the": {
+          "type": "string"
+        },
+        "scan_qr_code_screen": {
+          "type": "string"
+        },
+        "switch_to_audio": {
+          "type": "string"
+        },
+        "warning_user_cant_make_changes": {
+          "type": "string"
+        },
+        "cannot_unselect_candidate": {
+          "type": "string"
+        },
+        "swipe_down_skip_ahead": {
+          "type": "string"
+        },
+        "swipe_up_repeat_summary": {
+          "type": "string"
+        },
+        "continue_to_printing": {
+          "type": "string"
+        },
+        "continue_to_council_summary": {
+          "type": "string"
+        },
+        "print_receipt_intro": {
+          "type": "string"
+        },
+        "print_receipt_intro_sent_formal": {
+          "type": "string"
+        },
+        "print_receipt_intro_sent_informal": {
+          "type": "string"
+        },
+        "print_shuffle_explanation_a": {
+          "type": "string"
+        },
+        "print_shuffle_explanation_b_atl": {
+          "type": "string"
+        },
+        "print_shuffle_explanation_b_btl": {
+          "type": "string"
+        },
+        "print_shuffle_explanation_c": {
+          "type": "string"
+        },
+        "print_again_swipe_right": {
+          "type": "string"
+        },
+        "print_again_press_three": {
+          "type": "string"
+        },
+        "finalise_voting": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        },
+        "is_in_the": {
+          "type": "string"
+        },
+        "confirm_assembly_votes_screen": {
+          "type": "string"
+        },
+        "confirm_council_atl_votes_screen": {
+          "type": "string"
+        },
+        "confirm_council_btl_votes_screen": {
+          "type": "string"
+        },
+        "make_changes_to_ballot": {
+          "type": "string"
+        },
+        "options_menu": {
+          "type": "string"
+        },
+        "change_vote_later": {
+          "type": "string"
+        },
+        "user_failed_gestures": {
+          "type": "string"
+        },
+        "gvs_double_tap": {
+          "type": "string"
+        },
+        "gvs_options_menu_navigation": {
+          "type": "string"
+        },
+        "options_menu_item_1": {
+          "type": "string"
+        },
+        "options_menu_item_2": {
+          "type": "string"
+        },
+        "options_menu_item_3": {
+          "type": "string"
+        },
+        "options_menu_item_4": {
+          "type": "string"
+        },
+        "options_menu_item_5": {
+          "type": "string"
+        },
+        "options_menu_item_6": {
+          "type": "string"
+        },
+        "options_menu_item_7": {
+          "type": "string"
+        },
+        "options_menu_item_8": {
+          "type": "string"
+        },
+        "about_vic_parliament": {
+          "type": "string"
+        },
+        "about_la_ballot": {
+          "type": "string"
+        },
+        "about_lc_ballot": {
+          "type": "string"
+        },
+        "confirm_clear_ballot": {
+          "type": "string"
+        },
+        "press_three_fingers_for_options_menu": {
+          "type": "string"
+        },
+        "swipe_left_no_right_yes": {
+          "type": "string"
+        },
+        "press_two_fingers_council_ballot": {
+          "type": "string"
+        },
+        "atl_to_btl_switch": {
+          "type": "string"
+        },
+        "btl_to_atl_switch": {
+          "type": "string"
+        },
+        "flip_over_cover": {
+          "type": "string"
+        },
+        "legislative_council_candidate_summary": {
+          "type": "string"
+        },
+        "legislative_council_group_summary": {
+          "type": "string"
+        },
+        "confirm_all_votes_screen": {
+          "type": "string"
+        },
+        "practice_hash_key": {
+          "type": "string"
+        },
+        "practice_star_key": {
+          "type": "string"
+        },
+        "practice_one_key": {
+          "type": "string"
+        },
+        "practice_two_key": {
+          "type": "string"
+        },
+        "practice_three_key": {
+          "type": "string"
+        },
+        "practice_four_key": {
+          "type": "string"
+        },
+        "practice_five_key": {
+          "type": "string"
+        },
+        "practice_six_key": {
+          "type": "string"
+        },
+        "practice_seven_key": {
+          "type": "string"
+        },
+        "practice_eight_key": {
+          "type": "string"
+        },
+        "practice_nine_key": {
+          "type": "string"
+        },
+        "practice_zero_key": {
+          "type": "string"
+        },
+        "practice_star_star": {
+          "type": "string"
+        },
+        "practice_key_not_used": {
+          "type": "string"
+        },
+        "tvs_practice_navigation_instructions": {
+          "type": "string"
+        },
+        "practice_buttons_instructions": {
+          "type": "string"
+        },
+        "tvs_introduction_audio": {
+          "type": "string"
+        },
+        "tvs_intro_district_of": {
+          "type": "string"
+        },
+        "tvs_legislative_assembly_navigation": {
+          "type": "string"
+        },
+        "legislative_assembly_selected_all": {
+          "type": "string"
+        },
+        "tvs_legislative_council_atl_navigation": {
+          "type": "string"
+        },
+        "tvs_legislative_council_btl_navigation": {
+          "type": "string"
+        },
+        "tvs_legislative_council_atl_context_help": {
+          "type": "string"
+        },
+        "tvs_legislative_council_btl_context_help": {
+          "type": "string"
+        },
+        "tvs_legislative_council_ballot_for": {
+          "type": "string"
+        },
+        "tvs_legislative_assembly_informal_warning": {
+          "type": "string"
+        },
+        "tvs_legislative_council_return_from_summary": {
+          "type": "string"
+        },
+        "tvs_informal_council_atl_warning": {
+          "type": "string"
+        },
+        "tvs_informal_council_btl_warning": {
+          "type": "string"
+        },
+        "tvs_confirm_clear_ballot": {
+          "type": "string"
+        },
+        "changes_will_be_lost": {
+          "type": "string"
+        },
+        "tvs_switch_to_atl_warning_screen": {
+          "type": "string"
+        },
+        "tvs_switch_to_btl_warning_screen": {
+          "type": "string"
+        },
+        "tvs_legislative_council_candidate_summary": {
+          "type": "string"
+        },
+        "tvs_legislative_council_group_summary": {
+          "type": "string"
+        },
+        "press_eight_skip_ahead": {
+          "type": "string"
+        },
+        "press_star_to_repeat_summary": {
+          "type": "string"
+        },
+        "tvs_continue_to_printing": {
+          "type": "string"
+        },
+        "tvs_continue_to_council_summary": {
+          "type": "string"
+        },
+        "tvs_print_receipt_intro": {
+          "type": "string"
+        },
+        "tvs_print_shuffle_explanation_a": {
+          "type": "string"
+        },
+        "tvs_print_shuffle_explanation_b_atl": {
+          "type": "string"
+        },
+        "tvs_print_shuffle_explanation_b_btl": {
+          "type": "string"
+        },
+        "tvs_print_shuffle_explanation_c": {
+          "type": "string"
+        },
+        "tvs_legislative_assembly_ballot_summary": {
+          "type": "string"
+        },
+        "tvs_to_exit_this_options_menu": {
+          "type": "string"
+        },
+        "tvs_confirm_end_voting": {
+          "type": "string"
+        },
+        "tvs_move_to_summary_confirmation": {
+          "type": "string"
+        },
+        "tvs_btl_to_atl_switch": {
+          "type": "string"
+        },
+        "tvs_atl_to_btl_switch": {
+          "type": "string"
+        },
+        "tvs_flip_keypad": {
+          "type": "string"
+        },
+        "one_back_two_continue": {
+          "type": "string"
+        },
+        "tvs_press_1": {
+          "type": "string"
+        },
+        "tvs_press_2": {
+          "type": "string"
+        },
+        "tvs_press_3": {
+          "type": "string"
+        },
+        "tvs_press_4": {
+          "type": "string"
+        },
+        "tvs_press_5": {
+          "type": "string"
+        },
+        "tvs_press_6": {
+          "type": "string"
+        },
+        "tvs_press_7": {
+          "type": "string"
+        },
+        "tvs_press_8": {
+          "type": "string"
+        },
+        "tvs_press_9": {
+          "type": "string"
+        },
+        "tvs_press_star": {
+          "type": "string"
+        },
+        "tvs_press_0": {
+          "type": "string"
+        },
+        "tvs_press_hash": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

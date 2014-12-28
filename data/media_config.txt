@@ -1,0 +1,111 @@
+{
+    "images_hash": "-1145045023",
+    "videos_hash": "-1174533319",
+    "images" : 
+    [
+        {
+            "filename" : "images/button_arrow_animated.gif",
+            "dimensions" : "",
+            "format" : "gif"     
+        },
+        {
+            "filename" : "images/left_green_arrow.png",
+            "dimensions" : "",
+            "format" : "gif"       
+        },
+        {
+            "filename" : "images/qr_code.png",
+            "dimensions" : "",
+            "format" : "gif"       
+        },
+        {
+            "filename" : "images/right_green_arrow.png",
+            "dimensions" : "",
+            "format" : "gif"       
+        },
+        {
+            "filename" : "images/speaker_icon.png",
+            "dimensions" : "",
+            "format" : "gif"       
+        },
+        {
+            "filename" : "images/speaker_icon_black.png",
+            "dimensions" : "",
+            "format" : "gif"       
+        },
+        {
+            "filename" : "images/warning_sign.png",
+            "dimensions" : "",
+            "format" : "gif"       
+        }
+    ],
+    "videos" :
+    [
+        {
+            "filename" : "videos/gesture_demonstration.ogv",
+            "dimensions" : "",
+            "bvi_type" : "",
+            "lead_in_time" : "",
+            "speed" : "",
+            "format" : "ogv",
+            "alpha" : "",
+            "bounding_box" : "",
+            "colour_gamut" : ""
+        },
+        {
+            "filename" : "videos/lc_combined.ogv",
+            "dimensions" : "",
+            "bvi_type" : "",
+            "lead_in_time" : "",
+            "speed" : "",
+            "format" : "ogv",
+            "alpha" : "",
+            "bounding_box" : "",
+            "colour_gamut" : ""
+        },
+        {
+            "filename" : "videos/lc_fork.ogv",
+            "dimensions" : "",
+            "bvi_type" : "",
+            "lead_in_time" : "",
+            "speed" : "",
+            "format" : "ogv",
+            "alpha" : "",
+            "bounding_box" : "",
+            "colour_gamut" : ""
+        },
+        {
+            "filename" : "videos/print.ogv",
+            "dimensions" : "",
+            "bvi_type" : "",
+            "lead_in_time" : "",
+            "speed" : "",
+            "format" : "ogv",
+            "alpha" : "",
+            "bounding_box" : "",
+            "colour_gamut" : ""
+        },
+        {
+            "filename" : "videos/shred.ogv",
+            "dimensions" : "",
+            "bvi_type" : "",
+            "lead_in_time" : "",
+            "speed" : "",
+            "format" : "ogv",
+            "alpha" : "",
+            "bounding_box" : "",
+            "colour_gamut" : ""
+        },
+        {
+            "filename" : "videos/start_qr.ogv",
+            "dimensions" : "",
+            "bvi_type" : "",
+            "lead_in_time" : "",
+            "speed" : "",
+            "format" : "ogv",
+            "alpha" : "",
+            "bounding_box" : "",
+            "colour_gamut" : ""
+        }
+    ]
+}

@@ -1,0 +1,1947 @@
+<html>
+<head>
+
+  <link rel="stylesheet" href="css/qunit.css" type="text/css" media="screen" />
+
+  <script src="../js/lib/dependency_injection.js" type="text/javascript"></script>
+  <script src="../js/lib/print_stack_trace.js" type="text/javascript"></script>
+  <script src="../js/lib/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="../js/lib/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="../js/lib/jquery.ui.touch-punch.js" type="text/javascript"></script>
+  <script src="../js/lib/jquery.i18n.js" type="text/javascript"></script>
+  <script src="../js/lib/sprintf.js" type="text/javascript"></script>
+  <script src="../js/lib/hammer.js" type="text/javascript"></script>
+  <script src="../js/lib/jquery.hammer.js" type="text/javascript"></script>
+  <script src="../js/lib/inheritance.js" type="text/javascript"></script>
+  <script src="../js/lib/double_tap.js" type="text/javascript"></script>
+
+  <script src="../js/audio_view.js" type="text/javascript"></script>
+  <script src="../js/audio_instructions.js" type="text/javascript"></script>
+  <script src="../js/translated_audio_instructions.js" type="text/javascript"></script>
+  <script src="../js/constants.js" type="text/javascript"></script>
+  <script src="../js/assembly_candidate.js" type="text/javascript"></script>
+  <script src="../js/council_candidate.js" type="text/javascript"></script>
+  <script src="../js/ballot_manager.js" type="text/javascript"></script>
+  <script src="../js/options_manager.js" type="text/javascript"></script>
+  <script src="../js/audio_controller.js" type="text/javascript"></script>
+  <script src="../js/visual_controller.js" type="text/javascript"></script>
+  <script src="../js/voting_session.js" type="text/javascript"></script>
+  <script src="../js/readback_session.js" type="text/javascript"></script>
+  <script src="../js/qr_scanning.js" type="text/javascript"></script>
+
+  <script src="../js/visual_screens/visual_screen_manager.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/screen_factory.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/start_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/reset_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/invalid_qr_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/timeout_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/error_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/confirm_discard_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/timeout_lock_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/timeout_unlock_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/language_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/audio_mode_scan_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/scan_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/confirm_scan_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/confirm_audio_switch_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/audio_start_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/atl_btl_choice_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/legislative_assembly_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/legislative_assembly_warning_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/legislative_council_combined_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/legislative_council_warning_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/legislative_assembly_summary_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/legislative_council_summary_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/confirm_selections_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/review_ballots_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/print_receipt_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/audio_only_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/triage_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/practice_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/tvs_entry_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/tvs_practice_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/ballot_options_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/tvs_ballot_options_visual_screen.js" type="text/javascript"></script>
+  <script src="../js/visual_screens/scan_error_visual_screen.js" type="text/javascript"></script>
+
+  <script src="../js/audio_screens/audio_screen_manager.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/audio_screen_factory.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/audio_start_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/audio_scan_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/legislative_assembly_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/legislative_council_group_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/legislative_council_candidate_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/practice_gesture_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/free_practice_gesture_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/incomplete_assembly_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/incomplete_council_atl_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/incomplete_council_btl_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/switch_to_atl_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/switch_to_btl_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/assembly_summary_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/council_summary_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/print_receipt_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/finalise_voting_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/clear_ballot_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/quit_system_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/ballot_options_menu_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_entry_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_practice_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_legislative_assembly_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_legislative_council_group_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_legislative_council_candidate_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_incomplete_assembly_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_incomplete_council_atl_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_incomplete_council_btl_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_assembly_summary_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_council_summary_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_switch_to_atl_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_switch_to_btl_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_ballot_options_menu_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_clear_ballot_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_print_receipt_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/tvs_quit_system_audio_screen.js" type="text/javascript"></script>
+  <script src="../js/audio_screens/confirm_all_votes_audio_screen.js" type="text/javascript"></script>
+
+  <script src="../js/visual_view.js" type="text/javascript"></script>
+  <script src="../js/party.js" type="text/javascript"></script>
+  <script src="../js/party_group.js" type="text/javascript"></script>
+  <script src="../js/ballot.js" type="text/javascript"></script>
+  <script src="../js/ballot_generation.js" type="text/javascript"></script>
+  <script src="../js/below_line_council_ballot.js" type="text/javascript"></script>
+  <script src="../js/above_line_council_ballot.js" type="text/javascript"></script>
+  <script src="../js/legislative_assembly_ballot.js" type="text/javascript"></script>
+  <script src="../js/audio_clip.js" type="text/javascript"></script>
+  <script src="../js/blind_interface_gesture_commands.js" type="text/javascript"></script>
+  <script src="../js/blind_interface_button_commands.js" type="text/javascript"></script>
+  <script src="../js/touchscreen.js" type="text/javascript"></script>
+  <script src="../js/combined_council_view.js" type="text/javascript"></script>
+  <script src="../js/legislative_assembly_view.js" type="text/javascript"></script>
+  <script src="../js/confirm_selections_view.js" type="text/javascript"></script>
+  <script src="../js/review_ballots_view.js" type="text/javascript"></script>
+  <script src="../js/logging.js" type="text/javascript"></script>
+
+
+  <script src="js/qunit.js"></script>
+  <script src="js/hamcrest.js" data-cover-flags="debug"></script>
+  <script src="js/mockito.js" data-cover-flags="debug"></script>
+
+  <script>
+
+  // Test data: district and region.
+  var district = "Theans Well Formed Test";
+  var region = "Theans Well Formed Test";
+
+  var container;
+  var containerBuilder;
+
+  var dataContainer;
+  var dataContainerBuildrer;
+
+  var getContainer = function () {
+    return container;
+  }
+
+  var getDataContainer = function () {
+    return dataContainer;
+  }
+
+  function setBallotDrawData (district, region) {
+
+    var container = getContainer();
+    var dataContainer = getDataContainer();
+    var legislativeAssemblyBallot = container.Resolve("assembly");
+    var aboveTheLineCouncilBallot = container.Resolve("atl");
+    var belowTheLineCouncilBallot = container.Resolve("btl");
+    var votingSession = container.Resolve("votingSession");
+
+    var nominationsData = dataContainer.Resolve("nominationsData");
+    var regionData = null;
+
+    for (key in nominationsData) {
+      var regionName = nominationsData[key]["region"];
+      if (regionName == region) {
+        regionData = nominationsData[key];
+        break;
+      }
+    }
+
+    var districtsData = regionData["districts"];
+    var councilNominationsData = regionData["parties"];
+    var regionIsUncontested = regionData["no_race"];
+    if (regionIsUncontested == null) {
+      regionIsUncontested = false;
+    }
+    votingSession.setRegionIsUncontested(regionIsUncontested);
+
+    var assemblyNominationsData = null;
+    var districtObject = null;
+
+    // Find the relevant district. Save the nominations data.
+    for (key in districtsData) {
+      districtObject = districtsData[key];
+      if (districtObject["district"] == district) {
+        var districtIsUncontested = districtObject["uncontested"];
+        if (districtIsUncontested == null) {
+          districtIsUncontested = false;
+        }
+        votingSession.setDistrictIsUncontested(districtIsUncontested);
+
+        if (districtIsUncontested == true) {
+          votingSession.setUncontestedMessage(districtObject["uncontested_message"]);
+          votingSession.setMaximumNumberOfAssemblyCandidates(0);
+        } else {
+          assemblyNominationsData = districtObject["candidates"];
+          votingSession.setMaximumNumberOfAssemblyCandidates(assemblyNominationsData.length);
+        }
+
+        break;
+      }
+    }
+
+    legislativeAssemblyBallot.setCandidateNominations(assemblyNominationsData);
+
+    aboveTheLineCouncilBallot.setPartyGroupListing(councilNominationsData);
+    belowTheLineCouncilBallot.setCandidateNominations(councilNominationsData);
+
+    var btlCandidateCount = belowTheLineCouncilBallot.getNumberOfCandidates();
+    votingSession.setMaximumNumberOfCouncilCandidates(btlCandidateCount);
+
+    var atlGroupCount = aboveTheLineCouncilBallot.getNumberOfPartyGroups();
+    votingSession.setMaximumNumberOfGroups(atlGroupCount);
+  }
+
+  /**
+   * Load candidate data into the application.
+   */
+  // Get all nominations data.
+  function getNominationsData() {
+    try {
+      $.getJSON('data/region_district_candidate_data.txt', function(data) {
+        receivedNominationsData(null, data);
+      })
+      .error(function () { alert('ERROR: JSON Election Data is not valid.'); });
+    } catch (error) {
+      alert("Error reading nominations data: " + error);
+    }
+  }
+
+  // Once we have the data and the document is ready, start building the UI.
+  function receivedNominationsData(event, nominationsData) {
+
+    // Store the complete set of nominations data once.
+    dataContainerBuilder.Register("nominationsData",
+      function(c) {
+        return nominationsData;
+      }).Reused();
+
+    dataContainerBuilder.Register("partyTranslationsData",
+      function(c) {
+        var trans = new TranslatedParty(nominationsData);
+        return trans;
+      }).Reused();
+
+    var districtData = null;
+    var regionData = null;
+
+    for (key in nominationsData) {
+      var regionName = nominationsData[key]["region"];
+      if (regionName == region) {
+        regionData = nominationsData[key];
+        break;
+      }
+    }
+
+    var districtsJsonData = regionData["districts"];
+    var districtObject = null;
+
+    // Find the relevant district. Save the nominations data.
+    for (key in districtsJsonData) {
+      districtObject = districtsJsonData[key];
+      if (districtObject["district"] == district) {
+        districtData = districtObject;
+        break;
+      }
+    }
+
+    dataContainerBuilder.Register("districtData",
+      function(c) {
+        return districtData;
+      }).Reused();
+
+    dataContainerBuilder.Register("regionData",
+      function(c) {
+        return regionData;
+      }).Reused();
+
+    dataContainer = dataContainerBuilder.Create();
+
+    setBallotDrawData(district, region);
+
+    runTests();
+  }
+
+
+  // Configure global variables using dependency injection framework.
+  function setupApplicationContainer (data) {
+
+    // Legislative Assembly (Lower House) Ballot Singleton.
+    containerBuilder.Register("assembly",
+      function(c) {
+        return new LegislativeAssemblyBallot();
+      }).Reused();
+
+    // Legislative Council (Upper House) "Above The Line" Ballot Singleton.
+    containerBuilder.Register("atl",
+      function(c) {
+        return new AboveTheLineCouncilBallot();
+      }).Reused();
+
+    // Legislative Council (Upper House) "Below The Line" Ballot Singleton.
+    containerBuilder.Register("btl",
+      function(c) {
+        return new BelowTheLineCouncilBallot();
+      }).Reused();
+
+    // Audio Screen Manager Singleton.
+    containerBuilder.Register("audioScreenManager",
+      function(c) {
+        return new AudioScreenManager(true);
+      }).Reused();
+
+    // Visual Screen Manager Singleton.
+    containerBuilder.Register("visualScreenManager",
+      function(c) {
+        return new VisualScreenManager();
+      }).Reused();
+
+    // Visual Controller Singleton.
+    containerBuilder.Register("visualController",
+      function(c) {
+        return new VisualController();
+      }).Reused();
+
+    // Visual Controller Singleton.
+    containerBuilder.Register("visualView",
+      function(c) {
+        return new VisualView();
+      }).Reused();
+
+    // Options Manager Singleton.
+    containerBuilder.Register("optionsManager",
+      function(c) {
+        return new OptionsManager();
+      }).Reused();
+
+    // Ballot Manager Singleton.
+    containerBuilder.Register("ballotManager",
+      function(c) {
+        return new BallotManager();
+      }).Reused();
+
+    // Audio Controller Singleton.
+    containerBuilder.Register("audioController",
+      function(c) {
+        return new AudioController();
+      }).Reused();
+
+    // Blind Interface Navigation using buttons Singleton.
+    containerBuilder.Register("blindInterfaceButtonNavigation",
+      function(c) {
+        return new BlindInterfaceButtonNavigation();
+      }).Reused();
+
+    // Blind Interface Navigation using gestures Singleton.
+    containerBuilder.Register("blindInterfaceGestureNavigation",
+      function(c) {
+        return new BlindInterfaceGestureNavigation();
+      }).Reused();
+
+    containerBuilder.Register("votingSession",
+      function(c) {
+        return new VotingSession();
+      }).Reused();
+  }
+
+  $(document).ready(function(){
+
+    dataContainerBuilder = new JsInject.ContainerBuilder();
+    containerBuilder = new JsInject.ContainerBuilder();
+    setupApplicationContainer();
+
+    container = containerBuilder.Create();
+    getNominationsData();
+  });
+
+  function runTests () {
+
+    JsHamcrest.Integration.QUnit();
+    JsMockito.Integration.QUnit()
+
+    var container = getContainer();
+    var dataContainer = getDataContainer();
+
+    module("Ballots Module");
+
+    test("Ballot superclass", function() {
+      var belowTheLineCouncilBallot = new BelowTheLineCouncilBallot();
+      var ballotType = belowTheLineCouncilBallot.getType();
+      equal(ballotType, LEGISLATIVE_COUNCIL_CANDIDATE_BALLOT, "getType" );
+    });
+
+    test("LegislativeAssemblyBallot init()", function() {
+      var legislativeAssemblyBallot = new LegislativeAssemblyBallot();
+      equal(legislativeAssemblyBallot.getVisited(), false, "hasVisited init" );
+      equal(legislativeAssemblyBallot.highestSelectionCounter, 0, "highestSelectionCounter init" );
+      equal(legislativeAssemblyBallot.currentCandidatePosition, 0, "currentCandidatePosition init" );
+    });
+
+    test("LegislativeAssemblyBallot clear()", function() {
+      var legislativeAssemblyBallot = new LegislativeAssemblyBallot();
+      legislativeAssemblyBallot.clear();
+      equal(legislativeAssemblyBallot.highestSelectionCounter, 0, "highestSelectionCounter clear" );
+    });
+
+    test("LegislativeAssemblyBallot reset()", function() {
+      var legislativeAssemblyBallot = new LegislativeAssemblyBallot();
+      legislativeAssemblyBallot.currentCandidatePosition = 1;
+      legislativeAssemblyBallot.reset();
+      equal(legislativeAssemblyBallot.currentCandidatePosition, 0, "currentCandidatePosition reset" );
+    });
+
+    test("LegislativeAssemblyBallot setVisited()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      equal(legislativeAssemblyBallot.hasVisited, false, "hasVisited false");
+      legislativeAssemblyBallot.setVisited(true);
+      equal(legislativeAssemblyBallot.hasVisited, true, "hasVisited true");
+    });
+
+    test("LegislativeAssemblyBallot setCandidateListing()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var candidate = districtData["candidates"][0];
+
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      var storedCandidate = legislativeAssemblyBallot.getCandidateByIndex(0);
+      equal(storedCandidate.getName(), candidate.name, "getCandidateByIndex has correct Candidate name" );
+      var storedPartyName = legislativeAssemblyBallot.candidateParties[candidate.name];
+      equal(storedPartyName, candidate.partyName, "candidateParties has correct Party name" );
+    });
+
+    test("LegislativeAssemblyBallot getCandidates()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var candidate = districtData["candidates"][0];
+
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidates = legislativeAssemblyBallot.getCandidates();
+      var expectedName = candidate.name;
+      equal(expectedName, candidates[0].getName(), "getCandidates has correct Candidate name" );
+    });
+
+    test("LegislativeAssemblyBallot getCandidateListing()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var candidate = districtData["candidates"][0];
+
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      var candidates = legislativeAssemblyBallot.getCandidateListing();
+      var expectedName = candidate.name;
+      equal(expectedName, candidates[0].name, "getCandidateListing has correct Candidate name" );
+    });
+
+    test("LegislativeAssemblyBallot getNumberOfCandidates()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      var candidates = legislativeAssemblyBallot.getCandidateListing();
+      equal(candidates.length, legislativeAssemblyBallot.getNumberOfCandidates(), "getNumberOfCandidates = 10" );
+    });
+
+    test("LegislativeAssemblyBallot getHighestSelection()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      legislativeAssemblyBallot.highestSelectionCounter = 6;
+      equal(6, legislativeAssemblyBallot.getHighestSelection(), "getHighestSelection = 6" );
+    });
+
+    test("LegislativeAssemblyBallot incrementHighestSelectionCounter()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      legislativeAssemblyBallot.incrementHighestSelectionCounter();
+      equal(1, legislativeAssemblyBallot.getHighestSelection(), "incrementHighestSelectionCounter = 1" );
+    });
+
+    test("LegislativeAssemblyBallot decrementHighestSelectionCounter()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      legislativeAssemblyBallot.incrementHighestSelectionCounter();
+      legislativeAssemblyBallot.decrementHighestSelectionCounter();
+      equal(0, legislativeAssemblyBallot.getHighestSelection(), "decrementHighestSelectionCounter = 0" );
+    });
+
+    test("LegislativeAssemblyBallot getPartyByCandidateName()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][5];
+      var partyName = legislativeAssemblyBallot.getPartyByCandidateName(candidate.name);
+      equal(partyName, candidate.partyName, "getPartyByCandidateName = " + candidate.partyName );
+    });
+
+    test("LegislativeAssemblyBallot getCandidateByIndex()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][5];
+      var storedCandidate = legislativeAssemblyBallot.getCandidateByIndex(5);
+      equal(storedCandidate.getName(), candidate.name, "getCandidateByIndex = " + candidate.name );
+    });
+
+    test("LegislativeAssemblyBallot getShuffleOrder()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.setShuffleOrder('08010005040903020706');
+      var shuffleOrder = legislativeAssemblyBallot.getShuffleOrder();
+      equal('08010005040903020706', shuffleOrder, "getShuffleOrder is correct" );
+    });
+
+    test("LegislativeAssemblyBallot getCandidateByShuffleOrder()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][5];
+      legislativeAssemblyBallot.setShuffleOrder('08010005040903020706');
+      // candidate 5 is represented by the shuffle order as number 05
+      // which is positioned 3rd (zero based index), so retrieve 3rd shuffled candidate.
+      var storedCandidate = legislativeAssemblyBallot.getCandidateByShuffleOrder(3);
+      equal(storedCandidate.getName(), candidate.name, "getCandidateByShuffleOrder = " + candidate.name );
+    });
+
+    test("LegislativeAssemblyBallot getCandidatesInShuffleOrder()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][5];
+      legislativeAssemblyBallot.setShuffleOrder('08010005040903020706');
+      // candidate 5 is represented by the shuffle order as number '05'
+      // which is positioned 3rd (zero based index), so retrieve 3rd shuffled candidate.
+      var shuffledCandidates = legislativeAssemblyBallot.getCandidatesInShuffleOrder();
+      var shuffledCandidateName = shuffledCandidates[3].getName();
+      equal(shuffledCandidateName, candidate.name, "getCandidatesInShuffleOrder = " + candidate.name );
+    });
+
+    test("LegislativeAssemblyBallot getCandidateByBallotId()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][5];
+      var storedCandidate = legislativeAssemblyBallot.getCandidateByBallotId('ballot_option_6');
+      equal(storedCandidate.getName(), candidate.name, "getCandidateByBallotId = " + candidate.name );
+    });
+
+    test("LegislativeAssemblyBallot moveToNextCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][1];
+      legislativeAssemblyBallot.currentCandidatePosition = 0;
+      var storedCandidate = legislativeAssemblyBallot.moveToNextCandidate();
+      equal(storedCandidate.getName(), candidate.name, "moveToNextCandidate = " + candidate.name );
+    });
+
+    test("LegislativeAssemblyBallot moveToPreviousCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][0];
+      legislativeAssemblyBallot.currentCandidatePosition = 1;
+      var storedCandidate = legislativeAssemblyBallot.moveToPreviousCandidate();
+      equal(storedCandidate.getName(), candidate.name, "moveToPreviousCandidate = " + candidate.name );
+    });
+
+    test("LegislativeAssemblyBallot isSelected()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][0];
+      legislativeAssemblyBallot.highestSelectionCounter = 0;
+      legislativeAssemblyBallot.ballotSelections[legislativeAssemblyBallot.highestSelectionCounter] = candidate;
+      var isCandidateSelected = legislativeAssemblyBallot.isSelected(candidate);
+      equal(isCandidateSelected, true, "isSelected = " + candidate.name + " is selected");
+    });
+
+    test("LegislativeAssemblyBallot selectCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][0];
+      legislativeAssemblyBallot.selectCandidate(candidate);
+      var isCandidateSelected = legislativeAssemblyBallot.isSelected(candidate);
+      equal(isCandidateSelected, true, "selectCandidate = " + candidate.name );
+    });
+
+    test("LegislativeAssemblyBallot getCurrentCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][0];
+      legislativeAssemblyBallot.currentCandidatePosition = 0;
+      var currentCandidate = legislativeAssemblyBallot.getCurrentCandidate();
+      equal(currentCandidate.getName(), candidate.name, "getCurrentCandidate = " + candidate.name );
+    });
+
+    test("LegislativeAssemblyBallot selectCurrentCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][0];
+      legislativeAssemblyBallot.currentCandidatePosition = 0;
+      legislativeAssemblyBallot.selectCurrentCandidate();
+      var isCandidateSelected = legislativeAssemblyBallot.isSelected(candidate);
+      equal(isCandidateSelected, true, "selectCurrentCandidate = " + candidate.name );
+    });
+
+    test("LegislativeAssemblyBallot setBallotSelection()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][0];
+      legislativeAssemblyBallot.setBallotSelection(candidate, 1);
+      var isCandidateSelected = legislativeAssemblyBallot.isSelected(candidate);
+      equal(isCandidateSelected, true, "setBallotSelection = " + candidate.name );
+    });
+
+    test("LegislativeAssemblyBallot unselectCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][0];
+      legislativeAssemblyBallot.selectCandidate(candidate);
+      var isCandidateSelected = legislativeAssemblyBallot.isSelected(candidate);
+      equal(isCandidateSelected, true, "unselectCandidate = " + candidate.name + " is selected");
+      legislativeAssemblyBallot.unselectCandidate(candidate);
+      isCandidateSelected = legislativeAssemblyBallot.isSelected(candidate);
+      equal(isCandidateSelected, false, "unselectCandidate = " + candidate.name + " is unselected");
+    });
+
+    test("LegislativeAssemblyBallot unselectLastCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][0];
+      legislativeAssemblyBallot.currentCandidatePosition = 0;
+      legislativeAssemblyBallot.selectCurrentCandidate();
+      var isCandidateSelected = legislativeAssemblyBallot.isSelected(candidate);
+      equal(isCandidateSelected, true, "unselectLastCandidate = " + candidate.name + " is selected");
+      legislativeAssemblyBallot.unselectLastCandidate(candidate);
+      isCandidateSelected = legislativeAssemblyBallot.isSelected(candidate);
+      equal(isCandidateSelected, false, "unselectLastCandidate = " + candidate.name + " is unselected");
+    });
+
+    test("LegislativeAssemblyBallot unselectCurrentCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][0];
+      legislativeAssemblyBallot.currentCandidatePosition = 0;
+      legislativeAssemblyBallot.selectCurrentCandidate();
+      var isCandidateSelected = legislativeAssemblyBallot.isSelected(candidate);
+      equal(isCandidateSelected, true, "unselectLastCandidate = " + candidate.name + " is selected");
+      legislativeAssemblyBallot.unselectCurrentCandidate(candidate);
+      isCandidateSelected = legislativeAssemblyBallot.isSelected(candidate);
+      equal(isCandidateSelected, false, "unselectLastCandidate = " + candidate.name + " is unselected");
+    });
+
+    test("LegislativeAssemblyBallot getBallotSelectionNumber()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate = districtData["candidates"][0];
+      legislativeAssemblyBallot.selectCandidate(candidate);
+      equal(legislativeAssemblyBallot.getBallotSelectionNumber(candidate), 1,
+        "getBallotSelectionNumber = " + legislativeAssemblyBallot.getBallotSelectionNumber(candidate));
+    });
+
+    test("LegislativeAssemblyBallot swapSelections()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate1 = legislativeAssemblyBallot.getCandidateByIndex(0);
+      legislativeAssemblyBallot.selectCandidate(candidate1);
+      var candidate2 = legislativeAssemblyBallot.getCandidateByIndex(1);
+      legislativeAssemblyBallot.selectCandidate(candidate2);
+      equal(legislativeAssemblyBallot.getBallotSelectionNumber(candidate1), 1,
+        "swapSelections = " + candidate1.getName() + " selected as " +
+        legislativeAssemblyBallot.getBallotSelectionNumber(candidate1));
+      equal(legislativeAssemblyBallot.getBallotSelectionNumber(candidate2), 2,
+        "swapSelections = " + candidate2.getName() + " selected as " +
+        legislativeAssemblyBallot.getBallotSelectionNumber(candidate2));
+      legislativeAssemblyBallot.swapSelections(candidate1, candidate2);
+      equal(legislativeAssemblyBallot.getBallotSelectionNumber(candidate1), 2,
+        "swapSelections = " + candidate1.getName() + " selected as " +
+        legislativeAssemblyBallot.getBallotSelectionNumber(candidate1));
+      equal(legislativeAssemblyBallot.getBallotSelectionNumber(candidate2), 1,
+        "swapSelections = " + candidate2.getName() + " selected as " +
+        legislativeAssemblyBallot.getBallotSelectionNumber(candidate2));
+    });
+
+    test("LegislativeAssemblyBallot getLastSelectedCandidate()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate1 = legislativeAssemblyBallot.getCandidateByIndex(0);
+      legislativeAssemblyBallot.selectCandidate(candidate1);
+      var candidate2 = legislativeAssemblyBallot.getCandidateByIndex(1);
+      legislativeAssemblyBallot.selectCandidate(candidate2);
+      var lastSelected = legislativeAssemblyBallot.getLastSelectedCandidate();
+      equal(lastSelected.getName(), candidate2.getName(),
+        "getLastSelectedCandidate = " + candidate2.getName() + " is the last selected candidate" );
+    });
+
+    test("LegislativeAssemblyBallot isLastCandidateSelection()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate1 = legislativeAssemblyBallot.getCandidateByIndex(0);
+      legislativeAssemblyBallot.selectCandidate(candidate1);
+      var candidate2 = legislativeAssemblyBallot.getCandidateByIndex(1);
+      legislativeAssemblyBallot.selectCandidate(candidate2);
+      var lastSelected = legislativeAssemblyBallot.getLastSelectedCandidate();
+      equal(legislativeAssemblyBallot.isLastCandidateSelection(candidate2), true,
+        "isLastCandidateSelection = " + candidate2.getName() + " is the last selected candidate");
+    });
+
+    test("LegislativeAssemblyBallot getPreferenceOrderList()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate1 = legislativeAssemblyBallot.getCandidateByIndex(0);
+      legislativeAssemblyBallot.selectCandidate(candidate1);
+      var candidate2 = legislativeAssemblyBallot.getCandidateByIndex(1);
+      legislativeAssemblyBallot.selectCandidate(candidate2);
+      var preferenceList = legislativeAssemblyBallot.getPreferenceOrderList();
+
+      // Zero based index
+      equal(preferenceList[1].getName(), candidate2.getName(),
+        "getPreferenceOrderList has correct Candidate name" );
+    });
+
+    test("LegislativeAssemblyBallot getPreferencesInShuffleOrder()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate1 = legislativeAssemblyBallot.getCandidateByIndex(0);
+      legislativeAssemblyBallot.selectCandidate(candidate1);
+      var candidate2 = legislativeAssemblyBallot.getCandidateByIndex(1);
+      legislativeAssemblyBallot.selectCandidate(candidate2);
+
+      var highestSelectionNumber = legislativeAssemblyBallot.getHighestSelection();
+      legislativeAssemblyBallot.setShuffleOrder('030205060108000407');
+
+      // Zero-based list with shuffled candidate order.
+      var shuffledPreferenceList = legislativeAssemblyBallot.getPreferencesInShuffleOrder();
+
+      // The person in candidate index 2 is "01" (positioned index 4) in the shuffled array.
+      equal(shuffledPreferenceList[4], highestSelectionNumber, "getPreferencesInShuffleOrder " +
+        candidate2.getName() + " has preference number " + shuffledPreferenceList[4]);
+    });
+
+    test("LegislativeAssemblyBallot getTextualPreferencesInShuffleOrder()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate1 = legislativeAssemblyBallot.getCandidateByIndex(0);
+      legislativeAssemblyBallot.selectCandidate(candidate1);
+      var candidate2 = legislativeAssemblyBallot.getCandidateByIndex(1);
+      legislativeAssemblyBallot.selectCandidate(candidate2);
+
+      var highestSelectionNumber = legislativeAssemblyBallot.getHighestSelection();
+      legislativeAssemblyBallot.setShuffleOrder('030205060108000407');
+
+      // Zero-based list with shuffled candidate order.
+      var shuffledPreferenceList = legislativeAssemblyBallot.getTextualPreferencesInShuffleOrder();
+
+      // The person in candidate index 2 is "01" (positioned index 4) in the shuffled array.
+      equal(shuffledPreferenceList[4], highestSelectionNumber, "getPreferencesInShuffleOrder " +
+        candidate2.getName() + " has preference number " + shuffledPreferenceList[4]);
+    });
+
+    test("LegislativeAssemblyBallot getShuffledPositionInPreferenceOrder()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate1 = legislativeAssemblyBallot.getCandidateByIndex(0);
+      legislativeAssemblyBallot.selectCandidate(candidate1);
+      var candidate2 = legislativeAssemblyBallot.getCandidateByIndex(1);
+      legislativeAssemblyBallot.selectCandidate(candidate2);
+
+      var highestSelectionNumber = legislativeAssemblyBallot.getHighestSelection();
+      legislativeAssemblyBallot.setShuffleOrder('030205060108000407');
+
+      // one-based array means the candidate is located in position 5.
+      var shuffledPositionList = legislativeAssemblyBallot.getShuffledPositionInPreferenceOrder();
+      equal(shuffledPositionList[highestSelectionNumber], 5, "getShuffledPositionInPreferenceOrder " +
+        candidate2.getName() + " has preference number " + highestSelectionNumber);
+    });
+
+    test("LegislativeAssemblyBallot ballotOptionPressed()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate1 = legislativeAssemblyBallot.getCandidateByIndex(0);
+      equal(legislativeAssemblyBallot.isSelected(candidate1), false, "ballotOptionPressed " +
+        candidate1.getName() + " is not selected");
+      legislativeAssemblyBallot.ballotOptionPressed(candidate1.getBallotBoxId());
+      equal(legislativeAssemblyBallot.isSelected(candidate1), true, "ballotOptionPressed " +
+        candidate1.getName() + " is selected");
+    });
+
+    test("LegislativeAssemblyBallot ballotOptionSwapped()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+      var candidate1 = legislativeAssemblyBallot.getCandidateByIndex(0);
+      legislativeAssemblyBallot.selectCandidate(candidate1);
+      var candidate2 = legislativeAssemblyBallot.getCandidateByIndex(1);
+      legislativeAssemblyBallot.selectCandidate(candidate2);
+      equal(legislativeAssemblyBallot.getBallotSelectionNumber(candidate1), 1, "ballotOptionSwapped = " +
+        candidate1.getName() + " selected as " + legislativeAssemblyBallot.getBallotSelectionNumber(candidate1));
+      equal(legislativeAssemblyBallot.getBallotSelectionNumber(candidate2), 2, "ballotOptionSwapped = " +
+        candidate2.getName() + " selected as " + legislativeAssemblyBallot.getBallotSelectionNumber(candidate2));
+      legislativeAssemblyBallot.ballotOptionSwapped(candidate1.getBallotBoxId(), candidate2.getBallotBoxId());
+      equal(legislativeAssemblyBallot.getBallotSelectionNumber(candidate1), 2, "ballotOptionSwapped = " +
+        candidate1.getName() + " selected as " + legislativeAssemblyBallot.getBallotSelectionNumber(candidate1));
+      equal(legislativeAssemblyBallot.getBallotSelectionNumber(candidate2), 1, "ballotOptionSwapped = " +
+        candidate2.getName() + " selected as " + legislativeAssemblyBallot.getBallotSelectionNumber(candidate2));
+    });
+
+    test("LegislativeAssemblyBallot isInformal()", function() {
+      var container = getContainer();
+      var legislativeAssemblyBallot = container.Resolve("assembly");
+      legislativeAssemblyBallot.reset();
+
+      var isInformal = legislativeAssemblyBallot.isInformal();
+      equal(isInformal, true, "ballot is informal" );
+
+      var candidates = legislativeAssemblyBallot.getCandidateListing();
+      for (var index = 0; index < candidates.length; index++) {
+        var candidate = legislativeAssemblyBallot.getCandidateByIndex(index);
+        legislativeAssemblyBallot.selectCandidate(candidate);
+      }
+
+      isInformal = legislativeAssemblyBallot.isInformal();
+
+      equal(isInformal, false, "ballot is not informal" );
+    });
+
+    test("AboveTheLineCouncilBallot init()", function() {
+      var aboveTheLineCouncilBallot = new AboveTheLineCouncilBallot();
+      equal(aboveTheLineCouncilBallot.getVisited(), false, "hasVisited init" );
+      equal(aboveTheLineCouncilBallot.currentGroupPosition, 0, "currentGroupPosition init" );
+    });
+
+    test("AboveTheLineCouncilBallot reset()", function() {
+      var aboveTheLineCouncilBallot = new AboveTheLineCouncilBallot();
+      aboveTheLineCouncilBallot.currentGroupPosition = 1;
+      aboveTheLineCouncilBallot.reset();
+      equal(aboveTheLineCouncilBallot.currentGroupPosition, 0, "currentGroupPosition reset" );
+    });
+
+    test("AboveTheLineCouncilBallot setVisited()", function() {
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      equal(aboveTheLineCouncilBallot.hasVisited, false, "hasVisited false");
+      aboveTheLineCouncilBallot.setVisited(true);
+      equal(aboveTheLineCouncilBallot.hasVisited, true, "hasVisited true");
+    });
+
+    test("AboveTheLineCouncilBallot resetCurrentCandidatePosition()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.currentGroupPosition = 3;
+      equal(3, aboveTheLineCouncilBallot.currentGroupPosition, "currentCandidatePosition 3" );
+      aboveTheLineCouncilBallot.resetCurrentCandidatePosition();
+      equal(0, aboveTheLineCouncilBallot.currentGroupPosition, "currentCandidatePosition 0" );
+    });
+
+    test("AboveTheLineCouncilBallot setCurrentGroupPosition()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.setCurrentGroupPosition(3);
+
+      // zero based candidate position in the groups means setting group position as 3 converts to 2.
+      equal(2, aboveTheLineCouncilBallot.currentGroupPosition, "currentCandidatePosition 3" );
+    });
+
+    test("AboveTheLineCouncilBallot getCurrentGroupPosition()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+
+      // zero based candidate position in the groups means setting group position as 2 returns as 3.
+      aboveTheLineCouncilBallot.currentGroupPosition = 2;
+      aboveTheLineCouncilBallot.getCurrentGroupPosition();
+      equal(3, aboveTheLineCouncilBallot.getCurrentGroupPosition(), "currentCandidatePosition 3" );
+    });
+
+    test("AboveTheLineCouncilBallot goToLastSelectedCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+
+      var group = aboveTheLineCouncilBallot.getGroupByIndex(3);
+      aboveTheLineCouncilBallot.selectGroup(group);
+
+      aboveTheLineCouncilBallot.currentGroupPosition = 0;
+      equal(0, aboveTheLineCouncilBallot.currentGroupPosition, "currentGroupPosition 0" );
+
+      aboveTheLineCouncilBallot.goToLastSelectedCandidate();
+      equal(3, aboveTheLineCouncilBallot.currentGroupPosition, "currentGroupPosition 3" );
+    });
+
+    test("AboveTheLineCouncilBallot getPreferencesInShuffleOrder()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+
+      var group = aboveTheLineCouncilBallot.getGroupByIndex(3);
+      aboveTheLineCouncilBallot.selectGroup(group);
+
+      aboveTheLineCouncilBallot.setShuffleOrder('000301040205');
+
+      // Zero-based list with shuffled candidate order.
+      var shuffledPreferenceList = aboveTheLineCouncilBallot.getPreferencesInShuffleOrder();
+
+      // The group in legal order 3, which is shuffle order 2, zero indexed 1 has the only vote.
+      equal(shuffledPreferenceList[1], 1, "getPreferencesInShuffleOrder group 3 has preference number 1");
+    });
+
+    test("AboveTheLineCouncilBallot getTextualPreferencesInShuffleOrder()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var group = aboveTheLineCouncilBallot.getGroupByIndex(3);
+      aboveTheLineCouncilBallot.selectGroup(group);
+
+      aboveTheLineCouncilBallot.setShuffleOrder('000301040205');
+
+      // Zero-based list with shuffled candidate order.
+      var shuffledPreferenceList = aboveTheLineCouncilBallot.getTextualPreferencesInShuffleOrder();
+
+      // The group in legal order 3, which is shuffle order 2, zero indexed 1 has the only vote.
+      equal(shuffledPreferenceList[1], 1, "getPreferencesInShuffleOrder group 3 has preference number 1");
+    });
+
+    test("AboveTheLineCouncilBallot getShuffleOrder()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.setShuffleOrder('000301040205');
+      var shuffleOrder = aboveTheLineCouncilBallot.getShuffleOrder();
+      equal('000301040205', shuffleOrder, "getShuffleOrder is correct" );
+    });
+
+    test("AboveTheLineCouncilBallot getCandidateByShuffleOrder()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var party = regionData["parties"][3];
+      aboveTheLineCouncilBallot.setShuffleOrder('01000504030206');
+      // party 3 is represented by the shuffle order as number 03
+      // which is positioned 4th (zero based index), so retrieve 4th shuffled party.
+      var storedParty = aboveTheLineCouncilBallot.getCandidateByShuffleOrder(4);
+      equal(storedParty.getId(), party.id, "getCandidateByShuffleOrder = party " + party.id );
+    });
+
+    test("AboveTheLineCouncilBallot getPartiesInShuffleOrder()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var party = regionData["parties"][3];
+      aboveTheLineCouncilBallot.setShuffleOrder('01000504030206');
+      // party 3 is represented by the shuffle order as number 03
+      // which is positioned 4th (zero based index), so retrieve 4th shuffled party.
+      var storedParties = aboveTheLineCouncilBallot.getPartiesInShuffleOrder();
+      var storedParty = storedParties[4];
+      equal(storedParty.getId(), party.id, "getPartiesInShuffleOrder = party " + party.id );
+    });
+
+    test("AboveTheLineCouncilBallot getShuffledPositionInPreferenceOrder()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+
+      var group = aboveTheLineCouncilBallot.getGroupByIndex(3);
+      aboveTheLineCouncilBallot.selectGroup(group);
+
+      var highestSelectionNumber = aboveTheLineCouncilBallot.getHighestSelection();
+      aboveTheLineCouncilBallot.setShuffleOrder('000301040205');
+
+      // Zero-based list with shuffled candidate order.
+      var shuffledPositionList = aboveTheLineCouncilBallot.getShuffledPositionInPreferenceOrder();
+
+      // The group in legal order 3, which is shuffle order 2, zero indexed 1 has the only vote.
+      equal(shuffledPositionList[highestSelectionNumber], 1, "getShuffledPositionInPreferenceOrder group 3 has preference number 1");
+    });
+
+    test("AboveTheLineCouncilBallot getNumberOfPartyGroups()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      equal(aboveTheLineCouncilBallot.getNumberOfPartyGroups(), regionData.parties.length, "getNumberOfPartyGroups has 6 Party Groups" );
+    });
+
+    test("AboveTheLineCouncilBallot getPartyGroupListing()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var partyGroups = aboveTheLineCouncilBallot.getGroups();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData.parties[0].preferredName;
+      equal(expectedName, partyGroups[0].name, "getPartyGroupListing has correct Party Group name" );
+    });
+
+    test("AboveTheLineCouncilBallot getGroups()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var partyGroups = aboveTheLineCouncilBallot.getGroups();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData.parties[0].preferredName;
+      equal(expectedName, partyGroups[0].name, "getGroups has correct Party Group name" );
+    });
+
+    test("AboveTheLineCouncilBallot getGroupByIndex()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+
+      // Zero-based index for partyGroups. Sixth element is index 5.
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(0);
+      var expectedName = regionData.parties[0].preferredName;
+      equal(expectedName, partyGroup.name, "getGroupByIndex has correct Party Group name" );
+    });
+
+    test("AboveTheLineCouncilBallot isSelected()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(0);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup);
+      var isPartyGroupSelected = aboveTheLineCouncilBallot.isSelected(partyGroup);
+      equal(isPartyGroupSelected, true, "isSelected = " + partyGroup.name + " is selected");
+    });
+
+    test("AboveTheLineCouncilBallot selectGroup()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(0);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup);
+      var isPartyGroupSelected = aboveTheLineCouncilBallot.isSelected(partyGroup);
+      equal(isPartyGroupSelected, true, "selectGroup = " + partyGroup.name );
+    });
+
+    test("AboveTheLineCouncilBallot unselectGroup()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(0);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup);
+      var isPartyGroupSelected = aboveTheLineCouncilBallot.isSelected(partyGroup);
+      equal(isPartyGroupSelected, true, "unselectGroup = " + partyGroup.name + " is selected");
+      aboveTheLineCouncilBallot.unselectGroup(partyGroup);
+      isPartyGroupSelected = aboveTheLineCouncilBallot.isSelected(partyGroup);
+      equal(isPartyGroupSelected, false, "unselectGroup = " + partyGroup.name + " is unselected");
+    });
+
+    test("AboveTheLineCouncilBallot setBallotSelection()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(0);
+      aboveTheLineCouncilBallot.setBallotSelection(partyGroup);
+      var isPartyGroupSelected = aboveTheLineCouncilBallot.isSelected(partyGroup);
+      equal(isPartyGroupSelected, true, "setBallotSelection = " + partyGroup.name + " is selected");
+    });
+
+    test("AboveTheLineCouncilBallot isLastGroupSelection()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(0);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup);
+      var isPartyGroupSelected = aboveTheLineCouncilBallot.isLastGroupSelection(partyGroup);
+      equal(isPartyGroupSelected, true, "isLastGroupSelection = " + partyGroup.name + " is the last Group selected");
+    });
+
+    test("AboveTheLineCouncilBallot moveToNextGroup()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(2);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup);
+
+      // Start at first candidate in the list.
+      aboveTheLineCouncilBallot.currentGroupPosition = 1;
+
+      var storedPartyGroup = aboveTheLineCouncilBallot.moveToNextGroup();
+      equal(storedPartyGroup.getName(), partyGroup.name, "moveToNextGroup = " + partyGroup.name );
+    });
+
+    test("AboveTheLineCouncilBallot moveToPreviousGroup()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(1);
+
+      // Start at second group in the list.
+      aboveTheLineCouncilBallot.currentGroupPosition = 2;
+
+      // Move to the previous group.
+      var storedPartyGroup = aboveTheLineCouncilBallot.moveToPreviousGroup();
+      equal(storedPartyGroup.getName(), partyGroup.name, "moveToPreviousGroup = " + partyGroup.name );
+    });
+
+    test("AboveTheLineCouncilBallot getBallotSelectionNumber()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(1);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup);
+      equal(aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup), 1,
+        "getBallotSelectionNumber = " + aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup));
+    });
+
+    test("AboveTheLineCouncilBallot swapSelections()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup1 = aboveTheLineCouncilBallot.getGroupByIndex(1);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup1);
+
+      var partyGroup2 = aboveTheLineCouncilBallot.getGroupByIndex(2);
+
+      equal(aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup1), 1,
+        "swapSelections = " + partyGroup1.name + " selected as " +
+        aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup1));
+      equal(aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup2), null,
+        "swapSelections = " + partyGroup2.name + " not selected");
+      aboveTheLineCouncilBallot.swapSelections(partyGroup1, partyGroup2);
+      equal(aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup1), null,
+        "swapSelections = " + partyGroup1.name + " not selected");
+      equal(aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup2), 1,
+        "swapSelections = " + partyGroup2.name + " selected as " +
+        aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup2));
+    });
+
+    test("AboveTheLineCouncilBallot getCurrentGroup()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(2);
+
+      // Start at first candidate in the list.
+      aboveTheLineCouncilBallot.currentGroupPosition = 1;
+
+      // Move to the next group.
+      aboveTheLineCouncilBallot.moveToNextGroup();
+      var storedPartyGroup = aboveTheLineCouncilBallot.getCurrentGroup();
+      equal(storedPartyGroup.getName(), partyGroup.name, "getCurrentGroup = " + partyGroup.name );
+    });
+
+    test("AboveTheLineCouncilBallot isAlreadySelected()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(2);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup);
+      var isAlreadySelected = aboveTheLineCouncilBallot.isAlreadySelected(partyGroup);
+      equal(isAlreadySelected, true, "isAlreadySelected = " + partyGroup.name );
+    });
+
+    test("AboveTheLineCouncilBallot getSelection()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(2);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup);
+      var storedPartyGroup = aboveTheLineCouncilBallot.getSelection();
+      equal(storedPartyGroup.name, partyGroup.name, "getSelection = " + partyGroup.name );
+    });
+
+    test("AboveTheLineCouncilBallot getHighestSelection()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(1);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup);
+      var highestSelection = aboveTheLineCouncilBallot.getHighestSelection();
+      equal(highestSelection, 1, "getHighestSelection = " + highestSelection );
+    });
+
+    test("AboveTheLineCouncilBallot getBallotSelectionNumber()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(2);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup);
+      var highestSelection = aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup);
+      equal(highestSelection, 1, "getBallotSelectionNumber = " + highestSelection );
+    });
+
+    test("AboveTheLineCouncilBallot ballotOptionPressed()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup = aboveTheLineCouncilBallot.getGroupByIndex(1);
+      equal(aboveTheLineCouncilBallot.isSelected(partyGroup), false, "ballotOptionPressed " +
+        partyGroup.getName() + " is not selected");
+      aboveTheLineCouncilBallot.ballotOptionPressed(partyGroup.getBallotBoxId());
+      equal(aboveTheLineCouncilBallot.isSelected(partyGroup), true, "ballotOptionPressed " +
+        partyGroup.getName() + " is selected");
+    });
+
+    test("AboveTheLineCouncilBallot ballotOptionSwapped()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroup1 = aboveTheLineCouncilBallot.getGroupByIndex(1);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup1);
+      var partyGroup2 = aboveTheLineCouncilBallot.getGroupByIndex(2);
+
+      equal(aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup1), 1, "ballotOptionSwapped = " +
+        partyGroup1.getName() + " selected as " + aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup1));
+      equal(aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup2), null, "ballotOptionSwapped = " +
+        partyGroup2.getName() + " not selected");
+      aboveTheLineCouncilBallot.ballotOptionSwapped(partyGroup1.getBallotBoxId(), partyGroup2.getBallotBoxId());
+      equal(aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup1), null, "ballotOptionSwapped = " +
+        partyGroup1.getName() + " not selected");
+      equal(aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup2), 1, "ballotOptionSwapped = " +
+        partyGroup2.getName() + " selected as " + aboveTheLineCouncilBallot.getBallotSelectionNumber(partyGroup2));
+    });
+
+    test("AboveTheLineCouncilBallot isInformal()", function() {
+      var container = getContainer();
+      var aboveTheLineCouncilBallot = container.Resolve("atl");
+      aboveTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+
+      var isInformal = aboveTheLineCouncilBallot.isInformal();
+      equal(isInformal, true, "ballot is informal" );
+
+      var partyGroup1 = aboveTheLineCouncilBallot.getGroupByIndex(1);
+      aboveTheLineCouncilBallot.selectGroup(partyGroup1);
+      isInformal = aboveTheLineCouncilBallot.isInformal();
+
+      equal(isInformal, false, "ballot is not informal" );
+    });
+
+    test("BelowTheLineCouncilBallot init()", function() {
+      var belowTheLineCouncilBallot = new BelowTheLineCouncilBallot();
+      belowTheLineCouncilBallot.init();
+      equal(belowTheLineCouncilBallot.getVisited(), false, "hasVisited init" );
+      equal(belowTheLineCouncilBallot.highestSelectionCounter, 0, "highestSelectionCounter init" );
+      equal(belowTheLineCouncilBallot.currentCandidatePosition, 0, "currentCandidatePosition init" );
+      equal(belowTheLineCouncilBallot.currentGroupPosition, 1, "currentGroupPosition init" );
+    });
+
+    test("BelowTheLineCouncilBallot reset()", function() {
+      var belowTheLineCouncilBallot = new BelowTheLineCouncilBallot();
+      belowTheLineCouncilBallot.currentGroupPosition = 1;
+      belowTheLineCouncilBallot.currentCandidatePosition = 1;
+      belowTheLineCouncilBallot.reset();
+      equal(belowTheLineCouncilBallot.currentGroupPosition, 1, "currentGroupPosition reset" );
+      equal(belowTheLineCouncilBallot.currentCandidatePosition, 0, "currentCandidatePosition reset" );
+    });
+
+    test("BelowTheLineCouncilBallot setVisited()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      equal(belowTheLineCouncilBallot.hasVisited, false, "hasVisited false");
+      belowTheLineCouncilBallot.setVisited(true);
+      equal(belowTheLineCouncilBallot.hasVisited, true, "hasVisited true");
+    });
+
+    test("BelowTheLineCouncilBallot resetCurrentCandidatePosition()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.currentGroupPosition = 2;
+      belowTheLineCouncilBallot.currentCandidatePosition = 2;
+      equal(2, belowTheLineCouncilBallot.currentGroupPosition, "currentGroupPosition 2" );
+      equal(2, belowTheLineCouncilBallot.currentCandidatePosition, "currentCandidatePosition 2" );
+
+      belowTheLineCouncilBallot.resetCurrentCandidatePosition();
+
+      equal(1, belowTheLineCouncilBallot.currentGroupPosition, "currentGroupPosition 1" );
+      equal(0, belowTheLineCouncilBallot.currentCandidatePosition, "currentCandidatePosition 0" );
+    });
+
+    test("BelowTheLineCouncilBallot getCandidates()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var candidates = belowTheLineCouncilBallot.getCandidates();
+      var expectedName = regionData["parties"][0]["candidates"][0].name;
+      equal(expectedName, candidates[0].getName(),
+        "getCandidates has correct Candidate name" );
+    });
+
+    test("BelowTheLineCouncilBallot getNumberOfCandidates()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var candidates = belowTheLineCouncilBallot.getCandidates();
+      var candidateCount = belowTheLineCouncilBallot.getNumberOfCandidates();
+      equal(candidateCount, candidates.length, "getNumberOfCandidates has correct candidate count" );
+    });
+
+    test("BelowTheLineCouncilBallot getPartyGroups()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroups = belowTheLineCouncilBallot.getPartyGroups();
+      equal(partyGroups[1].getName(), regionData["parties"][0].preferredName,
+        "getPartyGroups has correct Party Group name" );
+    });
+
+    test("BelowTheLineCouncilBallot getPartyGroup()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroupId = regionData["parties"][0].id;
+      var partyGroup = belowTheLineCouncilBallot.getPartyGroup(partyGroupId);
+      equal(partyGroup.getName(), regionData["parties"][0].preferredName,
+        "getPartyGroup has correct Party Group name" );
+    });
+
+    test("BelowTheLineCouncilBallot getHighestSelection()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      belowTheLineCouncilBallot.highestSelectionCounter = 6;
+      equal(6, belowTheLineCouncilBallot.getHighestSelection(),
+        "getHighestSelection = 6" );
+    });
+
+    test("BelowTheLineCouncilBallot incrementHighestSelectionCounter()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      belowTheLineCouncilBallot.incrementHighestSelectionCounter();
+      equal(1, belowTheLineCouncilBallot.getHighestSelection(),
+        "incrementHighestSelectionCounter = 1" );
+    });
+
+    test("BelowTheLineCouncilBallot decrementHighestSelectionCounter()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      belowTheLineCouncilBallot.incrementHighestSelectionCounter();
+      belowTheLineCouncilBallot.decrementHighestSelectionCounter();
+      equal(0, belowTheLineCouncilBallot.getHighestSelection(),
+        "decrementHighestSelectionCounter = 0" );
+    });
+
+    test("BelowTheLineCouncilBallot getCandidateByIndex()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData["parties"][0]["candidates"][0].name;
+      var storedCandidate = belowTheLineCouncilBallot.getCandidateByIndex(0);
+      equal(storedCandidate.getName(), expectedName,
+        "getCandidateByIndex = " + expectedName );
+    });
+
+    test("BelowTheLineCouncilBallot getCandidateByBallotId()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData["parties"][0]["candidates"][0].name;
+      var storedCandidate = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+      equal(storedCandidate.getName(), expectedName,
+        "getCandidateByBallotId = " + expectedName );
+    });
+
+    test("BelowTheLineCouncilBallot getCurrentGroup()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData["parties"][1].preferredName;
+      belowTheLineCouncilBallot.moveToNextGroup();
+      var storedPartyGroup = belowTheLineCouncilBallot.getCurrentGroup();
+      equal(storedPartyGroup.getName(), expectedName, "getCurrentGroup = " + expectedName );
+    });
+
+    test("BelowTheLineCouncilBallot getCandidatesForGroup()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var partyGroupId = regionData["parties"][0].id;
+      var expectedName = regionData["parties"][0]["candidates"][0].name;
+      var candidates = belowTheLineCouncilBallot.getCandidatesForGroup(partyGroupId);
+      var storedCandidate = candidates[0];
+      equal(storedCandidate.getName(), expectedName,
+        "getCandidatesForGroup has correct Candidate name" );
+    });
+
+    test("BelowTheLineCouncilBallot compareCandidates()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      // ID = 1
+      var candidate1 = belowTheLineCouncilBallot.getCandidateByIndex(1);
+      // ID = 2
+      var candidate2 = belowTheLineCouncilBallot.getCandidateByIndex(2);
+      var candidate1BeforeCandidate2 = (belowTheLineCouncilBallot.compareCandidates(candidate1, candidate2) < 0);
+      equal(true, candidate1BeforeCandidate2, "candidate1 comes before candidate2");
+      var candidate1EqualsCandidate1 = (belowTheLineCouncilBallot.compareCandidates(candidate1, candidate1) == 0);
+      equal(true, candidate1EqualsCandidate1, "candidate1 equals candidate1");
+      var candidate2AfterCandidate1 = (belowTheLineCouncilBallot.compareCandidates(candidate2, candidate1) > 0);
+      equal(true, candidate2AfterCandidate1, "candidate2 comes after candidate1");
+    });
+
+    test("BelowTheLineCouncilBallot moveToNextCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData["parties"][0]["candidates"][1].name;
+
+      // Start at first group in the ballot.
+      belowTheLineCouncilBallot.currentGroupPosition = 1;
+
+      // Start at first candidate in the list.
+      belowTheLineCouncilBallot.currentCandidatePosition = 0;
+
+      // Move to the next candidate.
+      var storedCandidate = belowTheLineCouncilBallot.moveToNextCandidate();
+      equal(storedCandidate.getName(), expectedName, "moveToNextCandidate = " + expectedName );
+    });
+
+    test("BelowTheLineCouncilBallot moveToPreviousCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData["parties"][0]["candidates"][0].name;
+
+      // Start at first group in the ballot.
+      belowTheLineCouncilBallot.currentGroupPosition = 1;
+
+      // Start at first candidate in the list.
+      belowTheLineCouncilBallot.currentCandidatePosition = 1;
+
+      // Move to the next candidate.
+      var storedCandidate = belowTheLineCouncilBallot.moveToPreviousCandidate();
+      equal(storedCandidate.getName(), expectedName, "moveToNextCandidate = " + expectedName );
+    });
+
+    test("BelowTheLineCouncilBallot moveToNextGroup()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData["parties"][1].preferredName;
+
+      // Start at first group in the ballot.
+      belowTheLineCouncilBallot.currentGroupPosition = 1;
+
+      // Move to the next group.
+      var storedGroup = belowTheLineCouncilBallot.moveToNextGroup();
+      equal(storedGroup.getName(), expectedName, "moveToNextGroup = " + expectedName );
+    });
+
+    test("BelowTheLineCouncilBallot moveToPreviousGroup()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData["parties"][0].preferredName;
+
+      // Start at second group in the ballot.
+      belowTheLineCouncilBallot.currentGroupPosition = 2;
+
+      // Move to the next candidate.
+      var storedGroup = belowTheLineCouncilBallot.moveToPreviousGroup();
+      equal(storedGroup.getName(), expectedName, "moveToPreviousGroup = " + expectedName );
+    });
+
+    test("BelowTheLineCouncilBallot isSelected()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData["parties"][0]["candidates"][0].name;
+      var storedCandidate = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+      belowTheLineCouncilBallot.ballotSelections[belowTheLineCouncilBallot.highestSelectionCounter] = storedCandidate;
+      var isCandidateSelected = belowTheLineCouncilBallot.isSelected(storedCandidate);
+      equal(isCandidateSelected, true, "isSelected = " + expectedName + " is selected");
+    });
+
+    test("BelowTheLineCouncilBallot selectCandidate()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var nominationsData = dataContainer.Resolve("nominationsData");
+      var expectedName = regionData["parties"][0]["candidates"][0].name;
+      var storedCandidate = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+
+      // Start at first group in the ballot.
+      belowTheLineCouncilBallot.currentGroupPosition = 1;
+
+      // Start at first candidate in the list.
+      belowTheLineCouncilBallot.currentCandidatePosition = 0;
+
+      belowTheLineCouncilBallot.selectCandidate(storedCandidate);
+      var isCandidateSelected = belowTheLineCouncilBallot.isSelected(storedCandidate);
+      equal(isCandidateSelected, true, "selectCandidate = " + expectedName );
+    });
+
+    test("BelowTheLineCouncilBallot selectCurrentCandidate()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var storedCandidate = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+
+      // Start at first group in the ballot.
+      belowTheLineCouncilBallot.currentGroupPosition = 1;
+
+      // Start at first candidate in the list.
+      belowTheLineCouncilBallot.currentCandidatePosition = 0;
+
+      belowTheLineCouncilBallot.selectCurrentCandidate();
+      var isCandidateSelected = belowTheLineCouncilBallot.isSelected(storedCandidate);
+      equal(isCandidateSelected, true, "selectCurrentCandidate = " + storedCandidate.getName() );
+    });
+
+    test("BelowTheLineCouncilBallot setBallotSelection()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var storedCandidate = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+      belowTheLineCouncilBallot.setBallotSelection(storedCandidate, 1);
+      var isCandidateSelected = belowTheLineCouncilBallot.isSelected(storedCandidate);
+      equal(isCandidateSelected, true, "setBallotSelection = " + storedCandidate.getName() );
+    });
+
+    test("BelowTheLineCouncilBallot unselectCandidate()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var storedCandidate = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+      belowTheLineCouncilBallot.selectCandidate(storedCandidate);
+      var isCandidateSelected = belowTheLineCouncilBallot.isSelected(storedCandidate);
+      equal(isCandidateSelected, true, "unselectCandidate = " + storedCandidate.getName() + " is selected");
+      belowTheLineCouncilBallot.unselectCandidate(storedCandidate);
+      isCandidateSelected = belowTheLineCouncilBallot.isSelected(storedCandidate);
+      equal(isCandidateSelected, false, "unselectCandidate = " + storedCandidate.getName() + " is unselected");
+    });
+
+    test("BelowTheLineCouncilBallot unselectLastCandidate()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var storedCandidate = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+      belowTheLineCouncilBallot.currentCandidatePosition = 0;
+      belowTheLineCouncilBallot.currentGroupPosition = 1;
+      belowTheLineCouncilBallot.selectCurrentCandidate();
+
+      var isCandidateSelected = belowTheLineCouncilBallot.isSelected(storedCandidate);
+      equal(isCandidateSelected, true, "unselectLastCandidate = " + storedCandidate.getName() + " is selected");
+      belowTheLineCouncilBallot.unselectLastCandidate(storedCandidate);
+      isCandidateSelected = belowTheLineCouncilBallot.isSelected(storedCandidate);
+      equal(isCandidateSelected, false, "unselectLastCandidate = " + storedCandidate.getName() + " is unselected");
+    });
+
+    test("BelowTheLineCouncilBallot unselectCurrentCandidate()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var storedCandidate = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+      belowTheLineCouncilBallot.currentCandidatePosition = 0;
+      belowTheLineCouncilBallot.currentGroupPosition = 1;
+      belowTheLineCouncilBallot.selectCurrentCandidate();
+
+      var isCandidateSelected = belowTheLineCouncilBallot.isSelected(storedCandidate);
+      equal(isCandidateSelected, true, "unselectLastCandidate = " + storedCandidate.getName() + " is selected");
+      belowTheLineCouncilBallot.unselectCurrentCandidate(storedCandidate);
+      isCandidateSelected = belowTheLineCouncilBallot.isSelected(storedCandidate);
+      equal(isCandidateSelected, false, "unselectLastCandidate = " + storedCandidate.getName() + " is unselected");
+    });
+
+    test("BelowTheLineCouncilBallot swapSelections()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var storedCandidate1 = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_2');
+      belowTheLineCouncilBallot.selectCandidate(storedCandidate1);
+      var storedCandidate2 = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+      belowTheLineCouncilBallot.selectCandidate(storedCandidate2);
+      equal(belowTheLineCouncilBallot.getBallotSelectionNumber(storedCandidate1), 1,
+        "swapSelections = " + storedCandidate1.getName() + " selected as " +
+        belowTheLineCouncilBallot.getBallotSelectionNumber(storedCandidate1));
+      equal(belowTheLineCouncilBallot.getBallotSelectionNumber(storedCandidate2), 2,
+        "swapSelections = " + storedCandidate2.getName() + " selected as " +
+        belowTheLineCouncilBallot.getBallotSelectionNumber(storedCandidate2));
+      belowTheLineCouncilBallot.swapSelections(storedCandidate1, storedCandidate2);
+      equal(belowTheLineCouncilBallot.getBallotSelectionNumber(storedCandidate1), 2,
+        "swapSelections = " + storedCandidate1.getName() + " selected as " +
+        belowTheLineCouncilBallot.getBallotSelectionNumber(storedCandidate1));
+      equal(belowTheLineCouncilBallot.getBallotSelectionNumber(storedCandidate2), 1,
+        "swapSelections = " + storedCandidate2.getName() + " selected as " +
+        belowTheLineCouncilBallot.getBallotSelectionNumber(storedCandidate2));
+    });
+
+    test("BelowTheLineCouncilBallot getLastSelectedCandidate()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var storedCandidate1 = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_2');
+      belowTheLineCouncilBallot.selectCandidate(storedCandidate1);
+      var storedCandidate2 = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+      belowTheLineCouncilBallot.selectCandidate(storedCandidate2);
+      var lastSelected = belowTheLineCouncilBallot.getLastSelectedCandidate();
+      equal(lastSelected.getName(), storedCandidate2.getName(),
+        "getLastSelectedCandidate = " + storedCandidate2.getName() + " is the last selected candidate" );
+    });
+
+    test("BelowTheLineCouncilBallot isLastCandidateSelection()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var storedCandidate1 = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_2');
+      belowTheLineCouncilBallot.selectCandidate(storedCandidate1);
+      var storedCandidate2 = belowTheLineCouncilBallot.getCandidateByBallotId('council_candidate_ballot_option_1_1');
+      belowTheLineCouncilBallot.selectCandidate(storedCandidate2);
+      var lastSelected = belowTheLineCouncilBallot.getLastSelectedCandidate();
+      equal(belowTheLineCouncilBallot.isLastCandidateSelection(storedCandidate2), true,
+        "isLastCandidateSelection = " + storedCandidate2.getName() + " is the last selected candidate");
+    });
+
+    test("BelowTheLineCouncilBallot getCurrentCandidate()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var candidate = belowTheLineCouncilBallot.getCandidateByIndex(0);
+      belowTheLineCouncilBallot.currentGroupPosition = 1;
+      belowTheLineCouncilBallot.currentCandidatePosition = 0;
+      var currentCandidate = belowTheLineCouncilBallot.getCurrentCandidate();
+      equal(currentCandidate.getName(), candidate.getName(), "getCurrentCandidate = " + candidate.getName() );
+    });
+
+    test("BelowTheLineCouncilBallot getBallotSelectionNumber()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var candidate = belowTheLineCouncilBallot.getCandidateByIndex(0);
+      belowTheLineCouncilBallot.selectCandidate(candidate);
+      equal(belowTheLineCouncilBallot.getBallotSelectionNumber(candidate), 1,
+        "getBallotSelectionNumber = " + belowTheLineCouncilBallot.getBallotSelectionNumber(candidate));
+    });
+
+    test("BelowTheLineCouncilBallot getPreferenceOrderList()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var candidate1 = belowTheLineCouncilBallot.getCandidateByIndex(0);
+      belowTheLineCouncilBallot.selectCandidate(candidate1);
+      var candidate2 = belowTheLineCouncilBallot.getCandidateByIndex(1);
+      belowTheLineCouncilBallot.selectCandidate(candidate2);
+      var preferenceList = belowTheLineCouncilBallot.getPreferenceOrderList();
+
+      // Zero based index
+      equal(preferenceList[1].getName(), candidate2.getName(),
+        "getPreferenceOrderList has correct Candidate name" );
+    });
+
+    test("BelowTheLineCouncilBallot getCandidatesInLegalOrder()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var candidates = new Array();
+
+      for (var index = 0; index < regionData["parties"].length; index++) {
+        var partyCandidates = regionData["parties"][index]["candidates"];
+        candidates = candidates.concat(partyCandidates);
+      }
+
+      var storedCandidates = belowTheLineCouncilBallot.getCandidatesInLegalOrder(index);
+      for (var index = 0; index < candidates.length; index++) {
+        var candidate = candidates[index];
+        var storedCandidate = storedCandidates[index];
+        equal(storedCandidate.getName(), candidate.name, "getCandidatesInLegalOrder = " + candidate.name );
+      }
+    });
+
+    test("BelowTheLineCouncilBallot getShuffleOrder()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var districtData = dataContainer.Resolve("districtData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.setShuffleOrder('000301040205');
+      var shuffleOrder = belowTheLineCouncilBallot.getShuffleOrder();
+      equal('000301040205', shuffleOrder, "getShuffleOrder is correct" );
+    });
+
+    test("BelowTheLineCouncilBallot getCandidateByShuffleOrder()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var candidate = regionData["parties"][0]["candidates"][1];
+      belowTheLineCouncilBallot.setShuffleOrder('000301040205');
+      // candidate is represented by the shuffle order as number 01
+      // which is positioned 2nd (zero based index), so retrieve 2nd shuffled party.
+      var storedCandidate = belowTheLineCouncilBallot.getCandidateByShuffleOrder(2);
+      equal(storedCandidate.getName(), candidate.name, "getCandidateByShuffleOrder = " + candidate.name );
+    });
+
+    test("BelowTheLineCouncilBallot getCandidatesInShuffleOrder()", function() {
+      var container = getContainer();
+      var dataContainer = getDataContainer();
+      var regionData = dataContainer.Resolve("regionData");
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var candidate = regionData["parties"][0]["candidates"][1];
+      belowTheLineCouncilBallot.setShuffleOrder('000301040205');
+      // candidate is represented by the shuffle order as number 01
+      // which is positioned 2nd (zero based index), so retrieve 2nd shuffled party.
+      var storedCandidates = belowTheLineCouncilBallot.getCandidatesInShuffleOrder();
+      var storedCandidate = storedCandidates[2];
+      equal(storedCandidate.getName(), candidate.name, "getCandidatesInShuffleOrder = " + candidate.name );
+    });
+
+    test("BelowTheLineCouncilBallot getPreferencesInShuffleOrder()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+
+      var candidate1 = belowTheLineCouncilBallot.getCandidateByIndex(0);
+      belowTheLineCouncilBallot.selectCandidate(candidate1);
+
+      var candidate2 = belowTheLineCouncilBallot.getCandidateByIndex(1);
+      belowTheLineCouncilBallot.selectCandidate(candidate2);
+
+      var highestSelectionNumber = belowTheLineCouncilBallot.getHighestSelection();
+      belowTheLineCouncilBallot.setShuffleOrder('180616081502101709071214031119000401132005');
+
+      // Zero-based list with shuffled candidate order.
+      var shuffledPreferenceList = belowTheLineCouncilBallot.getPreferencesInShuffleOrder();
+
+      // The person in candidate index 2 is "01" (positioned index 17) in the shuffled array.
+      equal(shuffledPreferenceList[17], highestSelectionNumber, "getPreferencesInShuffleOrder " +
+        candidate2.getName() + " has preference number " + shuffledPreferenceList[17]);
+    });
+
+    test("BelowTheLineCouncilBallot ballotOptionPressed()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+      var candidate1 = belowTheLineCouncilBallot.getCandidateByIndex(0);
+      equal(belowTheLineCouncilBallot.isSelected(candidate1), false, "ballotOptionPressed " +
+        candidate1.getName() + " is not selected");
+      belowTheLineCouncilBallot.ballotOptionPressed(candidate1.getBallotBoxId());
+      equal(belowTheLineCouncilBallot.isSelected(candidate1), true, "ballotOptionPressed " +
+        candidate1.getName() + " is selected");
+    });
+
+    test("BelowTheLineCouncilBallot ballotOptionSwapped()", function() {
+      var container = getContainer();
+      var belowTheLineCouncilBallot = container.Resolve("btl");
+      belowTheLineCouncilBallot.reset();
+
+      var candidate1 = belowTheLineCouncilBallot.getCandidateByIndex(0);
+      belowTheLineCouncilBallot.selectCandidate(candidate1);
+
+      var candidate2 = belowTheLineCouncilBallot.getCandidateByIndex(1);
+      belowTheLineCouncilBallot.selectCandidate(candidate2);
+
+      equal(belowTheLineCouncilBallot.getBallotSelectionNumber(candidate1), 1, "ballotOptionSwapped = " +
+        candidate1.getName() + " selected as " + belowTheLineCouncilBallot.getBallotSelectionNumber(candidate1));
+      equal(belowTheLineCouncilBallot.getBallotSelectionNumber(candidate2), 2, "ballotOptionSwapped = " +
+        candidate2.getName() + " selected as " + belowTheLineCouncilBallot.getBallotSelectionNumber(candidate2));
+      belowTheLineCouncilBallot.ballotOptionSwapped(candidate1.getBallotBoxId(), candidate2.getBallotBoxId());
+      equal(belowTheLineCouncilBallot.getBallotSelectionNumber(candidate1), 2, "ballotOptionSwapped = " +
+        candidate1.getName() + " selected as " + belowTheLineCouncilBallot.getBallotSelectionNumber(candidate1));
+      equal(belowTheLineCouncilBallot.getBallotSelectionNumber(candidate2), 1, "ballotOptionSwapped = " +
+        candidate2.getName() + " selected as " + belowTheLineCouncilBallot.getBallotSelectionNumber(candidate2));
+    });
+
+    module("VisualScreenManager Module");
+
+    test("visualScreenManager enterScreen('start_screen')", function() {
+      var container = getContainer();
+      var visualScreenManager = container.Resolve("visualScreenManager");
+      visualScreenManager.reset();
+      visualScreenManager.enterScreen('start_screen');
+      var currentScreen = visualScreenManager.getCurrentVisualInterfaceScreen();
+      equal(currentScreen, 'start_screen', "current visual screen is the start screen");
+    });
+
+    test("visualScreenManager getCurrentVisualInterfaceScreen", function() {
+      var container = getContainer();
+      var visualScreenManager = container.Resolve("visualScreenManager");
+      visualScreenManager.enterScreen('start_screen');
+      var currentVisualInterfaceScreen = visualScreenManager.getCurrentVisualInterfaceScreen();
+      equal(currentVisualInterfaceScreen, 'start_screen', "currentVisualInterfaceScreen correct");
+    });
+
+    test("visualScreenManager switchToAudioInterface", function() {
+      var container = getContainer();
+      var visualScreenManager = container.Resolve("visualScreenManager");
+      visualScreenManager.enterScreen('start_screen');
+      var currentVisualInterfaceScreen = visualScreenManager.switchToAudioInterface();
+      equal(currentVisualInterfaceScreen, 'start_screen', "switchToAudioInterface correct");
+    });
+
+    test("visualScreenManager execute", function() {
+      var container = getContainer();
+      var visualScreenManager = container.Resolve("visualScreenManager");
+      var commandResponse = null;
+      function saveResponse(response) {
+        commandResponse = response;
+      }
+      visualScreenManager.execute({
+        request : 'enterScreen',
+        screen : 'start_screen',
+        callback : saveResponse
+      });
+      equal(commandResponse, 'start_screen', "execute returned correct response");
+    });
+  }
+
+  </script>
+
+</head>
+<body>
+  <h1 id="qunit-header">vVote Source Code Unit Testing</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">markup, will be hidden</div>
+</body>
+</html>

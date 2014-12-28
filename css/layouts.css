@@ -1,0 +1,117 @@
+
+#wrapper {
+  height: 100%;
+  width: inherit;
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;  
+  padding: 0px 0px 0px 0px;    
+}
+
+.screen {
+  height: 100%;
+  width: 100%;
+  min-width: 400px;
+  min-height: 300px;
+}
+
+
+#ballot_combined_content {  
+  padding: 0px;
+  margin: 0px;
+  overflow-x: auto; 
+  overflow-y: auto; 
+}
+
+body::-webkit-scrollbar,
+div::-webkit-scrollbar,
+#ballot_combined_content::-webkit-scrollbar,
+#ballot_groups_content::-webkit-scrollbar,
+#ballot_candidates_content::-webkit-scrollbar,
+#assembly_ballot_container::-webkit-scrollbar,
+#assembly_ballot_summary_container::-webkit-scrollbar,
+#council_ballot_summary_container::-webkit-scrollbar,
+#ballot_container::-webkit-scrollbar,
+#ballot_scrollable_inner::-webkit-scrollbar
+{
+  -webkit-appearance: none;  
+  height: 0px; 
+  width: 0px; 
+  background-color: #FFF; 
+}
+
+#ballot_groups_content,
+#ballot_candidates_content
+{  
+  width: auto !important; 
+}
+
+#atl_top_div, #btl_bottom_div {
+  overflow-y: hidden;
+}
+
+#atl_top_div {
+  border-bottom: 5px solid black;
+}
+
+#btl_bottom_div {
+  border-top: 5px solid black;
+}
+
+#ballot_candidates_content_inner {
+  margin-top: 125px;
+}
+
+.div-fixed {
+  position:fixed;    
+  left: 7px; 
+  right: 7px; 
+}
+
+.div-absolute {
+  position: absolute; 
+  left: 0px; 
+  right: 0px;
+}
+
+.ballot {
+  display: block;
+}
+
+.group_ballot {
+  white-space: normal;
+  display: inline;
+  position: relative;
+}
+
+.candidate_group_ballot {
+  float: left;
+  padding-top: 5px;
+  padding-bottom: 0px; 
+}
+
+.party_ticket_panel, .party_policy_panel, .party_members_panel, .candidate_ticket_panel, .candidate_policy_panel {
+  width: 900px; 
+  height: 600px; 
+  background-color: #E6E0EC; 
+  color: #000000; 
+  display: none; 
+  visibility: hidden; 
+  border: 3px solid #385D8A;
+  overflow-y: hidden;
+  overflow-x: hidden; 
+  z-index: 501;
+  left: 15%;
+}
+
+#confirmationMessageBox {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+} 

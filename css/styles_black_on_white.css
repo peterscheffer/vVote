@@ -1,0 +1,633 @@
+body, h1 {
+  background-color: #FDF5E8 !important; 
+  color: #000000 !important;
+}
+
+.header {
+  background-color: #D9D2C7;
+  color: #000000;
+}
+
+.footer {
+  background-color: #D9D2C7;
+  color: #000000;
+}
+
+.left_bar {
+  background-color: #D9D2C7;
+  color: #000000;
+}
+
+.right_bar {
+  background-color: #D9D2C7;
+  color: #000000;
+}
+
+.button {
+  background-color: #575450;
+  color: #FDF5E8;
+}
+
+#language_listing li {
+  border-bottom: 1px solid #575450;
+}
+
+.language_selected {
+  background-color: #575450;
+  border-bottom: 1px solid #575450;
+  color: #FDF5E8;
+}
+
+.option_tick_box {
+  border: 2px solid #000000; 
+}
+
+#switch_to_audio_button {
+  border: 2px solid #000000;
+}
+
+.option_text {
+  color: #000000;
+}
+
+.notice_panel {
+  background-color: #FDF5E8;  
+  color: #000000;  
+}
+
+
+
+
+
+
+
+
+
+/************ Old Styles ***************/
+
+.invert_color {
+  color: #000000 !important;
+  background-color: #FDF5E8 !important;
+}
+
+.start_screen_button {
+  border: 3px solid #000000; 
+}
+
+.navButtonRecolor {
+  cursor: pointer;
+  font-weight:bold;
+  color: #000000; 
+  background: -moz-linear-gradient(
+    top,
+    #575450 0%,
+    #FDF5E8);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#575450),
+  to(#FDF5E8)); 
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: 3px solid #000000;
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);  
+}
+
+.navButtonRecolor:hover {
+  background: -moz-linear-gradient(
+    top,
+    #FDF5E8 0%,
+    #575450);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#FDF5E8),
+  to(#575450)); 
+}
+
+.navButtonRecolor:active {
+    background: -moz-linear-gradient(
+      top,
+      #cccccc 0%,
+      #FDF5E8);
+    background: -webkit-gradient(
+      linear, left top, left bottom, 
+      from(#cccccc),
+    to(#FDF5E8)); 
+}
+
+.actionButtonRecolor {
+  cursor: pointer;
+  font-weight:bold;
+  color: #000000; 
+  background: -moz-linear-gradient(
+    top,
+    #575450 0%,
+    #FDF5E8);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#575450),
+  to(#FDF5E8)); 
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  border-radius: 14px;
+  border: 3px solid #000000;
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);  
+}
+
+.actionButtonRecolor:hover {
+    background: -moz-linear-gradient(
+      top,
+      #FDF5E8 0%,
+      #575450);
+    background: -webkit-gradient(
+      linear, left top, left bottom, 
+      from(#FDF5E8),
+    to(#575450)); 
+}
+
+.actionButtonRecolor:active {
+    background: -moz-linear-gradient(
+      top,
+      #cccccc 0%,
+      #FDF5E8);
+    background: -webkit-gradient(
+      linear, left top, left bottom, 
+      from(#cccccc),
+    to(#FDF5E8)); 
+}
+
+.notice_panel {
+  color: #000000;  
+}
+
+.notice_panel button {
+  color: #000000;
+}
+
+#btnNext {
+  color: #000000;
+}
+
+.navButton {
+  border: 3px solid #000000;
+}
+
+.styleSizeBtn {
+  color: #000000;
+}
+
+.red_alert {
+  color: #000000;
+}
+
+.green_alert {
+  color: #000000;
+}
+
+#ballot_combined_content {
+  background-color: #FDF5E8;  
+  background: transparent;
+}
+
+#confirmation_message, #confirmation_message_box {
+  background-color: transparent !important;
+  z-index: 280;
+}
+
+.ballot img {
+  float: left;
+  margin: 0px 5px 5px 0px;
+}
+
+.ballot_box {
+  border: 6px solid #000000;  
+  color: #000000 !important;
+  background-color: #FDF5E8 !important;
+}
+
+.summary_ballot_box {
+  color: #000000 !important;
+  background-color: #FDF5E8 !important;
+}
+
+.candidate_details {
+  float: left;
+  display: inline;
+  padding-bottom: 0px;
+  margin-top: -2px;
+  text-align: left;
+}
+
+.candidate_name {  
+  font-weight: bold;
+  color: #000000 !important;
+  background-color: #FDF5E8 !important;
+}
+
+.candidate_party {
+  font-weight: normal;
+  color: #000000 !important;
+  background-color: #FDF5E8 !important;
+}
+
+.summary_candidate_name {  
+  font-weight: bold;
+  color: #000000 !important;
+  background-color: #FDF5E8 !important;
+}
+
+.summary_candidate_party {
+  font-weight: normal;
+  color: #000000 !important;
+  background-color: #FDF5E8 !important;
+}
+
+.candidate_region {  
+  font-weight: normal;
+  color: #000000 !important;
+  background-color: #FDF5E8 !important;
+}
+
+#assembly_ballot_container {
+  color: #FDF5E8 !important;
+  background-color: #FDF5E8 !important;
+}
+
+#assembly_ballot_content_inner {
+  color: #FDF5E8 !important;
+  background-color: #FDF5E8 !important;
+}
+
+#assembly_ballot_summary_content_inner {
+  color: #FDF5E8 !important;
+  background-color: #FDF5E8 !important;
+}
+
+#council_ballot_summary_content_inner {
+  color: #FDF5E8 !important;
+  background-color: #FDF5E8 !important;
+}
+
+#assembly_ballot_summary_container {
+  color: #000000 !important;
+  background-color: #FDF5E8 !important;
+}
+
+#council_ballot_summary_container {
+  color: #000000 !important;
+  background-color: #FDF5E8 !important;
+}
+
+#assembly_summary_title_background {
+  background-color: #FDF5E8 !important;
+}
+
+#council_summary_title_background {
+  background-color: #FDF5E8 !important;
+}
+
+/* REVIEW BALLOTS SCREEN STYLES */
+#ballot_container {
+  background-color: #FDF5E8; 
+}
+
+#review_front_inner_ballot {
+  color: #000  !important; 
+  height: 100%;
+}
+
+#review_front_ballot, #review_back_ballot_inner {
+  position: relative;  
+  background-color: #fff; 
+  color: #000; 
+  height: 100%;
+  overflow-x: hidden; 
+  overflow-y: scroll; 
+  width: 1200px; float: right;  
+}
+
+.review_arrow_base {
+  width: 0; 
+  height: 0; 
+  border-top: 50px solid #000; 
+  border-bottom: 50px solid #000; 
+  border-left: 10px solid #000; 
+  border-right: 10px solid #000;
+}
+
+.review_arrow_tip {
+  width: 0; 
+  height: 0; 
+  border-left: 40px solid transparent; 
+  border-right: 40px solid transparent; 
+  border-top: 40px solid #000;
+}
+
+.review_arrow_tip_up {
+  width: 0; 
+  height: 0; 
+  border-left: 40px solid transparent; 
+  border-right: 40px solid transparent; 
+  border-bottom: 40px solid #000;
+}
+
+.review_cut_out {
+  font-size: 0px; 
+  line-height: 0%; 
+  width: 0px;
+  border-top: 85px solid transparent;
+  border-bottom: 85px solid #CCC;
+  border-left: none;
+  border-right: 85px solid transparent;  
+}
+
+.review_cut_out_top {
+  font-size: 0px; 
+  line-height: 0%; 
+  width: 0px;
+  border-top: 85px solid #CCC;
+  border-bottom: 85px solid transparent;
+  border-left: none;
+  border-right: 85px solid transparent;  
+}
+
+.review_middle_dashed {
+  float: left; 
+  height: 100%; 
+  border-right-style: dashed; 
+  border-right-width: 1px; 
+  border-color: #000;  
+}
+
+.review_div_listing {
+  width: 100%; 
+  border-bottom: 2px solid #000;  
+  overflow-x: hidden;
+}
+
+.review_div_listing_inner {
+  padding: 5px; 
+  overflow-x: hidden; 
+  white-space: nowrap;  
+}
+
+.review_div_listing_top {
+  height: 100%; 
+  text-align: left;  
+  border-left: 2px solid #000;  
+  border-top: 2px solid #000;
+  overflow-x: hidden;   
+}
+
+.review_div_listing_inner {
+  padding: 5px; 
+  overflow-x: hidden; 
+  white-space: nowrap;  
+}
+
+.review_assembly_ballot {
+  border: 2px solid #000000;  
+}
+
+.review_atl_ballot {
+  border: 2px solid #000000;  
+}
+
+.review_btl_ballot {
+  border: 2px solid #000000;  
+}
+
+.receipt_candidate_name {
+  color: #000000;
+  font-weight: bold;
+}
+
+.review_preference_selection {
+  border: 2px solid #000000;  
+  font-weight: bold;
+}
+
+.review_candidate_selection {
+  border: 2px solid #000000;  
+  font-weight: bold;
+}
+
+.review_assembly_preferences {
+  border: 2px solid #000000;
+}
+
+.review_atl_preferences {
+  border: 2px solid #000000;
+}
+
+.review_btl_preferences {
+  border: 2px solid #000000;
+}
+
+.review_atl_preferences {
+  border: 2px solid #000000;
+}
+
+.review_preference_selection {
+  border: 2px solid #000000;  
+  font-weight: bold;
+}
+
+.review_candidate_selection {
+  border: 2px solid #000000;  
+  font-weight: bold;
+}
+
+.preference_selections_comparison {
+  background-color: #FDF5E8;  
+}
+/* END - REVIEW BALLOTS SCREEN STYLES */
+
+#assembly_instruction_background {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#review_ballot_instruction_background {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#help_modal_background {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#more_help_modal_background {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#paper_voting_modal_background {
+  background-color: #FDF5E8;
+  opacity: 1;
+}
+
+#other_help_modal_background {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#other_help_modal_container {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#help_modal_background {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#warning_modal_background {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#incomplete_vote_modal_background {
+  background-color: #FDF5E8;
+  opacity: 1; 
+}
+
+#want_htvc_modal_background {
+  background-color: #FDF5E8;
+  opacity: 1; 
+}
+
+#confirmation_modal_background {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#submit_confirmation_modal_background {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#submit_confirmation_modal_background {
+  opacity: 1; 
+  background-color: #FDF5E8;
+}
+
+#atl_top_div, #btl_bottom_div {
+  opacity: 1;
+}
+
+#atl_top_div, #btl_bottom_div {
+  background: rgba(255, 255, 255, 1);
+}
+
+#more_help_info {
+  background-color: #FDF5E8; 
+}
+
+#paper_voting_info {
+  background-color: #FDF5E8; 
+}
+
+#want_htvc_info {
+  background-color: #FDF5E8; 
+}
+
+#incomplete_vote_info {
+  background-color: #FDF5E8; 
+}
+
+.actionButtonDiv {
+  color: #000000; 
+  background: -moz-linear-gradient(
+    top,
+    #575450 0%,
+    #FDF5E8);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#575450),
+  to(#FDF5E8)); 
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: 3px solid #cccccc;
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);     
+}
+
+.actionButtonDiv:hover {
+  background: -moz-linear-gradient(
+    top,
+    #FDF5E8 0%,
+    #575450);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#FDF5E8),
+  to(#575450)); 
+}
+
+#atl_btl_choice_btl_button {
+  color: #000000;
+  background-color: #FDF5E8;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: 3px solid #000000;
+}
+
+#atl_btl_choice_atl_button {
+  color: #000000;
+  background-color: #FDF5E8;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: 3px solid #000000;
+}
+
+#summary_separator {
+  background-color: #575450;
+}
+
+#switch_to_audio_option {
+  border: 3px solid #000000;
+}
+
+#clear_ballot_button {
+  border: 3px solid #000000;
+}
+
+#return_to_audio_button {
+  border: 3px solid #000000;
+}

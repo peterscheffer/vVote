@@ -1,0 +1,74 @@
+{
+  "type":"object",
+  "required" : [ "images", "videos" ],
+  "properties":{
+    "images": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required" : 
+        [ "filename", 
+          "dimensions", 
+          "format"
+        ],
+        "properties" : {
+          "filename" : {
+            "type" : "string"
+          },
+          "dimensions" : {
+            "type" : "string"
+          },
+          "format" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "videos": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required" : 
+        [ "filename", 
+          "dimensions", 
+          "bvi_type",
+          "lead_in_time",
+          "speed",
+          "format",
+          "alpha",
+          "bounding_box",
+          "colour_gamut"
+        ],
+        "properties" : {
+          "filename" : {
+            "type" : "string"
+          },
+          "dimensions" : {
+            "type" : "string"
+          },
+          "bvi_type" : {
+            "type" : "string"
+          },
+          "lead_in_time" : {
+            "type" : "string"
+          },
+          "speed" : {
+            "type" : "string"
+          },
+          "format" : {
+            "type" : "string"
+          },
+          "alpha" : {
+            "type" : "string"
+          },
+          "bounding_box" : {
+            "type" : "string"
+          },
+          "colour_gamut" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

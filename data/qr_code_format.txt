@@ -1,0 +1,23 @@
+This is the QR code data for the candidate slip.
+
+DISTRICT;REGION;SERIAL NUMBER;SIGNATURE;LANGUAGE;FONT SIZE;COLOR CONTRAST;INTERFACE
+
+Where 
+
+SERIAL NUMBER  eg. NTH:1
+SIGNATURE      eg. MCwCFBwBw/vpAb4W8pLqcIR95GGfFS5lAhRDQvsJdEIB23tcpxxXFivpYWuSGA==
+LANGUAGE       1=English, 2=Arabic, 3=Mandarin, ... 20=
+FONT SIZE      1=Medium, 2=Large
+COLOR CONTRAST 1=BoW, 2=WoB
+INTERFACE      1=VIS, 2=GVS, 3=TVS
+DIST UNCONTEST 1=true, 0=false
+REG UNCONTEST  1=true, 0=false
+
+The Onion is the concatenation of SERIAL NUMBER;SIGNATURE.
+
+
+Sample QR code (no settings, no uncontested races) -
+
+Gembrook;Eastern Victoria;EST:1;MCwCFBwBw/vpAb4W8pLqcIR95GGfFS5lAhRDQvsJdEIB23tcpxxXFivpYWuSGA==;0;0;0;0;0;0
+
+Use http://goqr.me/ to generate QR codes for now.

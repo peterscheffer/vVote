@@ -1,0 +1,37 @@
+#triage_screen
+{ 
+  visibility: visible;
+  display: block;    
+}
+
+#language_screen,
+#start_screen,
+#legislative_assembly_candidate_vote_screen,
+#review_ballots_screen,
+#scan_error_visual_screen,
+#reset_screen,
+#error_screen,
+#mbb_timeout_screen,
+#invalid_qr_screen,
+#aui_timeout_screen,
+#timeout_screen,
+#timeout_lock_screen,
+#timeout_unlock_screen,
+#confirm_discard_screen,
+#practice_screen,
+#audio_only_screen,
+#audio_mode_scan_qr_code_screen,
+#confirm_triage_screen,
+#confirm_audio_switch_visual_screen,
+#scan_qr_code_screen,
+#confirm_scan_screen,
+#atl_btl_choice_screen,
+#legislative_council_combined_screen,
+#confirm_selections_screen,
+#gesture_video_box,
+#start_message_box,
+#print_receipt_screen
+{
+  visibility: hidden;
+  display: none;	
+}

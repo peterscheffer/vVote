@@ -1,0 +1,757 @@
+body {
+  font-size: 28pt;   
+}
+
+p { font-size: 1em; }
+
+span { font-size: 1em; }
+
+h1 { font-size: 1em; line-height: 105%; }
+
+button { font-size: 1em; }
+
+li { font-size: 1em; }
+
+ol, ul {
+  margin-left: 60px; 
+}
+
+.button {
+  width: 140px;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+}
+
+#language_listing li {
+  height: 110px;
+  padding-left: 40px;
+  line-height: 2.5em;
+}
+
+.actionButtonDiv p { 
+  font-size: 1em;   
+}
+
+.actionButtonDiv p.lcc_actionBtnFirstPara {
+  font-size: 1em;
+}
+
+.navButton, .navButtonInactive {
+  font-size: 1em;
+  width: 19%;
+  height: 80px; 
+  padding: 5px 5px 10px 0px;  
+  margin-left: 10px;
+  line-height: 95%;
+}
+
+.navPositionBtn {
+  font-size: 1em; 
+  width: 80px; 
+  height: 80px;
+  padding-left: 13px; 
+  padding-top: 2px; 
+}
+
+.styleSizeBtn {
+  height: 50px;
+}
+
+.ballot_box { 
+  font-size: 1em;   
+  width: 65px;
+  height: 65px; 
+  border: 3px solid #444;
+  margin-left: 5px;
+  font-weight: bold;
+  float: left;
+  display: inline;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 150%;
+}
+
+.summary_ballot_box { 
+  font-size: 1em;   
+  width: 65px;
+  height: 65px; 
+  border: none;
+  margin-left: 5px;
+  font-weight: bold;
+  float: left;
+  display: inline;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.candidate_name { 
+  font-size: 1em; 
+  padding-left: 5px;
+  margin-top: -8px;
+  display: inline;
+  float: left;
+  width: 84%;
+}
+
+.candidate_party { 
+  font-size: 1em; 
+  padding-left: 5px;
+  margin-top: -10px;
+  float: left;
+  width: 84%;
+}
+
+.summary_candidate_name { 
+  font-size: 1em; 
+  padding-left: 5px;
+  display: inline;
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+
+.summary_candidate_party { 
+  font-size: 1em; 
+  padding-left: 5px;
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+
+.candidate_region { 
+  font-size: 1em; 
+  padding-left: 5px;
+  width: 84%;
+}
+
+.group_name_lc { 
+  font-size: 1em; 
+  padding-left: 5px;
+  display: inline;
+  float: left;
+  font-weight: bold;
+}
+
+.candidate_name_lc { 
+  font-size: 1em; 
+  padding-left: 5px;
+  margin-top: -8px;
+  display: inline;
+  float: left;
+  padding-right: 50px;
+}
+
+.candidate_party_lc { 
+  font-size: 1em; 
+  padding-left: 5px;
+  margin-top: -10px;
+  float: left;
+}
+
+.candidate_region_lc {
+  padding-left: 5px;
+  margin-top: -8px;
+  float: left;
+}
+
+.la { 
+  float: left;
+  display: block;
+  width: 800px;
+}
+
+.candidate_group_ballot h1 { font-size: 1em; }
+
+.candidate_group_ballot h3 { font-size: 1em; }
+
+.group_ballot h1 { font-size: 1em; }
+
+.group_candidate_name { 
+  font-size: 1em; 
+  white-space: nowrap;
+  padding-right: 150px;
+}
+
+.confirm button { font-size: 1em; }
+
+.confirm p {
+  font-size: 1em;
+}
+
+#scrolling_content {
+  height: 100%;
+  float: left; 
+  width: 100%; 
+  padding: 0px; 
+  margin: 0px; 
+  z-index: 111;
+}
+
+#review_btn_correct {
+  width: 420px; 
+  height: 100px; 
+  padding: 20px; 
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#review_btn_help {
+  width: 260px; 
+  height: 60px; 
+  float: none;
+  font-size: 1em !important;
+  padding-top: 15px; 
+}
+
+#review_btn_again {
+  width: 220px; 
+  float: none;
+  font-size: 1em !important;
+  padding-top: 15px; 
+}
+
+#review_ballot_instruction_ok_button {
+  width: 260px; 
+  height: 60px; 
+  float: none;
+  font-size: 1em !important;
+  padding-top: 15px; 
+}
+
+#review_action_content {
+  padding-left: 250px;
+}
+
+#review_btn_explain {
+  width: 420px; 
+  height: 100px; 
+  padding: 20px; 
+  float: none;
+  font-size: 1em;
+}
+
+#atl_pref_header {
+  padding: 10px;
+  width: 100%;
+  float: right;
+}
+
+#btl_pref_header {
+  padding: 10px;
+  width: 100%;
+  float: right;
+}
+
+/* LAYOUTS */
+.ballot {
+  float: left;
+}
+
+.ballot_lc {
+  height: 100px;
+  float: left;
+}
+
+.btl_ballot {
+  height: 150px;
+}
+
+.summary_ballot {
+  width: 600px;
+  margin-top: 25px;
+}
+
+#council_ballot_summary_content_inner {
+}
+
+#assembly_ballot_summary_content_inner {
+}
+
+.group_ballot {
+  height: 100px;  
+}
+
+.group_ballot_lc {
+  height: 100px;  
+}
+
+.candidate_group_ballot {
+  width: 680px;
+  height: 100px;  
+}
+
+.candidate_details { 
+  height: 140px;
+  float: left;
+  display: inline;
+  margin-top: -2px;
+  text-align: left;
+}
+
+#ballot_combined_content {
+  top: 70px;
+  bottom: 70px;
+  left: 70px; 
+  right: 70px;
+  position: absolute; 
+  z-index: 100; 
+}
+
+#ballot_groups_content_inner,
+#ballot_candidates_content_inner
+{
+
+}
+
+#ballot_groups_content,
+#atl_top_div
+{
+  height: 160px;
+}
+
+#ballot_candidates_content
+{
+  top: 140px;
+}
+
+#atl_button_div, #btl_button_div {
+  padding: 20px;
+  height: 150px; 
+  width: 750px;
+}
+
+#atl_button_title, #btl_button_title {
+  font-size: 1em !important;
+}
+
+.help_modal_panel {
+  height: 400px;
+}
+
+.notice_panel {
+  margin-top: 70px;
+  height: 612px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px; 
+}
+
+.notice_panel p {
+  font-size: 1em;
+  line-height: 105%;
+  padding-bottom: 10px;
+}
+
+#notice_help_panel p {
+  font-size: 1em;
+  line-height: 105%;
+  padding-bottom: 10px;
+}
+
+.notice_panel button {
+  font-size: 1em;
+  line-height: 100%;
+  height:90px;
+  padding: 5px 20px 10px 20px;  
+}
+
+.notice_panel .other_help {
+  font-size: 1em;
+  height: 150px;
+  padding: 5px 20px 10px 20px;
+  width: 400px;
+  margin: 10px;
+}
+
+#help_content {
+  padding: 0px 40px 10px 40px;
+  overflow: hidden;
+}
+
+#confirm_clear_ballot_content {
+  padding: 50px 140px 10px 180px;
+}
+
+#ballot_cleared_content {
+  padding: 50px 140px 10px 180px;
+}
+
+#confirm_discard_content {
+  width: 800px;
+}
+
+#more_help_content {
+  padding: 50px 150px 10px 150px;
+}
+
+#other_help_content {
+  padding: 50px 175px 10px 175px;
+}
+
+#incomplete_vote_info {
+  width: 500px;
+  padding: 20px; 
+  margin-left: 20px; 
+  margin-top: 10px; 
+  float: left; 
+}
+
+#error_content {
+  width: 800px;
+}
+
+#timeout_content {
+  width: 800px;
+}
+
+#timeout_lock_content {
+  width: 800px;
+}
+
+#timeout_unlock_content {
+  width: 1000px;
+}
+
+.help_box {
+  font-size: 1em;
+}
+
+.count_notice {
+  font-size: 1em;
+}
+
+#assembly_ballot_content_inner {
+
+}
+
+#assembly_ballot_container {
+  width: 950px;
+  height: 610px;
+}
+
+#assembly_ballot_background {
+  width: 950px;
+  height: 610px;
+  position: absolute;
+  top: 70px;
+  left: 100px;
+}
+
+#assembly_ballot_summary_background {
+  width: 610px;
+  height: 610px;
+  margin-left: 15px;
+}
+
+#council_ballot_summary_background {
+  width: 650px;
+  height: 610px;
+  margin-left: 25px;
+}
+
+#assembly_vote_not_counted, #council_vote_not_counted {
+  font-size: 1em;
+}
+
+#assembly_ballot_summary_container {
+  height: 620px;
+  margin-top: 70px;
+}
+
+#council_ballot_summary_container {
+  height: 620px;
+  margin-top: 70px;
+  width: 610px;
+}
+
+#two_ballot_layout {
+    width: 1500px;
+}
+
+.language_button {
+  font-size: 1em;
+}
+
+#review_left_div {
+  font-size: 1em;
+}
+
+#ballot_container {
+  font-size: 1em !important;  
+}
+
+.review_div_section_header {
+  font-size: 1em !important;  
+  width: 100%; 
+  height: 180px; 
+  padding-top: 10px; 
+  padding-bottom: 0px;
+  vertical-align: bottom;
+}
+
+.review_div_section_header p {
+  font-size: 1em;
+}
+
+.assembly_section_header {
+  height: 180px; 
+}
+
+.atl_section_header {
+  height: 220px; 
+}
+
+.btl_section_header {
+  height: 220px; 
+}
+
+.review_middle_dashed {
+  height: 3500px;
+}
+
+.review_middle_front {
+  padding-top: 480px; 
+  padding-bottom: 0px; 
+  height: 2500px;
+}
+
+#review_right_side {
+  float: left; 
+  width: 840px; 
+  padding-left: 10px;
+}
+
+#review_left_side {
+  float: left; 
+  width: 450px; 
+  height: 2500px;
+}
+
+#generated_qr_code {
+  height: 250px; 
+  width: 450px;
+}
+
+.ballot_header_info {
+  font-size: 1em !important;  
+}
+
+.review_preference_selection {
+  padding: 5px; 
+  font-size: 1em;
+  text-align: center;
+  height: 42px;
+}
+
+.review_candidate_selection {
+  padding: 5px; 
+  font-size: 1em;
+  text-align: left;
+  overflow: hidden;
+  height: 42px;
+}
+
+.review_box_border {
+  border: 2px solid #ccc; 
+  padding: 5px; 
+  width: 75px; 
+}
+
+.receipt_candidate_name {
+  font-size: 1em;
+  padding: 5px;
+  border: 2px solid;
+  text-align: left;
+}
+
+.review_div_listing_top {
+  height: 100%; 
+  text-align: left;  
+  overflow-x: hidden;   
+}
+
+#confirmation_message_box h1 {
+  font-size: 1em;
+  padding-bottom: 10px;
+}
+
+.review_atl_preferences {
+  width: 69px;
+  float: right;
+  margin-right: 10px;
+}
+
+.arrow_button {
+
+}
+
+#assembly_ballot_summary_up_section {
+  height: 80px;
+  margin-top: -500px;
+  width: 100%;
+}
+
+#assembly_ballot_summary_down_section {
+  height: 80px;
+  margin-top: -80px;
+  width: 100%;
+}
+
+#assembly_summary_button_scroll_up {
+  bottom: 500px;
+  left: 15px;
+}
+
+#assembly_summary_button_scroll_down {
+  bottom: 160px;
+  left: 15px;
+}
+
+#council_ballot_summary_up_section {
+  height: 80px;
+  margin-top: -500px;
+  width: 100%;
+}
+
+#council_ballot_summary_down_section {
+  height: 80px;
+  margin-top: -80px;
+  width: 100%;
+}
+
+#council_summary_button_scroll_up {
+  bottom: 500px;
+  left: 15px;
+}
+
+#council_summary_button_scroll_down {
+  bottom: 160px;
+  left: 15px;
+}
+
+#more_help_button_scroll_up {
+  bottom: 750px;
+  left: 620px;
+}
+
+#more_help_button_scroll_down {
+  bottom: 100px;
+  left: 530px;
+}
+
+#paper_voting_modal_no_button {
+  float: left; 
+  margin-left: 25px; 
+  width: 250px; 
+  height: 100px;
+}
+
+#paper_voting_modal_yes_button {
+  float: left; 
+  margin-left: 25px; 
+  width: 250px; 
+  height: 100px;
+}
+
+#black_on_white_option {
+
+}
+
+#white_on_black_option {
+
+}
+
+#audio_switch_button {
+  top: 235px;  
+  width: 300px;
+}
+
+#audio_switch_button p {
+  font-size: 1em;
+}
+
+#legislative_council_title {
+  margin-top: 5px;
+}
+
+#more_help_content {
+  height: 600px;
+}
+
+#start_button {
+  width: 420px;
+}
+
+#assembly_instruction_title {
+  margin-top: 15px;
+  width: 1000px;
+}
+
+.ballot_aggregate {
+  margin-top: 25px;
+}
+
+#ballot_scrollable_inner {
+  height: 1000px;
+}
+
+.atl_btl_spacer_div {
+  height: 170px;
+  width: 100%;
+  display: block;
+}
+
+#atl_btl_switch_bar {
+  top: 100px;
+}
+
+#btl_atl_switch_bar {
+  top: 100px;
+}
+
+#summary_region_title {
+  float: left;
+  margin-left: 20px;
+}
+
+#summary_district_title {
+  float: left;
+  margin-left: 20px;
+}
+
+.group_letter {
+  float: left;
+  line-height: 180%;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.group_box {
+  padding-top: 10px;
+}
+
+.group_box_name {
+  line-height: 180%;
+}
+
+.btl_box {
+  margin-left: 40px;
+}
+
+#atl_btl_choice_atl_button {
+  padding: 40px 5px 0px 5px;
+  text-align: center; 
+  line-height: 120%;
+  height: 200px;
+}
+
+#atl_btl_choice_btl_button {
+  padding: 30px 5px 0px 5px;
+  text-align: center; 
+  line-height: 120%;
+  height: 200px;
+}

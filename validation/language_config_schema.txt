@@ -1,0 +1,1030 @@
+{
+  "type":"object",
+  "required" : [ "languages", "dictionaries" ],
+  "properties":{
+    "languages": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required" : 
+        [ "language", 
+          "name", 
+          "dictionary", 
+          "direction", 
+          "font", 
+          "default_font_size", 
+          "stylesheet_large", 
+          "stylesheet_medium" 
+        ],
+        "properties" : {
+          "language" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "dictionary" : {
+            "type" : "string"
+          },
+          "direction" : {
+            "type" : "string"
+          },
+          "font" : {
+            "type" : "string"
+          },
+          "default_font_size" : 
+          {
+            "type" : "string"
+          },
+          "stylesheet_large" : 
+          {
+            "type" : "string"
+          },
+          "stylesheet_medium" : 
+          {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "dictionaries": {
+      "type":"array",
+      "items": {
+        "properties" : {
+          "translations" : {
+            "type":"object",
+            "required" : 
+            [ "languages_button",
+              "mbb_timeout_failure_message",
+              "mbb_timeout_ok",
+              "mbb_timeout_warning_message",
+              "mbb_timeout_cancel",
+              "try_again",
+              "incorrect_pin",
+              "start_button",
+              "start_button_2",
+              "large_text_size_option",
+              "medium_text_size_option",
+              "black_on_white_option",
+              "white_on_black_option",
+              "color_option",
+              "audio_switch_button_off",
+              "audio_switch_button_on",
+              "assembly_instruction_title",
+              "assembly_instruction_ok_button",
+              "assembly_screen_back_button_text",
+              "assembly_screen_quit_button",
+              "assembly_screen_help_button",
+              "assembly_screen_undo_button",
+              "assembly_screen_next_button_text",
+              "assembly_no_candidates",
+              "assembly_missing_candidates_multiple",
+              "assembly_missing_candidates_dual",
+              "assembly_missing_candidates_single",
+              "proceed_warning_string_1a",
+              "proceed_warning_string_2a",
+              "proceed_warning_string_3a",
+              "proceed_warning_string_1b",
+              "proceed_warning_string_2b",
+              "proceed_warning_string_3b",
+              "assembly_help_modal_title",
+              "assembly_help_message_1a",
+              "assembly_help_message_2a",
+              "assembly_help_message_3a",
+              "uncontested_assembly_help_message_1a",
+              "uncontested_assembly_help_message_2a",
+              "uncontested_assembly_help_message_3a",
+              "assembly_help_message_1b_multiple",
+              "assembly_help_message_1b_dual",
+              "assembly_help_message_1b_single",
+              "assembly_help_message_2b",
+              "assembly_help_message_1c",
+              "assembly_help_message_2c",
+              "assembly_help_message_3c",
+              "council_screen_back_button_text",
+              "council_screen_quit_button",
+              "council_screen_help_button",
+              "council_screen_undo_button",
+              "council_screen_next_button_text",
+              "assembly_more_help_modal_title",
+              "assembly_more_help_message_1",
+              "assembly_more_help_message_2",
+              "assembly_more_help_message_3",
+              "assembly_more_help_message_4",
+              "uncontested_press_next_button",
+              "atl_btl_switch_help_title",
+              "atl_btl_switch_message_1",
+              "atl_btl_switch_message_2",
+              "atl_btl_switch_message_3",
+              "council_help_modal_title",
+              "council_unselected_help_message_1",
+              "council_unselected_help_message_2",
+              "council_btl_selected_help_message_1_multiple",
+              "council_btl_selected_help_message_1_dual",
+              "council_btl_selected_help_message_1_single",
+              "council_btl_selected_help_message_2",
+              "council_btl_selected_help_message_3",
+              "council_btl_completed_help_message_1",
+              "council_btl_completed_help_message_2",
+              "council_btl_completed_help_message_3",
+              "council_atl_selected_help_message_1",
+              "council_atl_selected_help_message_2",
+              "council_atl_selected_help_message_3",
+              "council_atl_completed_help_message_1",
+              "council_atl_completed_help_message_2",
+              "council_atl_completed_help_message_3",
+              "council_more_help_modal_title",
+              "council_more_help_message_1",
+              "council_more_help_message_2",
+              "council_more_help_message_3",
+              "council_candidates_warning_modal_title_multiple",
+              "council_candidates_warning_modal_title_dual",
+              "council_candidates_warning_modal_title_single",
+              "council_candidates_warning_message_1",
+              "council_candidates_warning_message_2",
+              "council_groups_warning_modal_title",
+              "council_groups_warning_message_1",
+              "council_groups_warning_message_2",
+              "council_groups_warning_message_3",
+              "council_warning_modal_title",
+              "council_warning_message_1",
+              "council_warning_message_2",
+              "confirmation_screen_title",
+              "informal_vote",
+              "formal_vote",
+              "ballot_not_counted",
+              "ballot_is_counted",
+              "confirmation_screen_back_button_text",
+              "confirmation_screen_quit_button",
+              "confirmation_screen_help_button",
+              "confirm_submit_button",
+              "dont_submit_button",
+              "submit_button",
+              "confirmation_title",
+              "confirmation_message_1",
+              "confirmation_message_2",
+              "confirm_help_modal_title",
+              "confirm_help_message_1a",
+              "confirm_help_message_2a",
+              "confirm_help_message_1b",
+              "confirm_help_message_2b",
+              "confirm_help_message_1c",
+              "confirm_help_message_2c",
+              "confirm_help_message_1d",
+              "confirm_help_message_2d",
+              "review_btn_correct",
+              "review_candidates_title",
+              "review_groups_title",
+              "assembly_not_in_order",
+              "atl_not_in_order",
+              "btl_not_in_order",
+              "above_line_title",
+              "below_line_title",
+              "review_ballot_help_modal_title",
+              "review_ballot_help_message_1",
+              "review_ballot_help_message_2",
+              "review_ballot_help_message_3",
+              "review_ballot_instruction_title",
+              "review_btn_explain" ,
+              "review_btn_correct" ,
+              "review_btn_again" ,
+              "review_ballot_instruction_ok_button",
+              "review_ballot_more_help_modal_title",
+              "review_ballot_more_help_message",
+              "printout_instructions_1",
+              "printout_instructions_2",
+              "your_votes_title",
+              "not_a_ballot",
+              "this_is_a_receipt",
+              "vote_remains_private",
+              "serial_number",
+              "district_of",
+              "region_of",
+              "candidate_list_title",
+              "preferences_list_title",
+              "district_boxes_empty",
+              "atl_boxes_empty",
+              "btl_boxes_empty",
+              "candidates",
+              "groups",
+              "check_receipt_message",
+              "print_receipt_title",
+              "print_receipt_message_1",
+              "print_receipt_message_2",
+              "print_receipt_next_button",
+              "warning_modal_back_button",
+              "warning_modal_help_button",
+              "warning_modal_proceed_button",
+              "help_modal_back_button",
+              "help_modal_more_help_button",
+              "more_help_modal_back_button",
+              "more_help_modal_more_help_button",
+              "more_help_info",
+              "other_help_modal_back_button",
+              "other_help_info",
+              "incomplete_vote_modal_back_button",
+              "incomplete_vote_help_title",
+              "incomplete_vote_message_1",
+              "incomplete_vote_message_2",
+              "incomplete_vote_message_3",
+              "incomplete_vote_info",
+              "paper_voting_modal_no_button",
+              "paper_voting_modal_yes_button",
+              "paper_voting_message_2",
+              "paper_voting_message_3",
+              "paper_voting_info",
+              "other_help_modal_title",
+              "help_modal_help_button",
+              "more_help_modal_help_button",
+              "video_instructions_button",
+              "submit_incomplete_button",
+              "paper_voting_help_title",
+              "paper_voting_button",
+              "clear_ballot_button",
+              "candidate_voting_modal_title",
+              "candidate_voting_modal_message_1",
+              "candidate_voting_modal_message_2",
+              "group_voting_modal_title",
+              "group_voting_modal_message_1",
+              "group_voting_modal_message_2",
+              "confirmation_modal_back_button",
+              "confirmation_modal_proceed_button",
+              "quit_confirmation_title",
+              "quit_confirmation_message",
+              "quit_yes_button",
+              "quit_no_button",
+              "confirm_clear_ballot_title",
+              "confirm_clear_back_button",
+              "confirm_clear_ok_button",
+              "ballot_cleared_confirmation",
+              "ballot_cleared_ok_button",
+              "district_uncontested",
+              "scan_error_message_1",
+              "scan_error_message_2",
+              "scan_error_message_3",
+              "scan_error_message_4",
+              "scan_error_message_5",
+              "scan_error_message_6",
+              "ungrouped_title",
+              "audio_screen_message_1",
+              "audio_screen_message_2",
+              "confirm_audio_switch_preserve_votes_button",
+              "confirm_audio_switch_clear_votes_button",
+              "confirm_audio_switch_return_button",
+              "confirm_discard_modal_title",
+              "confirm_discard_modal_message_1",
+              "confirm_discard_modal_message_2",
+              "discard_back_button",
+              "discard_confirm_button",
+              "error_modal_title",
+              "error_modal_message",
+              "error_modal_back_button",
+              "invalid_qr_modal_message",
+              "invalid_qr_modal_back_button",
+              "atl_btl_switch_bar",
+              "btl_atl_switch_bar",
+              "council_instruction_title",
+              "council_instruction_ok_button",
+              "council_instruction_message",
+              "mbb_timeout_modal_message",
+              "mbb_timeout_modal_back_button",
+              "reset_modal_title",
+              "reset_modal_message",
+              "switch_to_audio_button",
+              "review_ballot_see_slips_button",
+              "atl_btl_choice_modal_title",
+              "atl_btl_choice_atl_button",
+              "atl_btl_choice_btl_button",
+              "atl_btl_choice_help_button"
+            ],
+            "properties":{            
+              "above_line_title": {
+                "type":"string"
+              },
+              "assembly_help_message_1a": {
+                "type":"string"
+              },
+              "assembly_help_message_1b_dual": {
+                "type":"string"
+              },
+              "assembly_help_message_1b_multiple": {
+                "type":"string"
+              },
+              "assembly_help_message_1b_single": {
+                "type":"string"
+              },
+              "assembly_help_message_1c": {
+                "type":"string"
+              },
+              "assembly_help_message_2a": {
+                "type":"string"
+              },
+              "assembly_help_message_2b": {
+                "type":"string"
+              },
+              "assembly_help_message_2c": {
+                "type":"string"
+              },
+              "assembly_help_message_3a": {
+                "type":"string"
+              },
+              "assembly_help_message_3c": {
+                "type":"string"
+              },
+              "assembly_help_modal_title": {
+                "type":"string"
+              },
+              "assembly_instruction_ok_button": {
+                "type":"string"
+              },
+              "assembly_instruction_title": {
+                "type":"string"
+              },
+              "assembly_missing_candidates_dual": {
+                "type":"string"
+              },
+              "assembly_missing_candidates_multiple": {
+                "type":"string"
+              },
+              "assembly_missing_candidates_single": {
+                "type":"string"
+              },
+              "assembly_more_help_message_1": {
+                "type":"string"
+              },
+              "assembly_more_help_message_2": {
+                "type":"string"
+              },
+              "assembly_more_help_message_3": {
+                "type":"string"
+              },
+              "assembly_more_help_message_4": {
+                "type":"string"
+              },
+              "assembly_more_help_modal_title": {
+                "type":"string"
+              },
+              "assembly_no_candidates": {
+                "type":"string"
+              },
+              "assembly_not_in_order": {
+                "type":"string"
+              },
+              "assembly_screen_back_button_text": {
+                "type":"string"
+              },
+              "assembly_screen_help_button": {
+                "type":"string"
+              },
+              "assembly_screen_next_button_text": {
+                "type":"string"
+              },
+              "assembly_screen_quit_button": {
+                "type":"string"
+              },
+              "assembly_screen_undo_button": {
+                "type":"string"
+              },
+              "atl_boxes_empty": {
+                "type":"string"
+              },
+              "atl_btl_switch_bar": {
+                "type":"string"
+              },
+              "atl_btl_switch_help_title": {
+                "type":"string"
+              },
+              "atl_btl_switch_message_1": {
+                "type":"string"
+              },
+              "atl_btl_switch_message_2": {
+                "type":"string"
+              },
+              "atl_btl_switch_message_3": {
+                "type":"string"
+              },
+              "atl_not_in_order": {
+                "type":"string"
+              },
+              "audio_screen_message_1": {
+                "type":"string"
+              },
+              "audio_screen_message_2": {
+                "type":"string"
+              },
+              "audio_switch_button_off": {
+                "type":"string"
+              },
+              "audio_switch_button_on": {
+                "type":"string"
+              },
+              "ballot_cleared_confirmation": {
+                "type":"string"
+              },
+              "ballot_cleared_ok_button": {
+                "type":"string"
+              },
+              "ballot_is_counted": {
+                "type":"string"
+              },
+              "ballot_not_counted": {
+                "type":"string"
+              },
+              "below_line_title": {
+                "type":"string"
+              },
+              "black_on_white_option": {
+                "type":"string"
+              },
+              "btl_atl_switch_bar": {
+                "type":"string"
+              },
+              "btl_boxes_empty": {
+                "type":"string"
+              },
+              "btl_not_in_order": {
+                "type":"string"
+              },
+              "candidate_list_title": {
+                "type":"string"
+              },
+              "candidate_voting_modal_message_1": {
+                "type":"string"
+              },
+              "candidate_voting_modal_message_2": {
+                "type":"string"
+              },
+              "candidate_voting_modal_title": {
+                "type":"string"
+              },
+              "candidates": {
+                "type":"string"
+              },
+              "check_receipt_message": {
+                "type":"string"
+              },
+              "clear_ballot_button": {
+                "type":"string"
+              },
+              "color_option": {
+                "type":"string"
+              },
+              "confirm_audio_switch_clear_votes_button": {
+                "type":"string"
+              },
+              "confirm_audio_switch_preserve_votes_button": {
+                "type":"string"
+              },
+              "confirm_audio_switch_return_button": {
+                "type":"string"
+              },
+              "confirm_clear_back_button": {
+                "type":"string"
+              },
+              "confirm_clear_ballot_title": {
+                "type":"string"
+              },
+              "confirm_clear_ok_button": {
+                "type":"string"
+              },
+              "confirm_discard_modal_message_1": {
+                "type":"string"
+              },
+              "confirm_discard_modal_message_2": {
+                "type":"string"
+              },
+              "confirm_discard_modal_title": {
+                "type":"string"
+              },
+              "confirm_help_message_1a": {
+                "type":"string"
+              },
+              "confirm_help_message_1b": {
+                "type":"string"
+              },
+              "confirm_help_message_1c": {
+                "type":"string"
+              },
+              "confirm_help_message_1d": {
+                "type":"string"
+              },
+              "confirm_help_message_2a": {
+                "type":"string"
+              },
+              "confirm_help_message_2b": {
+                "type":"string"
+              },
+              "confirm_help_message_2c": {
+                "type":"string"
+              },
+              "confirm_help_message_2d": {
+                "type":"string"
+              },
+              "confirm_help_modal_title": {
+                "type":"string"
+              },
+              "confirm_submit_button": {
+                "type":"string"
+              },
+              "confirmation_message_1": {
+                "type":"string"
+              },
+              "confirmation_message_2": {
+                "type":"string"
+              },
+              "confirmation_modal_back_button": {
+                "type":"string"
+              },
+              "confirmation_modal_proceed_button": {
+                "type":"string"
+              },
+              "confirmation_screen_back_button_text": {
+                "type":"string"
+              },
+              "confirmation_screen_help_button": {
+                "type":"string"
+              },
+              "confirmation_screen_quit_button": {
+                "type":"string"
+              },
+              "confirmation_screen_title": {
+                "type":"string"
+              },
+              "confirmation_title": {
+                "type":"string"
+              },
+              "council_atl_completed_help_message_1": {
+                "type":"string"
+              },
+              "council_atl_completed_help_message_2": {
+                "type":"string"
+              },
+              "council_atl_completed_help_message_3": {
+                "type":"string"
+              },
+              "council_atl_selected_help_message_1": {
+                "type":"string"
+              },
+              "council_atl_selected_help_message_2": {
+                "type":"string"
+              },
+              "council_atl_selected_help_message_3": {
+                "type":"string"
+              },
+              "council_btl_completed_help_message_1": {
+                "type":"string"
+              },
+              "council_btl_completed_help_message_2": {
+                "type":"string"
+              },
+              "council_btl_completed_help_message_3": {
+                "type":"string"
+              },
+              "council_btl_selected_help_message_1_dual": {
+                "type":"string"
+              },
+              "council_btl_selected_help_message_1_multiple": {
+                "type":"string"
+              },
+              "council_btl_selected_help_message_1_single": {
+                "type":"string"
+              },
+              "council_btl_selected_help_message_2": {
+                "type":"string"
+              },
+              "council_btl_selected_help_message_3": {
+                "type":"string"
+              },
+              "council_candidates_warning_message_1": {
+                "type":"string"
+              },
+              "council_candidates_warning_message_2": {
+                "type":"string"
+              },
+              "council_candidates_warning_modal_title_dual": {
+                "type":"string"
+              },
+              "council_candidates_warning_modal_title_multiple": {
+                "type":"string"
+              },
+              "council_candidates_warning_modal_title_single": {
+                "type":"string"
+              },
+              "council_groups_warning_message_1": {
+                "type":"string"
+              },
+              "council_groups_warning_message_2": {
+                "type":"string"
+              },
+              "council_groups_warning_message_3": {
+                "type":"string"
+              },
+              "council_groups_warning_modal_title": {
+                "type":"string"
+              },
+              "council_help_modal_title": {
+                "type":"string"
+              },
+              "council_instruction_message": {
+                "type":"string"
+              },
+              "council_instruction_ok_button": {
+                "type":"string"
+              },
+              "council_instruction_title": {
+                "type":"string"
+              },
+              "council_more_help_message_1": {
+                "type":"string"
+              },
+              "council_more_help_message_2": {
+                "type":"string"
+              },
+              "council_more_help_message_3": {
+                "type":"string"
+              },
+              "council_more_help_modal_title": {
+                "type":"string"
+              },
+              "council_screen_back_button_text": {
+                "type":"string"
+              },
+              "council_screen_help_button": {
+                "type":"string"
+              },
+              "council_screen_next_button_text": {
+                "type":"string"
+              },
+              "council_screen_quit_button": {
+                "type":"string"
+              },
+              "council_screen_undo_button": {
+                "type":"string"
+              },
+              "council_unselected_help_message_1": {
+                "type":"string"
+              },
+              "council_unselected_help_message_2": {
+                "type":"string"
+              },
+              "council_warning_message_1": {
+                "type":"string"
+              },
+              "council_warning_message_2": {
+                "type":"string"
+              },
+              "council_warning_modal_title": {
+                "type":"string"
+              },
+              "discard_back_button": {
+                "type":"string"
+              },
+              "discard_confirm_button": {
+                "type":"string"
+              },
+              "district_boxes_empty": {
+                "type":"string"
+              },
+              "district_of": {
+                "type":"string"
+              },
+              "district_uncontested": {
+                "type":"string"
+              },
+              "dont_submit_button": {
+                "type":"string"
+              },
+              "error_modal_back_button": {
+                "type":"string"
+              },
+              "error_modal_message": {
+                "type":"string"
+              },
+              "error_modal_title": {
+                "type":"string"
+              },
+              "formal_vote": {
+                "type":"string"
+              },
+              "group_voting_modal_message_1": {
+                "type":"string"
+              },
+              "group_voting_modal_message_2": {
+                "type":"string"
+              },
+              "group_voting_modal_title": {
+                "type":"string"
+              },
+              "groups": {
+                "type":"string"
+              },
+              "help_modal_back_button": {
+                "type":"string"
+              },
+              "help_modal_help_button": {
+                "type":"string"
+              },
+              "help_modal_more_help_button": {
+                "type":"string"
+              },
+              "incomplete_vote_help_title": {
+                "type":"string"
+              },
+              "incomplete_vote_info": {
+                "type":"string"
+              },
+              "incomplete_vote_message_1": {
+                "type":"string"
+              },
+              "incomplete_vote_message_2": {
+                "type":"string"
+              },
+              "incomplete_vote_message_3": {
+                "type":"string"
+              },
+              "incomplete_vote_modal_back_button": {
+                "type":"string"
+              },
+              "incorrect_pin": {
+                "type":"string"
+              },
+              "informal_vote": {
+                "type":"string"
+              },
+              "invalid_qr_modal_back_button": {
+                "type":"string"
+              },
+              "invalid_qr_modal_message": {
+                "type":"string"
+              },
+              "languages_button": {
+                "type":"string"
+              },
+              "large_text_size_option": {
+                "type":"string"
+              },
+              "mbb_timeout_cancel": {
+                "type":"string"
+              },
+              "mbb_timeout_failure_message": {
+                "type":"string"
+              },
+              "mbb_timeout_modal_back_button": {
+                "type":"string"
+              },
+              "mbb_timeout_modal_message": {
+                "type":"string"
+              },
+              "mbb_timeout_ok": {
+                "type":"string"
+              },
+              "mbb_timeout_warning_message": {
+                "type":"string"
+              },
+              "medium_text_size_option": {
+                "type":"string"
+              },
+              "more_help_info": {
+                "type":"string"
+              },
+              "more_help_modal_back_button": {
+                "type":"string"
+              },
+              "more_help_modal_help_button": {
+                "type":"string"
+              },
+              "more_help_modal_more_help_button": {
+                "type":"string"
+              },
+              "not_a_ballot": {
+                "type":"string"
+              },
+              "other_help_info": {
+                "type":"string"
+              },
+              "other_help_modal_back_button": {
+                "type":"string"
+              },
+              "other_help_modal_title": {
+                "type":"string"
+              },
+              "paper_voting_button": {
+                "type":"string"
+              },
+              "paper_voting_help_title": {
+                "type":"string"
+              },
+              "paper_voting_info": {
+                "type":"string"
+              },
+              "paper_voting_message_2": {
+                "type":"string"
+              },
+              "paper_voting_message_3": {
+                "type":"string"
+              },
+              "paper_voting_modal_no_button": {
+                "type":"string"
+              },
+              "paper_voting_modal_yes_button": {
+                "type":"string"
+              },
+              "preferences_list_title": {
+                "type":"string"
+              },
+              "print_receipt_message_1": {
+                "type":"string"
+              },
+              "print_receipt_message_2": {
+                "type":"string"
+              },
+              "print_receipt_next_button": {
+                "type":"string"
+              },
+              "print_receipt_title": {
+                "type":"string"
+              },
+              "printout_instructions_1": {
+                "type":"string"
+              },
+              "printout_instructions_2": {
+                "type":"string"
+              },
+              "proceed_warning_string_1a": {
+                "type":"string"
+              },
+              "proceed_warning_string_1b": {
+                "type":"string"
+              },
+              "proceed_warning_string_2a": {
+                "type":"string"
+              },
+              "proceed_warning_string_2b": {
+                "type":"string"
+              },
+              "proceed_warning_string_3a": {
+                "type":"string"
+              },
+              "proceed_warning_string_3b": {
+                "type":"string"
+              },
+              "quit_confirmation_message": {
+                "type":"string"
+              },
+              "quit_confirmation_title": {
+                "type":"string"
+              },
+              "quit_no_button": {
+                "type":"string"
+              },
+              "quit_yes_button": {
+                "type":"string"
+              },
+              "region_of": {
+                "type":"string"
+              },
+              "reset_modal_message": {
+                "type":"string"
+              },
+              "reset_modal_title": {
+                "type":"string"
+              },
+              "review_ballot_help_message_1": {
+                "type":"string"
+              },
+              "review_ballot_help_message_2": {
+                "type":"string"
+              },
+              "review_ballot_help_message_3": {
+                "type":"string"
+              },
+              "review_ballot_help_modal_title": {
+                "type":"string"
+              },
+              "review_ballot_instruction_ok_button": {
+                "type":"string"
+              },
+              "review_ballot_instruction_title": {
+                "type":"string"
+              },
+              "review_ballot_more_help_message": {
+                "type":"string"
+              },
+              "review_ballot_more_help_modal_title": {
+                "type":"string"
+              },
+              "review_ballot_see_slips_button": {
+                "type":"string"
+              },
+              "review_btn_again": {
+                "type":"string"
+              },
+              "review_btn_correct": {
+                "type":"string"
+              },
+              "review_btn_explain": {
+                "type":"string"
+              },
+              "review_candidates_title": {
+                "type":"string"
+              },
+              "review_groups_title": {
+                "type":"string"
+              },
+              "scan_error_message_1": {
+                "type":"string"
+              },
+              "scan_error_message_2": {
+                "type":"string"
+              },
+              "scan_error_message_3": {
+                "type":"string"
+              },
+              "scan_error_message_4": {
+                "type":"string"
+              },
+              "scan_error_message_5": {
+                "type":"string"
+              },
+              "scan_error_message_6": {
+                "type":"string"
+              },
+              "serial_number": {
+                "type":"string"
+              },
+              "start_button_2": {
+                "type":"string"
+              },
+              "start_button": {
+                "type":"string"
+              },
+              "submit_button": {
+                "type":"string"
+              },
+              "submit_incomplete_button": {
+                "type":"string"
+              },
+              "switch_to_audio_button": {
+                "type":"string"
+              },
+              "this_is_a_receipt": {
+                "type":"string"
+              },
+              "try_again": {
+                "type":"string"
+              },
+              "uncontested_assembly_help_message_1a": {
+                "type":"string"
+              },
+              "uncontested_assembly_help_message_2a": {
+                "type":"string"
+              },
+              "uncontested_assembly_help_message_3a": {
+                "type":"string"
+              },
+              "uncontested_press_next_button": {
+                "type":"string"
+              },
+              "ungrouped_title": {
+                "type":"string"
+              },
+              "video_instructions_button": {
+                "type":"string"
+              },
+              "vote_remains_private": {
+                "type":"string"
+              },
+              "warning_modal_back_button": {
+                "type":"string"
+              },
+              "warning_modal_help_button": {
+                "type":"string"
+              },
+              "warning_modal_proceed_button": {
+                "type":"string"
+              },
+              "white_on_black_option": {
+                "type":"string"
+              },
+              "your_votes_title": {
+                "type":"string"
+              },
+              "atl_btl_choice_modal_title": {
+                "type":"string"
+              },
+              "atl_btl_choice_atl_button": {
+                "type":"string"
+              },
+              "atl_btl_choice_btl_button": {
+                "type":"string"
+              },
+              "atl_btl_choice_help_button": {
+                "type":"string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

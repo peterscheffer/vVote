@@ -1,0 +1,25 @@
+<div id="error_modal_header" class="header" style="display: none; z-index: 301;">
+  <div id="error_modal_title" style="float: left; padding: 8px;">Error</div>
+</div>
+
+<div id="error_modal_background" style="z-index: 301;">
+</div>
+<div id="error_modal_container" style="z-index: 302; display: block; position: absolute; top: 5px; width: 100%">
+  <div id="error_alert">
+    <center>
+      <div id="error_modal_panel" class="notice_panel invert_color" style="overflow-y: scroll; overflow-x: hidden;">
+        <div id="error_content">
+          <p id="error_modal_message" class="invert_color internationalisation" style="text-align: center; padding: 20px;">
+            The computer was unable to submit your vote.
+          </p>
+        </div>
+      </div>
+    </center>
+  </div>
+</div>
+
+<div id="error_modal_footer" class="footer" style="display: none; z-index: 301;">
+  <div id="error_modal_back_button" class="button" style="float: left;" onclick="alert('hiding'); hideErrorAlert();">
+    Back
+  </div>
+</div>

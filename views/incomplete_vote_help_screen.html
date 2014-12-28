@@ -1,0 +1,79 @@
+<div id="incomplete_vote_modal_background" style="z-index: 287;">
+</div>
+<div id="incomplete_vote_modal_container" style="z-index: 288; display: none; position: absolute; top: 0; width: 100%;">
+  <center>
+    <div id="incomplete_vote_modal_panel" class="notice_panel incomplete_vote_notice_panel invert_color" style="overflow-y: scroll; overflow-x: hidden;">
+      <div id="incomplete_vote_content">
+        <h1 id="incomplete_vote_help_title" class="invert_color">
+          INCOMPLETE VOTE
+        </h1>
+        <p id="incomplete_vote_message_1" class="invert_color internationalisation">An incomplete vote is one that is blank or incomplete. It does not count toward the election result. You can submit an incomplete vote in one or both houses.</p>
+        <p id="incomplete_vote_message_2" class="invert_color internationalisation">To submit an incomplete vote, follow these instructions:</p>
+        <p id="incomplete_vote_message_3" class="invert_color internationalisation">
+          When you are on a ballot page, click next without selecting any candidates or groups. You will receive a warning message explaining that
+          you have not completed your vote. Click the PROCEED ANYWAY button. You can do this for one or both houses.</p>
+        <div style="width: 100%; padding: 25px;">
+          <button id="incomplete_vote_modal_back_button" class="actionButtonDiv" style="margin-left: 5px;">BACK</button>
+          <span id="incomplete_vote_info" class="invert_color help_box internationalisation">
+            Raise your hand to get help from a staff member
+          </span>
+        </div>
+      </div>
+    </div>
+  </center>
+
+  <button type="button" id="incomplete_vote_button_scroll_up" class="modal_button_scroll_up arrowButtonRecolor navPositionBtn"
+    style="position: absolute; top: 25px; left: 1400px; visibility: hidden; z-index: 288;">&#10152;</button>
+  <button type="button" id="incomplete_vote_button_scroll_down" class="modal_button_scroll_down arrowButtonRecolor navPositionBtn"
+    style="position: absolute; bottom: 25px; left: 1400px; visibility: hidden; z-index: 288;">&#10152;</button>
+
+</div>
+
+<script>
+  function checkIncompleteVoteScrollButtons () {
+
+    var innerHeight = $('#incomplete_vote_content').height();
+    var outerHeight = $('#incomplete_vote_modal_panel').height();
+
+    if (innerHeight > outerHeight) {
+
+      var maxTopPos = (innerHeight - outerHeight) > 0 ? innerHeight - outerHeight : 0;
+
+      if (maxTopPos > 0) {
+        var topPos = $('#incomplete_vote_modal_panel').scrollTop();
+
+        if (topPos > 0) {
+          $('#incomplete_vote_button_scroll_up').css('visibility', 'visible');
+        } else {
+          $('#incomplete_vote_button_scroll_up').css('visibility', 'hidden');
+        }
+
+        if (topPos < maxTopPos) {
+          $('#incomplete_vote_button_scroll_down').css('visibility', 'visible');
+        } else {
+          $('#incomplete_vote_button_scroll_down').css('visibility', 'hidden');
+        }
+      } else {
+        $('#incomplete_vote_button_scroll_up').css('visibility', 'hidden');
+        $('#incomplete_vote_button_scroll_down').css('visibility', 'hidden');
+      }
+    } else {
+      $('#incomplete_vote_button_scroll_up').css('visibility', 'hidden');
+      $('#incomplete_vote_button_scroll_down').css('visibility', 'hidden');
+    }
+  }
+
+  $('#incomplete_vote_button_scroll_up').click(function() {
+    var topVal = $('#incomplete_vote_modal_panel').scrollTop();
+    $('#incomplete_vote_modal_panel').animate({scrollTop: topVal - 70}, 0);
+  });
+
+  $('#incomplete_vote_button_scroll_down').click(function() {
+    var topVal = $('#incomplete_vote_modal_panel').scrollTop();
+    $('#incomplete_vote_modal_panel').animate({scrollTop: topVal + 70}, 0);
+  });
+
+  $('#incomplete_vote_modal_panel').bind('scroll resize', function() {
+    checkIncompleteVoteScrollButtons();
+  });
+</script>

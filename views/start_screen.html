@@ -1,0 +1,55 @@
+<div class="header">
+  <div id="settings_title" style="float: left; padding: 8px;">Visual settings</div>
+</div>
+
+<div id="select_large_text" class="option_wrapper" style="top: 170px; left: 110px;">
+    <div id="large_selected" class="option_tick_box">
+
+    </div>
+    <div id="large_text_size_option" class="option_text" style="font-size: 35pt;">
+      LARGE SIZE TEXT
+    </div>
+</div>
+
+<div id="select_medium_text" class="option_wrapper" style="top: 170px; left: 660px;">
+    <div id="medium_selected" class="option_tick_box">
+      &#10004;
+    </div>
+    <div id="medium_text_size_option" class="option_text" style="font-size: 28pt; line-height: 1.5em;">
+      MEDIUM SIZE TEXT
+    </div>
+</div>
+
+<div id="select_bow" class="option_wrapper" style="top: 340px; left: 110px;">
+    <div id="bow_selected" class="option_tick_box">
+      &#10004;
+    </div>
+    <div id="black_on_white_option" class="option_text" style="font-size: 35pt;">
+      BLACK ON WHITE
+    </div>
+</div>
+
+<div id="select_wob" class="option_wrapper" style="top: 340px; left: 660px; background-color: #000000; width: 550px;">
+    <div id="wob_selected" class="option_tick_box" style="border: 2px solid #FDF5E8;">
+
+    </div>
+    <div id="white_on_black_option" class="option_text" style="color: #FDF5E8; font-size: 35pt;">
+      WHITE ON BLACK
+    </div>
+</div>
+
+<div id="switch_to_audio_button" style="position: absolute; top: 520px; left: 350px; font-size: 35pt;" onclick="switchToAudioInterface();">
+  Change to AUDIO ONLY
+</div>
+
+<div class="footer">
+  <div id="settings_back_button" class="button" style="float: left;"
+       onclick="openLanguagesScreen();">
+    Back
+  </div>
+
+  <div id="settings_next_button" class="button" style="float: right;"
+       onclick="(container.Resolve('audioController')).stopAudio(); openDistrictScreen();">
+    Next
+  </div>
+</div>

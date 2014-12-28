@@ -1,0 +1,37 @@
+<div id="confirm_discard_modal_header" class="header" style="display: block; z-index: 310;">
+  <div id="confirm_discard_modal_title" style="float: left; padding: 8px;">
+    TIMEOUT
+  </div>
+</div>
+
+<div id="confirm_discard_modal_background" style="z-index: 309;">
+</div>
+<div id="confirm_discard_modal_container" style="z-index: 310; display: block; position: absolute; width: 100%">
+  <div id="timeout_alert">
+    <center>
+      <div id="confirm_discard_modal_panel" class="notice_panel invert_color"
+           style="overflow-y: scroll; overflow-x: hidden; background-color: #000000;">
+        <div id="confirm_discard_content">
+          <p id="confirm_discard_modal_message_1" class="invert_color"
+             style="text-align: left; padding: 20px;">
+            The vote will not be submitted. The voting choices will be cleared.
+            The system will be reset for the next voter.
+          </p>
+          <p id="confirm_discard_modal_message_2" class="invert_color"
+             style="text-align: left; padding: 20px;">
+            Please retrieve the printed candidate list from the voter and place into the security bin.
+          </p>
+        </div>
+      </div>
+    </center>
+  </div>
+</div>
+
+<div id="confirm_discard_modal_footer" class="footer" style="display: block; z-index: 310;">
+  <div id="discard_back_button" class="button internationalisation" style="float: left; width: auto;" onclick="hideConfirmDiscardScreen();">
+    BACK
+  </div>
+  <div id="discard_confirm_button" class="button internationalisation" style="float: right; width: auto;" onclick="(container.Resolve('visualController')).quitApplication();">
+    CONFIRM DISCARD VOTE
+  </div>
+</div>

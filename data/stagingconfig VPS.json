@@ -1,0 +1,46 @@
+{
+    "EventEntity": {
+        "AssociatedElections": [
+            {
+                "ElectionDate": "Saturday, 27 November 2010",
+                "ElectionType": 1,
+                "Id": "57474254-4f91-4125-8b89-ad4113387f78",
+                "Name": "State Election 2010"
+            }
+        ],
+        "DraftBundlePath": "/vvote/bundle.zip",
+        "EBPubKeyPath": "/vvote/pub.bpg",
+        "FinalBundlePath": "/vvote/bundle.zip",
+        "Id": "8894cb06-ee2b-4e7f-a129-136476f421ce",
+        "MBBInternetProtocols": [
+            {
+                "Id": 14,
+                "Name": "10.15.151.155"
+            },
+            {
+                "Id": 15,
+                "Name": "10.15.151.16"
+            }
+        ],
+        "MBBPubKeyPath": "/vvote/pub.bpg",
+        "Name": "My State Election 2010",
+        "PollTime": "2013-11-06T10:10",
+        "ProofTime": "2013-11-06T11:11",
+        "VVPubKeyPath": "/vvote/pub.bpb",
+        "WBBMServiceHostName": "http://localhost",
+        "WBBServiceHostName": "http://localhost"
+    },
+    "Id": "d7d40081-0eb2-41c9-997a-01461fc39c2b",
+    "LocationEntity": {
+        "AddressLine1": null,
+        "AddressLine2": null,
+        "AddressLine3": null,
+        "Id": "4c1fed25-4a2d-4814-b898-caa42cd9bf57",
+        "LocationCode": 279,
+        "LocationType": 1,
+        "Name": "Shepparton District",
+        "ParentId": "00000000-0000-0000-0000-000000000000"
+    },
+    "TypeId": 0,
+    "TypeName": "VPS"
+}

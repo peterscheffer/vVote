@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>WBB Interface</display-name>
+
+  <servlet>
+    <servlet-name>WBBInt</servlet-name>
+    <servlet-class>uk.ac.surrey.cs.tvs.vec.pod.WBBInt</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GetVote</servlet-name>
+    <servlet-class>uk.ac.surrey.cs.tvs.vec.pod.GetVote</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>CancelSlip</servlet-name>
+    <servlet-class>uk.ac.surrey.cs.tvs.vec.pod.CancelSlip</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>VoteSlip</servlet-name>
+    <servlet-class>uk.ac.surrey.cs.tvs.vec.pod.VoteSlip</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AuditSlip</servlet-name>
+    <servlet-class>uk.ac.surrey.cs.tvs.vec.pod.AuditSlip</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>DiscardSlip</servlet-name>
+    <servlet-class>uk.ac.surrey.cs.tvs.vec.pod.DiscardSlip</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ExpireSlip</servlet-name>
+    <servlet-class>uk.ac.surrey.cs.tvs.vec.pod.ExpireSlip</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ClearSlip</servlet-name>
+    <servlet-class>uk.ac.surrey.cs.tvs.vec.pod.ClearSlip</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>WBBInt</servlet-name>
+    <url-pattern>/wbbCheck</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GetVote</servlet-name>
+    <url-pattern>/getVote</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>CancelSlip</servlet-name>
+    <url-pattern>/cancelSlip</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>VoteSlip</servlet-name>
+    <url-pattern>/voteSlip</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AuditSlip</servlet-name>
+    <url-pattern>/auditSlip</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>DiscardSlip</servlet-name>
+    <url-pattern>/discardSlip</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ExpireSlip</servlet-name>
+    <url-pattern>/expireSlip</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ClearSlip</servlet-name>
+    <url-pattern>/clearSlip</url-pattern>
+  </servlet-mapping>
+
+  <listener>
+    <listener-class>uk.ac.surrey.cs.tvs.vec.pod.ConfLoader</listener-class>
+  </listener>
+</web-app>

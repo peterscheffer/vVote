@@ -1,0 +1,547 @@
+body {
+  background-color: #604A7B !important;
+}
+
+.invert_color {
+  color: #FFFFFF !important;
+ -- background-color: #604A7B !important;
+}
+
+.start_screen_button {
+  border: 3px solid #FFFFFF; 
+}
+
+#assembly_ballot_background {
+  background-color: #CCCCCC !important; 
+}
+
+#assembly_ballot_foreground {
+  background-color: #CCCCCC !important; 
+}
+
+#assembly_ballot_container {
+  color: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+}
+
+#assembly_ballot_content_inner {
+  background-color: #FFFFFF !important;
+}
+
+#assembly_ballot_summary_background {
+  background-color: #CCCCCC !important; 
+}
+
+#assembly_ballot_summary_content_inner {
+  background-color: #FFFFFF !important;
+}
+
+#council_ballot_summary_background {
+  background-color: #CCCCCC !important; 
+}
+
+#council_ballot_summary_content_inner {
+  background-color: #FFFFFF !important;
+}
+
+.ballot.invert_color {
+  background-color: #ffffff !important;
+}
+
+.navButtonRecolor {
+  color: #ffffff; 
+  border: 1px solid #42aaff;
+  cursor: pointer;
+  font-weight:bold;
+  background: -moz-linear-gradient(
+    top,
+    #42aaff 0%,
+    #003366);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#42aaff),
+  to(#003366));
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  border-radius: 14px;
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);   
+}
+
+.navButtonRecolor:hover {
+  background: -moz-linear-gradient(
+    top,
+    #42aaff 0%,
+    #1b67b3);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#42aaff),
+  to(#1b67b3)); 
+}
+
+.navButtonRecolor:active {
+  background: -moz-linear-gradient(
+    top,
+    #42aaff 0%,
+    #0A82FA);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#42aaff),
+  to(#0A82FA)); 
+}
+
+
+
+.arrowButtonRecolor {
+  color: #ffffff; 
+  background-color: #069C10;    
+  background: -moz-linear-gradient(
+    top,
+    #0CE919 0%,
+    #069C10);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#0CE919),
+  to(#069C10));
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px; 
+  border: 1px solid #069C10;  
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);    
+  border: 1px solid #069C10;  
+}
+
+.arrowButtonRecolor:hover {
+  background: -moz-linear-gradient(
+    top,
+    #0CE919 0%,
+    #31DE3D);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#0CE919),
+  to(#31DE3D)); 
+}
+
+
+
+.navButton {
+  background: -moz-linear-gradient(
+    top,
+    #42aaff 0%,
+    #003366);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#42aaff),
+    to(#003366));
+  border: 1px solid #42aaff;
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);
+}
+
+.navButton:hover {
+    background: -moz-linear-gradient(
+      top,
+      #42aaff 0%,
+      #1b67b3);
+    background: -webkit-gradient(
+      linear, left top, left bottom, 
+      from(#42aaff),
+    to(#1b67b3)); 
+}
+
+.navButton:active {
+    background: -moz-linear-gradient(
+      top,
+      #42aaff 0%,
+      #0A82FA);
+    background: -webkit-gradient(
+      linear, left top, left bottom, 
+      from(#42aaff),
+    to(#0A82FA)); 
+}
+
+.actionButtonRecolor {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff; 
+  background-color: #069C10;    
+  background: -moz-linear-gradient(
+    top,
+    #0CE919 0%,
+    #069C10);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#0CE919),
+  to(#069C10));
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  border-radius: 14px; 
+  border: 1px solid #069C10;  
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);    
+  border: 1px solid #069C10;  
+}
+
+.actionButtonRecolor:hover {
+  background: -moz-linear-gradient(
+    top,
+    #0CE919 0%,
+    #31DE3D);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#0CE919),
+  to(#31DE3D)); 
+}
+
+.notice_panel {
+  color: #ffffff;  
+}
+
+.notice_panel button {
+  color: #ffffff;
+}
+
+#btnNext {
+  color: #31DE3D;
+}
+
+.styleSizeBtn {
+  color: #ffffff;
+}
+
+.red_alert {
+  color: red;
+}
+
+.green_alert {
+  color: green;
+}
+
+#ballot_combined_content {
+  background-color: #ffffff;
+}
+
+#confirmation_message, #confirmation_message_box {
+  background-color: #604A7B !important;
+  z-index: 280;
+}
+
+.ballot img {
+  float: left;
+  margin: 0px 5px 5px 0px;
+}
+
+.ballot_box {
+  float: left;
+  display: inline;
+  padding: 5px;
+  text-align: center;
+  color: #000000 !important;
+  background-color: #FFFFFF !important;
+}
+
+.group_candidate_name {
+  color: #000000 !important;
+  background-color: transparent !important;
+}
+
+.candidate_details {
+}
+
+.candidate_name {  
+  color: #000000 !important;
+  background-color: transparent !important;
+}
+
+.candidate_party {
+  font-weight: normal;
+  color: #000000 !important;
+  background-color: transparent !important;
+}
+
+.candidate_region {  
+  font-weight: normal;
+  color: #000000 !important;
+  background-color: transparent !important;
+}
+
+/* REVIEW BALLOTS SCREEN STYLES */
+#ballot_container {
+  background-color: #ffffff; 
+}
+
+#review_front_inner_ballot {
+  color: #000  !important; 
+  height: 100%;
+}
+
+.review_arrow_base {
+  width: 0; 
+  height: 0; 
+  border-top: 50px solid #000; 
+  border-bottom: 50px solid #000; 
+  border-left: 10px solid #000; 
+  border-right: 10px solid #000;
+}
+
+.review_arrow_tip {
+  width: 0; 
+  height: 0; 
+  border-left: 40px solid transparent; 
+  border-right: 40px solid transparent; 
+  border-top: 40px solid #000;
+}
+
+.review_arrow_tip_up {
+  width: 0; 
+  height: 0; 
+  border-left: 40px solid transparent; 
+  border-right: 40px solid transparent; 
+  border-bottom: 40px solid #000;
+}
+
+.review_cut_out {
+  font-size: 0px; 
+  line-height: 0%; 
+  width: 0px;
+  border-top: 85px solid transparent;
+  border-bottom: 85px solid #604A7B;
+  border-left: none;
+  border-right: 85px solid transparent;  
+}
+
+.review_cut_out_top {
+  font-size: 0px; 
+  line-height: 0%; 
+  width: 0px;
+  border-top: 85px solid #604A7B;
+  border-bottom: 85px solid transparent;
+  border-left: none;
+  border-right: 85px solid transparent;  
+}
+
+.review_middle_dashed {
+  border-color: #604A7B;  
+}
+
+.review_div_listing {
+  width: 100%; 
+  border-bottom: 2px solid #000;  
+  overflow-x: hidden;
+}
+
+.review_div_listing_inner {
+  padding: 5px; 
+  overflow-x: hidden; 
+  white-space: nowrap;  
+}
+
+.review_assembly_ballot {
+  border: 2px solid #000000;  
+}
+
+.review_atl_ballot {
+  border: 2px solid #000000;  
+}
+
+.review_btl_ballot {
+  border: 2px solid #000000;  
+}
+
+.receipt_candidate_name {
+  color: #000000;
+  font-weight: bold;
+}
+
+.review_preference_selection {
+  border: 2px solid #000000;  
+  font-weight: bold;
+}
+
+.review_candidate_selection {
+  border: 2px solid #000000;  
+  font-weight: bold;
+}
+
+.review_assembly_preferences {
+  border: 2px solid #000000;
+}
+
+.review_atl_preferences {
+  border: 2px solid #000000;
+}
+
+.review_btl_preferences {
+  border: 2px solid #000000;
+}
+
+.review_atl_preferences {
+  border: 2px solid #000000;
+}
+
+/* END - REVIEW BALLOTS SCREEN STYLES */
+
+#assembly_instruction_background {
+  background-color: #604A7B;
+}
+
+#review_ballot_instruction_background {
+  background-color: #604A7B;
+}
+
+#help_modal_background {
+  background-color: #604A7B;
+}
+
+#help_modal_background {
+  background-color: #604A7B;
+}
+
+#more_help_modal_background {
+  background-color: #604A7B;
+}
+
+#paper_voting_modal_background {
+  background-color: #604A7B;
+}
+
+#other_help_modal_background {
+  background-color: #604A7B;
+}
+
+#warning_modal_background {
+  background-color: #604A7B;
+}
+
+#incomplete_vote_modal_background {
+  background-color: #604A7B;
+}
+
+#want_htvc_modal_background {
+  background-color: #604A7B;
+}
+
+#confirmation_modal_background {
+  background-color: #604A7B;
+}
+
+#submit_confirmation_modal_background {
+  background-color: #604A7B;
+}
+
+#atl_top_div, #btl_bottom_div {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#atl_button_div, #btl_button_div {
+  opacity: 1;
+}
+
+#more_help_info {
+  background-color: #523674; 
+}
+
+#other_help_info {
+  background-color: #523674; 
+}
+
+#paper_voting_info {
+  background-color: #523674; 
+}
+
+#want_htvc_info {
+  background-color: #523674; 
+}
+
+#incomplete_vote_info {
+  background-color: #523674; 
+}
+
+.actionButtonDiv {
+  color: #ffffff; 
+  background-color: #069C10;    
+  background: -moz-linear-gradient(
+    top,
+    #0CE919 0%,
+    #069C10);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#0CE919),
+  to(#069C10));
+  border-radius: 14px; 
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  border: 1px solid #069C10;  
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);      
+}
+
+.actionButtonDiv:hover {
+  background: -moz-linear-gradient(
+    top,
+    #0CE919 0%,
+    #31DE3D);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#0CE919),
+  to(#31DE3D)); 
+}
+
+.preference_selections_comparison {
+  background-color: #FFFFFF;  
+}
+
+#audio_switch_button {
+   
+}
